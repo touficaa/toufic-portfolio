@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Toufic Abou Ali — Athletic Achievements & Race Highlights</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+@page { size: A4 portrait; margin: 0; }
+body { font-family: 'Inter', sans-serif; color: #FFFFFF; background: #0A0E1A; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 210mm; height: 297mm; padding: 18mm 16mm; position: relative; overflow: hidden; page-break-after: always; background: #0A0E1A; }
+.page:last-child { page-break-after: auto; }
+.bg-photo { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('../website/images/photo.jpg'); background-size: cover; background-position: center; z-index: 0; }
+.bg-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 14, 26, 0.82); z-index: 1; }
+.bg-overlay-light { background: rgba(10, 14, 26, 0.68); }
+.content { position: relative; z-index: 2; height: 100%; }
+h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56pt; line-height: 1; letter-spacing: -1px; }
+h2 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22pt; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6mm; }
+h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13pt; text-transform: uppercase; letter-spacing: 1.5px; color: #E8621A; margin-bottom: 4mm; }
+p { font-size: 10pt; line-height: 1.5; color: #C8D0DC; }
+.divider { height: 2px; background: #E8621A; width: 50mm; margin: 4mm 0; }
+.divider-full { height: 1px; background: rgba(232, 98, 26, 0.4); margin: 8mm 0; }
+.section-title { display: flex; align-items: center; gap: 6mm; margin-bottom: 8mm; }
+.section-title::after { content: ''; flex: 1; height: 1px; background: rgba(232, 98, 26, 0.5); }
+.cover { display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 10mm 0; }
+.cover-tag { font-family: 'Montserrat', sans-serif; font-size: 9pt; letter-spacing: 4px; color: #E8621A; font-weight: 600; text-transform: uppercase; }
+.cover-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 52pt; line-height: 0.95; letter-spacing: -1.5px; margin: 6mm 0; }
+.cover-subtitle { font-family: 'Montserrat', sans-serif; font-size: 13pt; letter-spacing: 3px; text-transform: uppercase; color: #FFFFFF; font-weight: 500; margin-top: 4mm; }
+.cover-meta { font-size: 10pt; color: #A8B2C1; margin-top: 8mm; line-height: 1.7; }
+.cover-bottom { border-top: 2px solid #E8621A; padding-top: 6mm; }
+.cover-doc-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16pt; text-transform: uppercase; letter-spacing: 2px; }
+.cover-doc-sub { font-size: 9pt; color: #A8B2C1; margin-top: 3mm; letter-spacing: 1px; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-bottom: 6mm; }
+.stat-card { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(232, 98, 26, 0.25); padding: 6mm; border-radius: 2mm; }
+.stat-number { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36pt; line-height: 1; color: #FFFFFF; letter-spacing: -1px; }
+.stat-unit { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14pt; color: #E8621A; margin-left: 2mm; }
+.stat-label { font-family: 'Montserrat', sans-serif; font-size: 8pt; letter-spacing: 2.5px; text-transform: uppercase; color: #A8B2C1; margin-top: 3mm; font-weight: 600; }
+.year-row { display: grid; grid-template-columns: 18mm 1fr 32mm; align-items: center; gap: 4mm; margin-bottom: 3mm; font-size: 10pt; }
+.year-label { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #FFFFFF; }
+.bar-bg { height: 6mm; background: rgba(255, 255, 255, 0.08); border-radius: 1mm; overflow: hidden; }
+.bar-fill { height: 100%; background: linear-gradient(90deg, #E8621A, #F58A47); border-radius: 1mm; }
+.year-value { font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C8D0DC; text-align: right; font-size: 9pt; }
+.pb-card { background: rgba(255, 255, 255, 0.06); border-left: 3px solid #E8621A; padding: 5mm 6mm; margin-bottom: 3mm; display: grid; grid-template-columns: 32mm 1fr 14mm; align-items: center; gap: 4mm; }
+.pb-distance { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 11pt; letter-spacing: 1.5px; text-transform: uppercase; color: #E8621A; }
+.pb-time { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 20pt; line-height: 1; color: #FFFFFF; }
+.pb-context { font-size: 8.5pt; color: #A8B2C1; margin-top: 2mm; }
+.pb-podium { text-align: right; font-size: 16pt; color: #E8621A; }
+.achievement-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(232, 98, 26, 0.2); border-left: 3px solid #E8621A; padding: 4mm 5mm; margin-bottom: 3mm; border-radius: 1mm; }
+.achievement-year { font-family: 'Montserrat', sans-serif; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; color: #E8621A; font-weight: 700; margin-bottom: 1mm; }
+.achievement-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11pt; color: #FFFFFF; margin-bottom: 1mm; }
+.achievement-detail { font-size: 9pt; color: #C8D0DC; }
+.race-block { background: rgba(255, 255, 255, 0.06); border-top: 3px solid #E8621A; padding: 5mm 6mm; margin-bottom: 4mm; border-radius: 0 0 1mm 1mm; }
+.race-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 13pt; text-transform: uppercase; letter-spacing: 1px; color: #FFFFFF; margin-bottom: 1mm; }
+.race-date { font-size: 9pt; color: #A8B2C1; letter-spacing: 1px; margin-bottom: 3mm; }
+.race-data { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; padding: 3mm 0; border-top: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.race-stat-value { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14pt; color: #FFFFFF; }
+.race-stat-label { font-size: 7.5pt; letter-spacing: 1.5px; text-transform: uppercase; color: #A8B2C1; margin-top: 1mm; }
+.race-tags { margin-top: 3mm; display: flex; gap: 2mm; flex-wrap: wrap; }
+.tag { background: rgba(232, 98, 26, 0.18); color: #E8621A; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 7.5pt; letter-spacing: 1px; text-transform: uppercase; padding: 1.5mm 3mm; border-radius: 1mm; }
+.tag-gold { background: rgba(255, 200, 60, 0.2); color: #FFC83C; }
+.long-run-row { display: grid; grid-template-columns: 18mm 1fr 50mm; align-items: center; gap: 3mm; margin-bottom: 2.5mm; font-size: 9pt; }
+.lr-distance { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #E8621A; font-size: 10pt; }
+.lr-bar-bg { height: 4mm; background: rgba(255, 255, 255, 0.08); border-radius: 0.5mm; overflow: hidden; }
+.lr-bar-fill { height: 100%; background: linear-gradient(90deg, #E8621A, #F58A47); }
+.lr-name { font-size: 8pt; color: #C8D0DC; }
+.timeline-row { margin-bottom: 5mm; padding: 3mm 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+.timeline-year { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 14pt; color: #E8621A; margin-bottom: 1mm; }
+.timeline-dots { margin: 2mm 0; letter-spacing: 2px; color: #E8621A; font-size: 11pt; }
+.timeline-text { font-size: 9pt; color: #C8D0DC; }
+.splits-table { width: 100%; margin-top: 3mm; border-collapse: collapse; font-size: 8.5pt; }
+.splits-table th { font-family: 'Montserrat', sans-serif; font-size: 7pt; text-transform: uppercase; letter-spacing: 1px; color: #E8621A; padding: 2mm; text-align: left; border-bottom: 1px solid rgba(232, 98, 26, 0.3); }
+.splits-table td { padding: 1.8mm 2mm; color: #C8D0DC; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.splits-table td:nth-child(1) { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #FFFFFF; }
+.closing { display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 12mm 0; }
+.closing-quote { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 18pt; line-height: 1.3; color: #FFFFFF; font-style: italic; }
+.closing-stats { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 4mm; margin: 8mm 0; }
+.closing-stat { text-align: center; }
+.closing-stat-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28pt; color: #E8621A; line-height: 1; }
+.closing-stat-label { font-family: 'Montserrat', sans-serif; font-size: 7.5pt; letter-spacing: 1.5px; text-transform: uppercase; color: #A8B2C1; margin-top: 2mm; font-weight: 600; }
+.closing-contact { border-top: 2px solid #E8621A; padding-top: 6mm; font-size: 10pt; line-height: 1.8; color: #C8D0DC; }
+.closing-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22pt; color: #FFFFFF; margin-bottom: 2mm; }
+.closing-label { font-size: 9pt; letter-spacing: 2px; text-transform: uppercase; color: #E8621A; margin-bottom: 4mm; }
+.highlight-line { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11pt; color: #E8621A; text-align: center; margin-top: 5mm; letter-spacing: 1.5px; text-transform: uppercase; }
+.page-num { position: absolute; bottom: 8mm; right: 16mm; font-family: 'Montserrat', sans-serif; font-size: 8pt; letter-spacing: 2px; color: rgba(168, 178, 193, 0.6); z-index: 3; }
+.page-footer { position: absolute; bottom: 8mm; left: 16mm; font-family: 'Montserrat', sans-serif; font-size: 8pt; letter-spacing: 2px; color: rgba(168, 178, 193, 0.6); z-index: 3; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="bg-photo"></div>
+  <div class="bg-overlay bg-overlay-light"></div>
+  <div class="content cover">
+    <div>
+      <div class="cover-tag">— Lebanese Sports Federation Submission</div>
+      <div class="cover-name">TOUFIC<br>ABOU ALI</div>
+      <div class="divider"></div>
+      <div class="cover-subtitle">Lebanese Endurance Athlete</div>
+      <div class="cover-meta">Born June 14, 2006 — Beirut, Lebanon<br>Based in Montpellier, France<br>Marathon Runner — Triathlete</div>
+    </div>
+    <div class="cover-bottom">
+      <div class="cover-doc-title">Athletic Achievements<br>& Race Highlights</div>
+      <div class="cover-doc-sub">Official Portfolio — 2026 Season</div>
+    </div>
+  </div>
+  <div class="page-num">01</div>
+</div>
+
+<div class="page">
+  <div class="bg-photo"></div>
+  <div class="bg-overlay"></div>
+  <div class="content">
+    <div class="section-title"><h2>Athletic Overview</h2></div>
+    <p style="margin-bottom: 6mm; color: #A8B2C1; font-size: 9pt; letter-spacing: 1px; text-transform: uppercase;">Tracked Training Data — October 2022 to June 2026</p>
+    <div class="stats-grid">
+      <div class="stat-card"><div><span class="stat-number">2,164</span><span class="stat-unit">km</span></div><div class="stat-label">Running — 201 Activities</div></div>
+      <div class="stat-card"><div><span class="stat-number">436</span><span class="stat-unit">km</span></div><div class="stat-label">Cycling — 23 Activities</div></div>
+      <div class="stat-card"><div><span class="stat-number">28.2</span><span class="stat-unit">km</span></div><div class="stat-label">Swimming — 30 Sessions</div></div>
+      <div class="stat-card"><div><span class="stat-number">256</span></div><div class="stat-label">Total Activities Tracked</div></div>
+    </div>
+    <div class="divider-full"></div>
+    <h3>Yearly Running Progression</h3>
+    <div class="year-row"><div class="year-label">2022</div><div class="bar-bg"><div class="bar-fill" style="width: 7%;"></div></div><div class="year-value">53.7 km — 6 runs</div></div>
+    <div class="year-row"><div class="year-label">2023</div><div class="bar-bg"><div class="bar-fill" style="width: 40%;"></div></div><div class="year-value">287.9 km — 35 runs</div></div>
+    <div class="year-row"><div class="year-label">2024</div><div class="bar-bg"><div class="bar-fill" style="width: 60%;"></div></div><div class="year-value">433.4 km — 45 runs</div></div>
+    <div class="year-row"><div class="year-label">2025</div><div class="bar-bg"><div class="bar-fill" style="width: 92%;"></div></div><div class="year-value">668.2 km — 56 runs</div></div>
+    <div class="year-row"><div class="year-label">2026</div><div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div><div class="year-value">721.2 km — 59 runs</div></div>
+    <div class="divider-full"></div>
+    <div class="stats-grid">
+      <div class="stat-card"><div><span class="stat-number">2,636</span><span class="stat-unit">km</span></div><div class="stat-label">Total Distance — All Sports</div></div>
+      <div class="stat-card"><div><span class="stat-number">218</span><span class="stat-unit">hrs</span></div><div class="stat-label">Total Moving Time</div></div>
+    </div>
+    <div class="highlight-line">Trained across 4 countries — Lebanon · France · Czech Republic · Poland</div>
+  </div>
+  <div class="page-num">02</div>
+  <div class="page-footer">Toufic Abou Ali</div>
+</div>
+
+<div class="page">
+  <div class="bg-photo"></div>
+  <div class="bg-overlay"></div>
+  <div class="content">
+    <div class="section-title"><h2>Personal Bests</h2></div>
+    <div class="pb-card"><div class="pb-distance">5K</div><div><div class="pb-time">19:48</div><div class="pb-context">Allure Bleue Race — February 2026 — Age 19</div></div><div class="pb-podium">★</div></div>
+    <div class="pb-card"><div class="pb-distance">10K</div><div><div class="pb-time">39:42</div><div class="pb-context">Envolez Vous 2026 — February 2026 — Age 19</div></div><div class="pb-podium">★</div></div>
+    <div class="pb-card"><div class="pb-distance">Half Marathon</div><div><div class="pb-time">1:29:26</div><div class="pb-context">Montpellier Run Festival — April 2026 — Age 19</div></div><div class="pb-podium">★</div></div>
+    <div class="pb-card"><div class="pb-distance">Marathon</div><div><div class="pb-time">3:42:37</div><div class="pb-context">Prague Marathon — May 2026 — Age 19</div></div><div class="pb-podium">★</div></div>
+    <div class="divider-full"></div>
+    <h3>Half Marathon Progression</h3>
+    <div class="year-row"><div class="year-label">2023</div><div class="bar-bg"><div class="bar-fill" style="width: 38%;"></div></div><div class="year-value">1:49:34</div></div>
+    <div class="year-row"><div class="year-label">2025</div><div class="bar-bg"><div class="bar-fill" style="width: 70%;"></div></div><div class="year-value">1:39:48</div></div>
+    <div class="year-row"><div class="year-label">2026</div><div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div><div class="year-value">1:29:26</div></div>
+    <div class="highlight-line">— 20 Minutes Improvement Over 3 Years</div>
+    <div class="divider-full"></div>
+    <h3>Marathon Progression</h3>
+    <div class="year-row"><div class="year-label">2025</div><div class="bar-bg"><div class="bar-fill" style="width: 60%;"></div></div><div class="year-value">3:48:22</div></div>
+    <div class="year-row"><div class="year-label">2026</div><div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div><div class="year-value">3:42:37</div></div>
+    <div class="highlight-line">— 5 Minutes 45 Seconds Improvement</div>
+  </div>
+  <div class="page-num">03</div>
+  <div class="page-footer">Personal Bests</div>
+</div>
+
+<div class="page">
+  <div class="bg-photo"></div>
+  <div class="bg-overlay"></div>
+  <div class="content">
+    <div class="section-title"><h2>Key Achievements</h2></div>
+    <div class="achievement-card"><div class="achievement-year">2019 — Age 13</div><div class="achievement-title">The Transformation</div><div class="achievement-detail">Began athletic journey overweight and bullied. Completed full physical transformation in 6 months through self-discipline. Origin of all that followed.</div></div>
+    <div class="achievement-card"><div class="achievement-year">June 2023 — Age 16</div><div class="achievement-title">First Half Marathon — 1st Place</div><div class="achievement-detail">Won the ISF Half Marathon on debut. 1:49:34. First podium ever.</div></div>
+    <div class="achievement-card"><div class="achievement-year">2022 to 2025 — Age 16 to 19</div><div class="achievement-title">35 Race Wins in Lebanon</div><div class="achievement-detail">Competed across the Lebanese road racing circuit. Distances from 4K to 21K. Cities including Beirut, Tripoli, Jounieh, Barja, Hasbaya, Sarba, Yanta, Anjar.</div></div>
+    <div class="achievement-card"><div class="achievement-year">2023 — Age 17</div><div class="achievement-title">10K with Broken Leg — MTV Lebanon Feature</div><div class="achievement-detail">Competed and finished a 10K race with a broken leg. Featured on MTV Lebanon — one of the country leading television channels.</div></div>
+    <div class="achievement-card"><div class="achievement-year">May 2025 — Age 18</div><div class="achievement-title">First Marathon — Beirut — Double Podium</div><div class="achievement-detail">3:48:22. 51st Overall. 1st — 542 Training Program. 2nd — U20. Double podium on debut marathon.</div></div>
+    <div class="achievement-card"><div class="achievement-year">Age 18 — Strength</div><div class="achievement-title">60 kg Weighted Pull-Up · 100 kg Weighted Dip</div><div class="achievement-detail">Documented strength achievements outside endurance training.</div></div>
+    <div class="achievement-card"><div class="achievement-year">February 2026 — Age 19</div><div class="achievement-title">Envolez Vous 10K — 3rd ESM — 39:42 PB</div><div class="achievement-detail">First major podium in France. 10K personal best of 39:42. 23rd Overall.</div></div>
+    <div class="achievement-card"><div class="achievement-year">February 2026 — Age 19</div><div class="achievement-title">Allure Bleue 5K — 2nd Overall</div><div class="achievement-detail">2nd Overall in 19:48. Second French podium within a month.</div></div>
+    <div class="achievement-card"><div class="achievement-year">April 2026 — Age 19</div><div class="achievement-title">Montpellier Run Festival — 9th U23</div><div class="achievement-detail">1:29:26. 140th out of 4,516 finishers. Top 3.1% overall. Half marathon PB.</div></div>
+    <div class="achievement-card"><div class="achievement-year">May 2026 — Age 19</div><div class="achievement-title">Prague Marathon — 3:42:37</div><div class="achievement-detail">Marathon PB. Raced with injured left leg. 5 weeks before IRONMAN 70.3 Warsaw.</div></div>
+  </div>
+  <div class="page-num">04</div>
+  <div class="page-footer">Key Achievements</div>
+</div>
+
+<div class="page">
+  <div class="bg-photo"></div>
+  <div class="bg-overlay"></div>
+  <div class="content">
+    <div class="section-title"><h2>Major Races · I</h2></div>
+    <div class="race-block">
+      <div class="race-name">Beirut Marathon 2025</div>
+      <div class="race-date">May 1, 2025 — Beirut, Lebanon — Age 18</div>
+      <div class="race-data">
+        <div><div class="race-stat-value">3:48:22</div><div class="race-stat-label">Finish Time</div></div>
+        <div><div class="race-stat-value">51st</div><div class="race-stat-label">Overall</div></div>
+      </div>
+      <div class="race-tags"><span class="tag tag-gold">1st — 542 Program</span><span class="tag tag-gold">2nd — U20</span><span class="tag">First Marathon</span><span class="tag">42.195 km</span></div>
+    </div>
+    <div class="race-block">
+      <div class="race-name">Montpellier Run Festival 2026</div>
+      <div class="race-date">April 19, 2026 — Montpellier, France — Age 19</div>
+      <div class="race-data">
+        <div><div class="race-stat-value">1:29:26</div><div class="race-stat-label">Half Marathon PB</div></div>
+        <div><div class="race-stat-value">140 / 4,516</div><div class="race-stat-label">Overall Placement</div></div>
+      </div>
+      <div class="race-tags"><span class="tag tag-gold">9th — U23</span><span class="tag">Top 3.1%</span><span class="tag">Pace 4:13 /km</span><span class="tag">21.1 km</span></div>
+    </div>
+    <div class="race-block">
+      <div class="race-name">Envolez Vous 2026</div>
+      <div class="race-date">February 1, 2026 — France — Age 19</div>
+      <div class="race-data">
+        <div><div class="race-stat-value">39:42</div><div class="race-stat-label">10K Personal Best</div></div>
+        <div><div class="race-stat-value">23rd</div><div class="race-stat-label">Overall</div></div>
+      </div>
+      <div class="race-tags"><span class="tag tag-gold">3rd — ESM</span><span class="tag">Pace 3:58 /km</span><span class="tag">10 km</span></div>
+    </div>
+    <div class="race-block">
+      <div class="race-name">Allure Bleue 2026</div>
+      <div class="race-date">February 21, 2026 — France — Age 19</div>
+      <div class="race-data">
+        <div><div class="race-stat-value">19:48</div><div class="race-stat-label">5K Time</div></div>
+        <div><div class="race-stat-value">2nd</div><div class="race-stat-label">Overall</div></div>
+      </div>
+      <div class="race-tags"><span class="tag tag-gold">2nd Overall</span><span class="tag">Pace 3:56 /km</span><span class="tag">5 km</span></div>
+    </div>
+  </div>
+  <div class="page-num">05</div>
+  <div class="page-footer">Major Races</div>
+</div>
+
+<div class="page">
+  <div class="bg-photo"></div>
+  <div class="bg-overlay"></div>
+  <div class="content">
+    <div class="section-title"><h2>Major Races · II</h2></div>
+    <div class="race-block">
+      <div class="race-name">Vodafone Prague Marathon 2026</div>
+      <div class="race-date">May 3, 2026 — Prague, Czech Republic — Age 19</div>
+      <div class="race-data">
+        <div><div class="race-stat-value">3:42:37</div><div class="race-stat-label">Marathon PB</div></div>
+        <div><div class="race-stat-value">2,346</div><div class="race-stat-label">Overall Placement</div></div>
+      </div>
+      <table class="splits-table">
+        <thead><tr><th>Checkpoint</th><th>Rank</th><th>Time</th><th>Split</th></tr></thead>
+        <tbody>
+          <tr><td>5K</td><td>564</td><td>00:21:10</td><td>0:21:10</td></tr>
+          <tr><td>10K</td><td>644</td><td>00:42:31</td><td>0:21:20</td></tr>
+          <tr><td>15K</td><td>930</td><td>01:06:48</td><td>0:24:17</td></tr>
+          <tr><td>Half Marathon</td><td>1,493</td><td>01:40:09</td><td>0:33:20</td></tr>
+          <tr><td>25K</td><td>1,856</td><td>02:02:23</td><td>0:22:13</td></tr>
+          <tr><td>30K</td><td>2,323</td><td>02:31:42</td><td>0:29:18</td></tr>
+          <tr><td>35K</td><td>2,140</td><td>02:57:24</td><td>0:25:42</td></tr>
+          <tr><td>Finish</td><td>2,346</td><td>03:42:37</td><td>0:45:11</td></tr>
+        </tbody>
+      </table>
+      <div class="race-tags" style="margin-top: 4mm;"><span class="tag">Marathon #2</span><span class="tag">Raced Injured</span><span class="tag">Official Diplom</span></div>
+    </div>
+    <div class="race-block">
+      <div class="race-name">IRONMAN 70.3 Warsaw</div>
+      <div class="race-date">June 7, 2026 — Warsaw, Poland — Age 19 — Upcoming</div>
+      <div class="race-data">
+        <div><div class="race-stat-value">113 km</div><div class="race-stat-label">Half Ironman — Total</div></div>
+        <div><div class="race-stat-value">7 days</div><div class="race-stat-label">Before turning 20</div></div>
+      </div>
+      <div style="margin-top: 3mm; font-size: 9pt; color: #C8D0DC; line-height: 1.7;"><strong style="color: #E8621A;">SWIM</strong> 1.9 km &nbsp;·&nbsp; <strong style="color: #E8621A;">BIKE</strong> 90 km &nbsp;·&nbsp; <strong style="color: #E8621A;">RUN</strong> 21.1 km</div>
+      <div class="race-tags"><span class="tag">First Triathlon</span><span class="tag">First Half Ironman</span><span class="tag">35 Days After Prague</span></div>
+    </div>
+  </div>
+  <div class="page-num">06</div>
+  <div class="page-footer">Major Races</div>
+</div>
+
+<div class="page">
+  <div class="bg-photo"></div>
+  <div class="bg-overlay"></div>
+  <div class="content">
+    <div class="section-title"><h2>Endurance &amp; Timeline</h2></div>
+    <h3>Long Runs · 20km+</h3>
+    <div class="long-run-row"><div class="lr-distance">35.0 km</div><div class="lr-bar-bg"><div class="lr-bar-fill" style="width: 100%;"></div></div><div class="lr-name">Rashaya to Sit Shaawene · LB</div></div>
+    <div class="long-run-row"><div class="lr-distance">31.0 km</div><div class="lr-bar-bg"><div class="lr-bar-fill" style="width: 89%;"></div></div><div class="lr-name">Long Run · FR · Feb 2025</div></div>
+    <div class="long-run-row"><div class="lr-distance">30.0 km</div><div class="lr-bar-bg"><div class="lr-bar-fill" style="width: 86%;"></div></div><div class="lr-name">Long Run · FR · Feb 2026</div></div>
+    <div class="long-run-row"><div class="lr-distance">27.9 km</div><div class="lr-bar-bg"><div class="lr-bar-fill" style="width: 80%;"></div></div><div class="lr-name">Rashaya to Hasbaya · LB</div></div>
+    <div class="long-run-row"><div class="lr-distance">25.0 km</div><div class="lr-bar-bg"><div class="lr-bar-fill" style="width: 71%;"></div></div><div class="lr-name">Long Run · FR · Feb 2026</div></div>
+    <div class="long-run-row"><div class="lr-distance">22.3 km</div><div class="lr-bar-bg"><div class="lr-bar-fill" style="width: 64%;"></div></div><div class="lr-name">Mresty - Bater - Nabeh Mershed · LB</div></div>
+    <div class="long-run-row"><div class="lr-distance">20.0 km</div><div class="lr-bar-bg"><div class="lr-bar-fill" style="width: 57%;"></div></div><div class="lr-name">Mountain Run · LB · May 2025 — 459m gain</div></div>
+    <div class="highlight-line">17 long runs of 20 km or more · Longest 35 km</div>
+    <div class="divider-full"></div>
+    <h3>Race Timeline</h3>
+    <div class="timeline-row"><div class="timeline-year">2023 — Age 16</div><div class="timeline-dots">● ● ● ● ● ● ● ●</div><div class="timeline-text">8 races — First Half Marathon — 1st Place ISF Half Marathon</div></div>
+    <div class="timeline-row"><div class="timeline-year">2024 — Age 17 / 18</div><div class="timeline-dots">● ● ● ● ● ●</div><div class="timeline-text">6 races — MTV Lebanon feature — Broken leg 10K finish</div></div>
+    <div class="timeline-row"><div class="timeline-year">2025 — Age 18 / 19</div><div class="timeline-dots">● ● ● ● ● ● ●</div><div class="timeline-text">7 races — First Marathon (Beirut, double podium) — Barja 2nd Overall</div></div>
+    <div class="timeline-row"><div class="timeline-year">2026 — Age 19</div><div class="timeline-dots">● ● ● ● ●</div><div class="timeline-text">5 races — 3 podiums — 4 personal bests — 3 countries — IRONMAN 70.3</div></div>
+  </div>
+  <div class="page-num">07</div>
+  <div class="page-footer">Endurance &amp; Timeline</div>
+</div>
+
+<div class="page">
+  <div class="bg-photo"></div>
+  <div class="bg-overlay bg-overlay-light"></div>
+  <div class="content closing">
+    <div>
+      <div class="closing-quote">From overweight at 13<br>to endurance athlete at 19.<br><span style="color: #E8621A;">Built one race at a time.</span></div>
+    </div>
+    <div>
+      <div class="closing-stats">
+        <div class="closing-stat"><div class="closing-stat-num">6</div><div class="closing-stat-label">Podiums</div></div>
+        <div class="closing-stat"><div class="closing-stat-num">25</div><div class="closing-stat-label">Races</div></div>
+        <div class="closing-stat"><div class="closing-stat-num">2,636</div><div class="closing-stat-label">km Tracked</div></div>
+        <div class="closing-stat"><div class="closing-stat-num">4</div><div class="closing-stat-label">Countries</div></div>
+      </div>
+      <div class="closing-contact">
+        <div class="closing-label">— Athlete</div>
+        <div class="closing-name">Toufic Abou Ali</div>
+        <div>Lebanese Endurance Athlete<br>Born June 14, 2006 — Beirut, Lebanon<br>Based in Montpellier, France</div>
+        <br>
+        <div class="closing-label">— Contact</div>
+        <div>Strava: strava.com/athletes/109556347<br>Instagram: @touficaa<br>Email: _______________</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">08</div>
+</div>
+
+</body>
+</html>
