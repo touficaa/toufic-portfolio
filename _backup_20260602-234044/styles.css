@@ -36,16 +36,9 @@
 /* ============ RESET ============ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-body {
-  font-family: var(--font-sans);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--black);
-  background: var(--white);
-  overflow-x: hidden;
-  cursor: none;
-}
+
+    $args[0] -replace 'cursor: none;', 'cursor: auto;'
+
 
 @media (max-width: 1024px) {
   body { cursor: auto; }
@@ -742,3 +735,593 @@ section {
   body { background: white; cursor: auto; }
   * { animation: none !important; transition: none !important; }
 }
+
+/* ============ CURSOR OVERRIDE - USE NORMAL MOUSE ============ */
+.cursor, .cursor-label {
+  display: none !important;
+}
+body {
+  cursor: auto !important;
+}
+button {
+  cursor: pointer !important;
+}
+a {
+  cursor: pointer !important;
+}
+
+
+/* ================================================================
+   GLOBAL FONT OVERRIDE
+   Inter = everything
+   Playfair Display = times and race times ONLY
+   ================================================================ */
+
+/* ===== INTER ON EVERYTHING ===== */
+*,
+*::before,
+*::after {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* ===== PLAYFAIR DISPLAY ONLY FOR TIMES ===== */
+
+/* PB tile times */
+.pb-tile-time,
+.pb-card-time {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* Race table times */
+.rt-time {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Progression times */
+.prog-time {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Podium times */
+.podium-time {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Accordion times (race header) */
+.acc-time {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Accordion stats times */
+.acc-stats-row span {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Splits table times */
+.splits-table td:nth-child(3),
+.splits-table td:nth-child(4) {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 600 !important;
+}
+
+/* Home PB card times */
+.pb-card-time {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* Stat card numbers (home) */
+.stat-card-num span[data-count],
+.stat-card-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* Education numbers (story) */
+.edu-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* Grade values (story) */
+.grade-value {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Strength card numbers */
+.strength-card-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* Sira metrics numbers */
+.sira-metric strong {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Work stats strip numbers */
+.work-stats-strip strong {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Audit top numbers */
+.audit-top-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* Disc card numbers */
+.disc-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* LR distance */
+.lr-dist {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* LR highlight numbers */
+.lr-h-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Table summary numbers */
+.ts-cell strong {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Ironman numbers */
+.im-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* Role numbers (story) */
+.role-mini-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Trait card numbers */
+.trait-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* Yearly table data */
+.yearly-table td {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+/* Hero big number (record page) */
+.rec-big-num {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+/* ================================================================
+   HEADLINES - USE INTER BOLD (not Playfair)
+   This is the key change - all headlines now Inter
+   ================================================================ */
+
+h1, h2, h3, h4, h5, h6,
+.headline-xl,
+.headline-l,
+.headline-m,
+.headline-s,
+.hero-title,
+.story-h2,
+.story-h3,
+.rec-h2,
+.rec-h3,
+.story-hero-quote,
+.story-lead,
+.era-name,
+.work-block-title,
+.sira-logo-fallback,
+.footer-brand-name,
+.manifesto-block p,
+.realization p,
+.ambition p,
+.story-quote,
+.explore-card-title,
+.moment-text h3,
+.resilience-body h3 {
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  letter-spacing: -1.5px !important;
+}
+
+/* Hero title specific */
+.hero-title {
+  font-weight: 900 !important;
+  letter-spacing: -4px !important;
+}
+
+/* Section h2s */
+.rec-h2,
+.story-h2 {
+  font-weight: 800 !important;
+  letter-spacing: -2px !important;
+}
+
+/* italic accents stay red, just change font */
+.italic-accent {
+  font-family: 'Inter', sans-serif !important;
+  font-style: italic !important;
+  font-weight: 800 !important;
+  color: var(--red) !important;
+}
+
+/* Hero line italic */
+.hero-line em,
+.hero-line-2 em {
+  font-family: 'Inter', sans-serif !important;
+  font-style: italic !important;
+  font-weight: 900 !important;
+}
+
+/* Story hero quote */
+.story-hero-quote em {
+  font-family: 'Inter', sans-serif !important;
+  font-style: italic !important;
+}
+
+
+
+/* ================================================================
+   DESIGN SYSTEM FONT ENFORCEMENT
+   Uses exact CSS variables defined in :root
+   --font-sans = Inter (body, labels, nav, buttons, text)
+   --font-serif = Playfair Display (headlines, big numbers, times)
+   ================================================================ */
+
+/* ===== RESET EVERYTHING TO SANS FIRST ===== */
+* {
+  font-family: var(--font-sans) !important;
+}
+
+/* ================================================================
+   PLAYFAIR DISPLAY (--font-serif)
+   Headlines, section titles, big numbers, times, quotes
+   ================================================================ */
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif) !important; }
+
+/* Headline utility classes */
+.headline-xl,
+.headline-l,
+.headline-m,
+.headline-s { font-family: var(--font-serif) !important; }
+
+/* Home hero */
+.hero-title,
+.hero-line,
+.hero-line-1,
+.hero-line-2 { font-family: var(--font-serif) !important; }
+
+/* Story headlines */
+.story-h2,
+.story-h3,
+.story-hero-quote,
+.story-lead { font-family: var(--font-serif) !important; }
+
+/* Record headlines */
+.rec-h2,
+.rec-h3 { font-family: var(--font-serif) !important; }
+
+/* Big numbers */
+.rec-big-num,
+.stat-card-num,
+.audit-top-num,
+.disc-num,
+.edu-num,
+.grade-value,
+.strength-card-num,
+.trait-num,
+.role-mini-num,
+.lr-h-num,
+.ts-cell strong,
+.im-num,
+.sira-logo-fallback { font-family: var(--font-serif) !important; }
+
+/* Times - PB board */
+.pb-tile-time,
+.pb-card-time { font-family: var(--font-serif) !important; }
+
+/* Times - Race table */
+.rt-time { font-family: var(--font-serif) !important; }
+
+/* Times - Long runs */
+.lr-dist { font-family: var(--font-serif) !important; }
+
+/* Times - Progression blocks */
+.prog-time { font-family: var(--font-serif) !important; }
+
+/* Times - Podiums */
+.podium-time { font-family: var(--font-serif) !important; }
+
+/* Times - Accordion */
+.acc-time { font-family: var(--font-serif) !important; }
+
+/* Times - Accordion stats */
+.acc-stats-row span { font-family: var(--font-serif) !important; }
+
+/* Times - Splits table */
+.splits-table td:nth-child(3),
+.splits-table td:nth-child(4) { font-family: var(--font-serif) !important; }
+
+/* Times - Yearly table data */
+.yearly-table td { font-family: var(--font-serif) !important; }
+
+/* Quotes and manifesto */
+.story-quote,
+.manifesto-block p,
+.realization p,
+.ambition p { font-family: var(--font-serif) !important; }
+
+/* Era names */
+.era-name { font-family: var(--font-serif) !important; }
+
+/* Explore card titles */
+.explore-card-title { font-family: var(--font-serif) !important; }
+
+/* Moment headings */
+.moment-text h3 { font-family: var(--font-serif) !important; }
+
+/* Footer brand name */
+.footer-brand-name { font-family: var(--font-serif) !important; }
+
+/* Work block titles */
+.work-block-title { font-family: var(--font-serif) !important; }
+
+/* Race card names */
+.race-card-name { font-family: var(--font-serif) !important; }
+
+/* Sira metric numbers */
+.sira-metric strong { font-family: var(--font-serif) !important; }
+
+/* Work stats numbers */
+.work-stats-strip strong { font-family: var(--font-serif) !important; }
+
+/* Podium race name */
+.podium-race { font-family: var(--font-serif) !important; }
+
+/* Prog block title */
+.prog-title { font-family: var(--font-serif) !important; }
+
+/* Acc splits title */
+.acc-splits-title { font-family: var(--font-serif) !important; }
+
+/* Resilience numbers */
+.resilience-num { font-family: var(--font-serif) !important; }
+
+/* Origin year */
+.origin-year { font-family: var(--font-serif) !important; }
+
+/* Era year */
+.era-year { font-family: var(--font-serif) !important; }
+
+/* Before/after state */
+.ba-state { font-family: var(--font-serif) !important; }
+
+/* SM value (sira meta) */
+.sm-value { font-family: var(--font-serif) !important; }
+
+/* Grade block value */
+.grade-value { font-family: var(--font-serif) !important; }
+
+/* Italic accents */
+.italic-accent,
+.hero-line em,
+em.italic-accent { font-family: var(--font-serif) !important; font-style: italic !important; }
+
+/* Language names */
+.lang-name { font-family: var(--font-serif) !important; }
+
+/* Acc title in accordion */
+.acc-title { font-family: var(--font-serif) !important; }
+
+/* Resilience h3 */
+.resilience-body h3 { font-family: var(--font-serif) !important; }
+
+/* ================================================================
+   INTER (--font-sans)
+   Everything else - body, nav, labels, buttons, descriptions
+   (already set by the * rule above, this is for clarity)
+   ================================================================ */
+
+/* Nav */
+.nav-logo,
+.nav-link { font-family: var(--font-sans) !important; }
+
+/* Eyebrows and labels */
+.eyebrow,
+.story-eyebrow,
+.section-tag,
+.disc-label,
+.pb-tile-dist,
+.audit-top-label,
+.disc-meta,
+.podium-date,
+.podium-detail,
+.podium-badge,
+.podium-link,
+.rt-podium-badge,
+.lr-badge,
+.im-label,
+.im-unit,
+.acc-tag,
+.acc-sub,
+.filter-btn,
+.vs-ok,
+.vs-warn,
+.vc-key,
+.verify-contact-tag,
+.footer-col-title,
+.footer-brand-tagline,
+.footer-bottom,
+.rec-hero-tag { font-family: var(--font-sans) !important; }
+
+/* Body text */
+.body-l,
+.body-m,
+.body-s,
+.story-body p,
+.work-block-text,
+.resilience-body p,
+.sira-survival p,
+.why-fed p { font-family: var(--font-sans) !important; }
+
+/* Buttons */
+.btn,
+.pb-tile-btn,
+.acc-strava-btn,
+.filter-btn,
+.hero-scroll-link { font-family: var(--font-sans) !important; }
+
+/* Table headers */
+.race-table th,
+.lr-table th,
+.yearly-table th,
+.verify-table th,
+.splits-table th { font-family: var(--font-sans) !important; }
+
+/* Race names in table */
+.rt-race,
+.rt-date,
+.rt-dist,
+.rt-num,
+.rt-place,
+.rt-country { font-family: var(--font-sans) !important; }
+
+/* Long run names */
+.lr-name { font-family: var(--font-sans) !important; }
+
+/* Verification table */
+.verify-table td { font-family: var(--font-sans) !important; }
+
+/* Footer list */
+.footer-list a,
+.footer-list span { font-family: var(--font-sans) !important; }
+
+/* Ticker */
+.ticker-track span { font-family: var(--font-sans) !important; }
+
+/* Meta */
+.meta-label { font-family: var(--font-sans) !important; }
+.meta-value { font-family: var(--font-serif) !important; }
+
+/* Hero meta */
+.hero-meta-text { font-family: var(--font-sans) !important; }
+
+/* Race card date */
+.race-card-date { font-family: var(--font-sans) !important; }
+
+/* Race card stats */
+.race-card-stats-row span { font-family: var(--font-sans) !important; }
+.race-card-stats-row strong { font-family: var(--font-serif) !important; }
+
+/* Race card note */
+.race-card-note { font-family: var(--font-sans) !important; }
+
+/* Country pills */
+.country-pill { font-family: var(--font-sans) !important; }
+
+/* Language level */
+.lang-level { font-family: var(--font-sans) !important; }
+
+/* Trait card */
+.trait-name,
+.trait-card p { font-family: var(--font-sans) !important; }
+
+/* Sira clients row */
+.sira-clients-row span { font-family: var(--font-serif) !important; }
+
+/* Sira meta label */
+.sm-label { font-family: var(--font-sans) !important; }
+
+/* Story contact */
+.sc-key { font-family: var(--font-sans) !important; }
+.sc-val { font-family: var(--font-sans) !important; }
+
+/* Before/after tag */
+.ba-tag { font-family: var(--font-sans) !important; }
+
+/* Broken leg note */
+.broken-leg-note p { font-family: var(--font-sans) !important; }
+
+/* Style note */
+.style-note p { font-family: var(--font-sans) !important; }
+
+/* France arc */
+.france-arc p { font-family: var(--font-sans) !important; }
+
+/* Failure item */
+.failure-text { font-family: var(--font-sans) !important; }
+
+/* Sira survival */
+.sira-survival h3 { font-family: var(--font-serif) !important; }
+
+/* Partners row */
+.partner-mini { font-family: var(--font-sans) !important; }
+
+/* Work block period */
+.work-block-period,
+.work-block-role,
+.work-block-sub { font-family: var(--font-sans) !important; }
+
+/* Loader */
+.loader-name { font-family: var(--font-sans) !important; }
+
+/* Print fab */
+.print-fab { font-family: var(--font-sans) !important; }
+
+/* Im context */
+.im-ctx-key { font-family: var(--font-sans) !important; }
+.im-ctx-val { font-family: var(--font-sans) !important; }
+
+/* Rec id */
+.rec-id-key { font-family: var(--font-sans) !important; }
+.rec-id-val { font-family: var(--font-sans) !important; }
+
+/* Podium detail */
+.podium-detail { font-family: var(--font-sans) !important; }
+
+/* Verify contact */
+.vc-val { font-family: var(--font-sans) !important; }
+
+/* Resilience date */
+.resilience-date { font-family: var(--font-sans) !important; }
+
+/* Moment date */
+.moment-date { font-family: var(--font-sans) !important; }
+
+/* Moment text p */
+.moment-text p { font-family: var(--font-sans) !important; }
+
+/* Sira block title */
+.sira-block-title { font-family: var(--font-serif) !important; }
+
+/* Sira metric span */
+.sira-metric span { font-family: var(--font-sans) !important; }
+
+/* Origin step p */
+.origin-step p { font-family: var(--font-sans) !important; }
+
+/* Era content p */
+.era-content p { font-family: var(--font-sans) !important; }
+

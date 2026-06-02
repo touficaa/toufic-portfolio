@@ -1,0 +1,948 @@
+﻿/* ================================================================
+   RACE PROOF PAGE STYLES
+   ================================================================ */
+
+/* === PROOF HERO === */
+.proof-hero {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 32px 100px;
+  overflow: hidden;
+}
+
+.proof-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/images/hero/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: grayscale(80%);
+  z-index: 0;
+}
+
+.proof-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 100%);
+  z-index: 1;
+}
+
+.proof-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+}
+
+.proof-hero-tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease) 1.6s forwards;
+}
+
+.proof-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(80px, 14vw, 200px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -5px;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 1s var(--ease) 1.8s forwards;
+}
+.proof-hero-title em {
+  color: var(--red);
+  font-style: italic;
+}
+
+.proof-hero-sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--grey-600);
+  max-width: 760px;
+  margin: 0 auto 48px;
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease) 2.1s forwards;
+}
+
+.proof-hero-meta {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  padding-top: 40px;
+  border-top: 1px solid var(--grey-200);
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease) 2.4s forwards;
+}
+.proof-hero-meta > div { text-align: center; }
+.proof-hero-meta strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.proof-hero-meta span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* === CHAPTER (reuse from profile-styles, with adjustments) === */
+.chapter {
+  padding: 120px 0;
+  background: var(--white);
+  position: relative;
+}
+.chapter-grey { background: var(--grey-50); }
+.chapter-dark {
+  background: var(--black);
+  color: var(--white);
+}
+.chapter-dark .chapter-title { color: var(--white); }
+.chapter-dark .chapter-sub { color: var(--grey-400); }
+
+.chapter-header {
+  margin-bottom: 56px;
+  max-width: 900px;
+}
+.chapter-num {
+  font-family: var(--font-serif);
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+.chapter-tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+.chapter-title {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.chapter-sub {
+  font-size: 16px;
+  color: var(--grey-600);
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+/* === SECTION 01 - IDENTITY VERIFY === */
+.identity-verify-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.identity-card {
+  padding: 28px 24px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 4px;
+  transition: all 0.3s var(--ease);
+}
+.identity-card:hover {
+  border-color: var(--red);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+.identity-card-link:hover .iv-link {
+  color: var(--red);
+}
+.iv-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.iv-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+}
+.iv-link {
+  font-size: 14px;
+  word-break: break-all;
+  transition: color 0.3s ease;
+}
+
+/* === SECTION 02 - AUDIT === */
+.audit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.audit-card {
+  padding: 36px 28px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 4px;
+  transition: all 0.4s var(--ease);
+}
+.audit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border-color: var(--grey-300);
+}
+.audit-card-dark {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.audit-card-dark .audit-detail { color: var(--grey-400); }
+.audit-disc {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.audit-num {
+  font-family: var(--font-serif);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.audit-unit {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  margin-top: 8px;
+  font-weight: 600;
+}
+.audit-card-dark .audit-unit { color: var(--grey-400); }
+.audit-detail {
+  font-size: 12px;
+  color: var(--grey-600);
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.audit-note {
+  padding: 32px 40px;
+  background: var(--white);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+}
+.audit-note-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.audit-note p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey-700);
+}
+
+/* === SECTION 03 - RACE TABLE === */
+.filter-bar {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  background: var(--grey-50);
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+.filter-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 8px;
+}
+.filter-btn {
+  padding: 8px 16px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-btn:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+.filter-btn.filter-active,
+.filter-btn.filter-podium-active {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.race-table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 4px;
+}
+.race-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.race-table thead {
+  background: var(--black);
+  color: var(--white);
+}
+.race-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.race-table tbody tr {
+  border-bottom: 1px solid var(--grey-200);
+  transition: all 0.2s ease;
+}
+.race-table tbody tr:hover {
+  background: var(--grey-50);
+}
+.race-table tbody tr[data-podium="true"] {
+  background: rgba(220, 38, 38, 0.03);
+}
+.race-table tbody tr[data-podium="true"]:hover {
+  background: rgba(220, 38, 38, 0.08);
+}
+.race-table td {
+  padding: 16px 20px;
+  color: var(--grey-700);
+}
+.race-table td:nth-child(1) {
+  font-weight: 700;
+  color: var(--black);
+}
+.race-table td:nth-child(3) {
+  font-weight: 600;
+  color: var(--black);
+}
+.podium-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.strava-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--black);
+  color: var(--white) !important;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.strava-btn:hover {
+  background: var(--red);
+  transform: translateY(-2px);
+}
+
+.table-summary {
+  margin-top: 16px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* === SECTION 04 - PB VERIFY === */
+.pb-verify-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.pb-verify-card {
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 4px;
+  transition: all 0.4s var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+.pb-verify-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  border-color: var(--red);
+}
+.pbv-distance {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.pbv-time {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.pbv-source {
+  padding: 16px 0;
+  border-top: 1px solid var(--grey-200);
+  flex: 1;
+}
+.pbv-label {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.pbv-race {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.pbv-date {
+  font-size: 12px;
+  color: var(--grey-500);
+}
+
+.strava-btn-large {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.strava-btn-large:hover {
+  background: var(--red);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+}
+
+/* === SECTION 05 - FEATURED RACES === */
+.featured-stack {
+  display: grid;
+  gap: 24px;
+}
+.featured-race {
+  padding: 40px 48px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 4px;
+  transition: all 0.4s var(--ease);
+}
+.featured-race:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  border-color: var(--grey-300);
+}
+.featured-race-dark {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.featured-race-dark .fr-note { color: var(--grey-300); }
+.featured-race-dark .fr-date { color: var(--grey-400); }
+
+.fr-header {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.fr-num {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+}
+.fr-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.fr-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.fr-date {
+  font-size: 13px;
+  color: var(--grey-600);
+}
+.fr-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--grey-200);
+  border-bottom: 1px solid var(--grey-200);
+  margin-bottom: 16px;
+}
+.featured-race-dark .fr-stats { border-color: rgba(255,255,255,0.15); }
+.fr-stats > div { display: flex; flex-direction: column; }
+.fr-stats strong {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.fr-stats span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.featured-race-dark .fr-stats span { color: var(--grey-400); }
+.fr-note {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--grey-700);
+  font-style: italic;
+}
+
+.diplom-block {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.diplom-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.diplom-placeholder {
+  height: 240px;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* === SECTION 06 - PRAGUE SPLITS === */
+.splits-wrap {
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.splits-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--white);
+}
+.splits-tbl thead {
+  background: rgba(220,38,38,0.2);
+}
+.splits-tbl th {
+  padding: 20px 24px;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--red);
+}
+.splits-tbl td {
+  padding: 18px 24px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.splits-tbl td:first-child {
+  font-weight: 700;
+  color: var(--white);
+}
+.splits-tbl tr.splits-finish {
+  background: rgba(220,38,38,0.15);
+}
+.splits-tbl tr.splits-finish td {
+  font-weight: 700;
+  color: var(--white);
+  font-size: 16px;
+}
+
+.splits-note {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey-400);
+  font-style: italic;
+  max-width: 800px;
+}
+
+/* === SECTION 07 - MEDIA === */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.media-card {
+  padding: 40px 48px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 4px;
+  transition: all 0.4s var(--ease);
+}
+.media-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+.media-card-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.media-card-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.media-card-date {
+  font-size: 12px;
+  color: var(--grey-500);
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+.media-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey-700);
+  margin-bottom: 16px;
+}
+.media-link-placeholder {
+  padding: 12px 16px;
+  background: var(--grey-100);
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.strava-media-note {
+  padding: 28px 40px;
+  background: var(--grey-50);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+}
+.smn-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.strava-media-note p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey-700);
+}
+
+/* === SECTION 08 - IRONMAN PROOF === */
+.ironman-proof-card {
+  background: var(--black);
+  color: var(--white);
+  padding: 56px 64px;
+  border-radius: 4px;
+}
+.ipc-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.ipc-name {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+}
+.ipc-date {
+  font-size: 14px;
+  color: var(--grey-400);
+  margin-bottom: 32px;
+}
+.ipc-distances {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 28px 0;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  margin-bottom: 28px;
+}
+.ipc-distances > div { display: flex; flex-direction: column; }
+.ipc-distances strong {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.ipc-distances span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--grey-400);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.ipc-context {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--grey-300);
+  margin-bottom: 28px;
+  font-style: italic;
+}
+.ipc-pending {
+  padding: 24px 28px;
+  background: rgba(220,38,38,0.15);
+  border-radius: 4px;
+}
+.pending-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.ipc-pending div:last-child {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--grey-300);
+}
+
+/* === SECTION 09 - VERIFY SOURCES === */
+.verify-sources {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.vs-block {
+  padding: 32px 36px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  border-left: 3px solid var(--red);
+}
+.vs-num {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.vs-block h3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+.vs-block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey-300);
+  margin-bottom: 12px;
+}
+.vs-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 18px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.vs-link:hover {
+  background: var(--white);
+  color: var(--red);
+}
+.vs-list {
+  list-style: none;
+  margin-top: 8px;
+}
+.vs-list li {
+  padding: 6px 0;
+  font-size: 13px;
+  color: var(--grey-300);
+  position: relative;
+  padding-left: 16px;
+}
+.vs-list li::before {
+  content: '·';
+  color: var(--red);
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.verify-contact {
+  padding: 40px 48px;
+  background: rgba(220,38,38,0.1);
+  border-radius: 4px;
+  margin-bottom: 48px;
+}
+.vc-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.vc-grid {
+  display: grid;
+  gap: 12px;
+}
+.vc-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+}
+.vc-key {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.vc-val { color: var(--grey-300); }
+.vc-link:hover { color: var(--white); }
+
+.closing-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .identity-verify-grid,
+  .audit-grid,
+  .pb-verify-grid { grid-template-columns: repeat(2, 1fr); }
+  .fr-header { grid-template-columns: 50px 1fr; }
+  .fr-header > a { grid-column: 1 / -1; justify-self: start; }
+  .fr-stats { grid-template-columns: repeat(2, 1fr); }
+  .media-grid,
+  .verify-sources { grid-template-columns: 1fr; }
+  .ipc-distances { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .chapter { padding: 80px 0; }
+  .chapter-num { font-size: 56px; }
+  .proof-hero-meta { gap: 24px; }
+  .proof-hero-meta strong { font-size: 36px; }
+  .identity-verify-grid,
+  .audit-grid,
+  .pb-verify-grid { grid-template-columns: 1fr; }
+  .featured-race { padding: 28px; }
+  .ironman-proof-card { padding: 36px 28px; }
+  .ipc-name { font-size: 32px; }
+  .vc-row { grid-template-columns: 1fr; gap: 4px; }
+  .closing-actions { flex-direction: column; align-items: stretch; }
+  .fr-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .race-table { font-size: 11px; }
+  .race-table th, .race-table td { padding: 12px 10px; }
+}

@@ -1,0 +1,101 @@
+﻿====================================================
+TOUFIC PORTFOLIO - HOW TO ADD PHOTOS
+====================================================
+
+This folder structure is built to match the website design.
+Drop your photos into the matching folders below.
+
+----------------------------------------------------
+FOLDER: hero/
+----------------------------------------------------
+PURPOSE: Hero portrait shots (top of Home and Story pages)
+RECOMMENDED: 2-3 vertical photos, high quality
+NAMING:
+  - hero-main.jpg      Main portrait (used on Home)
+  - hero-story.jpg     Story page portrait (more intimate)
+  - hero-action.jpg    Action shot (optional)
+
+----------------------------------------------------
+FOLDER: races/
+----------------------------------------------------
+PURPOSE: Race-specific photos for race cards
+RECOMMENDED: 6-10 photos
+NAMING (match race names):
+  - beirut-marathon.jpg
+  - prague-marathon.jpg
+  - montpellier.jpg
+  - envolez-vous.jpg
+  - allure-bleue.jpg
+  - ironman-warsaw.jpg
+
+----------------------------------------------------
+FOLDER: gallery/
+----------------------------------------------------
+PURPOSE: General gallery photos (Story page)
+RECOMMENDED: 10-20 of your best shots
+NAMING: 1.jpg, 2.jpg, 3.jpg, etc.
+
+----------------------------------------------------
+FOLDER: podiums/
+----------------------------------------------------
+PURPOSE: Podium and medal photos
+NAMING:
+  - podium-isf-2023.jpg
+  - podium-beirut-2025.jpg
+  - podium-barja-2025.jpg
+  - podium-envolez-2026.jpg
+  - podium-allure-2026.jpg
+
+----------------------------------------------------
+FOLDER: sira/
+----------------------------------------------------
+PURPOSE: Sira company photos (Story page)
+RECOMMENDED: 3-6 photos
+NAMING:
+  - sira-team.jpg      Team photo
+  - sira-workshop.jpg  Workshop photo
+  - sira-event.jpg     Event photo
+
+----------------------------------------------------
+FOLDER: training/
+----------------------------------------------------
+PURPOSE: Training, long runs, gym photos
+NAMING:
+  - training-1.jpg, training-2.jpg, etc.
+
+----------------------------------------------------
+FOLDER: travel/
+----------------------------------------------------
+PURPOSE: Travel photos (Lebanon, France, mother trip)
+NAMING:
+  - travel-lebanon.jpg
+  - travel-france.jpg
+  - travel-geneva.jpg
+
+----------------------------------------------------
+FOLDER: ../logos/
+----------------------------------------------------
+PURPOSE: Brand/partner logos
+RECOMMENDED FORMAT: PNG with transparent background
+NAMING:
+  - sira.png
+  - ray.png
+  - mediascaling.png
+  - heracles.png
+  - roseup.png
+  - leklub.png
+
+====================================================
+IMPORTANT NOTES
+====================================================
+
+1. Use lowercase for all filenames
+2. Use hyphens instead of spaces (race-name.jpg, not "Race Name.jpg")
+3. JPG format for photos, PNG for logos
+4. Max 2MB per photo (compress at tinyjpg.com if needed)
+5. Vertical photos work best for hero shots
+6. Horizontal photos work best for gallery and race cards
+
+After adding photos, refresh your browser to see them appear.
+The website is designed to gracefully show placeholders for any
+missing photos, so you can add them in batches at your own pace.

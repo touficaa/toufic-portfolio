@@ -1,0 +1,770 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRONMAN 70.3 Warsaw — Toufic Abou Ali</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="ironman.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-content">
+    <div class="loader-mark"></div>
+    <div class="loader-name">WARSAW 70.3</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="dot"></span>
+      <span>TOUFIC ABOU ALI</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link">Profile</a></li>
+      <li><a href="record.html" class="nav-link">Record</a></li>
+      <li><a href="ironman.html" class="nav-link active">Warsaw 70.3</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO — title only, no status badge ===== -->
+<section class="im-hero">
+  <div class="container-narrow">
+    <div class="im-hero-tag">— Document 03 of 03 · IRONMAN 70.3 Warsaw Media Pack</div>
+    <h1 class="im-hero-title">
+      IRONMAN<br>70.3<br><em>Warsaw.</em>
+    </h1>
+    <div class="im-hero-meta">
+      <div class="im-meta-cell">
+        <span class="im-meta-key">Race Date</span>
+        <span class="im-meta-val">June 7, 2026</span>
+      </div>
+      <div class="im-meta-cell">
+        <span class="im-meta-key">Location</span>
+        <span class="im-meta-val">Warsaw, Poland</span>
+      </div>
+      <div class="im-meta-cell">
+        <span class="im-meta-key">Athlete Age</span>
+        <span class="im-meta-val">19 — 7 days before turning 20</span>
+      </div>
+      <div class="im-meta-cell">
+        <span class="im-meta-key">After Prague</span>
+        <span class="im-meta-val">35 days after 2nd marathon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RACE FORMAT ===== -->
+<section class="im-section" id="format">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">Race Format</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">Half Ironman · 113 km total</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
+      The race. <em class="italic-accent">113 km.</em>
+    </h2>
+
+    <div class="im-format-grid reveal-stagger">
+
+      <div class="im-format-card">
+        <div class="im-format-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12z"/>
+            <path d="M12 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+            <path d="M6.93 17c.55-1.77 2.17-3 4.07-3h2c1.9 0 3.52 1.23 4.07 3"/>
+          </svg>
+        </div>
+        <div class="im-format-num">1.9</div>
+        <div class="im-format-unit">km</div>
+        <div class="im-format-label">Swim</div>
+        <p class="im-format-note">Open water · Vistula River · Warsaw</p>
+      </div>
+
+      <div class="im-format-plus">+</div>
+
+      <div class="im-format-card">
+        <div class="im-format-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="5.5" cy="17.5" r="3.5"/>
+            <circle cx="18.5" cy="17.5" r="3.5"/>
+            <path d="M15 6a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/>
+            <path d="M12 17.5V13l-3.5-3 4.5-4 2.5 3H21"/>
+            <path d="M5.5 14L9 11.5"/>
+          </svg>
+        </div>
+        <div class="im-format-num">90</div>
+        <div class="im-format-unit">km</div>
+        <div class="im-format-label">Bike</div>
+        <p class="im-format-note">Road cycling · S-Works Shiv Di2</p>
+      </div>
+
+      <div class="im-format-plus">+</div>
+
+      <div class="im-format-card">
+        <div class="im-format-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 4a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/>
+            <path d="M7 20l4-8 3 3 2-4 3 2"/>
+            <path d="M7 15l2-3 2 2"/>
+          </svg>
+        </div>
+        <div class="im-format-num">21.1</div>
+        <div class="im-format-unit">km</div>
+        <div class="im-format-label">Run</div>
+        <p class="im-format-note">Half marathon finish · Warsaw city</p>
+      </div>
+
+      <div class="im-format-equals">=</div>
+
+      <div class="im-format-card im-format-total">
+        <div class="im-format-icon-wrap" style="background:rgba(255,255,255,0.15);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <div class="im-format-num">113</div>
+        <div class="im-format-unit">km</div>
+        <div class="im-format-label">Total</div>
+        <p class="im-format-note">First triathlon · First Half Ironman · Age 19</p>
+      </div>
+
+    </div>
+
+    <!-- Context — 4 clean panels -->
+    <div class="im-context-panels reveal-stagger" style="margin-top: 56px;">
+      <div class="im-ctx-panel">
+        <div class="im-ctx-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/></svg>
+        </div>
+        <span class="im-ctx-label">Race type</span>
+        <span class="im-ctx-value">First triathlon · First Half Ironman</span>
+      </div>
+      <div class="im-ctx-panel">
+        <div class="im-ctx-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+        </div>
+        <span class="im-ctx-label">Previous race</span>
+        <span class="im-ctx-value">Prague Marathon 3:42:37 · 35 days before</span>
+      </div>
+      <div class="im-ctx-panel">
+        <div class="im-ctx-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
+        </div>
+        <span class="im-ctx-label">Training while</span>
+        <span class="im-ctx-value">Running Sira · University · France · Age 19</span>
+      </div>
+      <div class="im-ctx-panel">
+        <div class="im-ctx-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/></svg>
+        </div>
+        <span class="im-ctx-label">Result</span>
+        <span class="im-ctx-value" style="color:var(--red);font-style:italic;">To be added after June 7</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGISTRATION PROOF ===== -->
+<section class="im-section im-section-grey" id="proof">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">Registration Proof</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">Enea IRONMAN 70.3 Warsaw</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      Officially <em class="italic-accent">registered.</em>
+    </h2>
+
+    <!-- Athlete info — horizontal strip -->
+    <div class="im-reg-strip reveal">
+      <div class="im-reg-cell">
+        <span class="im-reg-key">Athlete</span>
+        <span class="im-reg-val">Toufic Abou Ali</span>
+      </div>
+      <div class="im-reg-cell">
+        <span class="im-reg-key">Date of Birth</span>
+        <span class="im-reg-val">14 June 2006</span>
+      </div>
+      <div class="im-reg-cell">
+        <span class="im-reg-key">Nationality</span>
+        <span class="im-reg-val">Lebanon 🇱🇧</span>
+      </div>
+      <div class="im-reg-cell">
+        <span class="im-reg-key">Residence</span>
+        <span class="im-reg-val">France 🇫🇷</span>
+      </div>
+      <div class="im-reg-cell">
+        <span class="im-reg-key">Location</span>
+        <span class="im-reg-val">Montpellier, 34000</span>
+      </div>
+      <div class="im-reg-cell im-reg-cell-status">
+        <span class="im-reg-key">Status</span>
+        <span class="im-reg-status">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Registered
+        </span>
+      </div>
+    </div>
+
+    <!-- Products + screenshots side by side -->
+    <div class="im-reg-grid reveal">
+      <div class="im-products-block">
+        <span class="im-products-label">— Race registration breakdown</span>
+        <div class="im-products-table">
+          <div class="im-product-row">
+            <span class="im-product-name">Starting kit · Enea IRONMAN 70.3 Warsaw</span>
+            <span class="im-product-price">400.00 EUR</span>
+          </div>
+          <div class="im-product-row">
+            <span class="im-product-name">Daily license · Polish Triathlon Association</span>
+            <span class="im-product-price">4.60 EUR</span>
+          </div>
+          <div class="im-product-row">
+            <span class="im-product-name">Medal engraving</span>
+            <span class="im-product-price">9.50 EUR</span>
+          </div>
+          <div class="im-product-row im-product-last">
+            <span class="im-product-name">Finisher's photo + video</span>
+            <span class="im-product-price">49.00 EUR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="im-screenshots-block">
+        <div class="im-screenshot">
+          <img src="assets/images/proof/ironman-registration-1.jpg" alt="IRONMAN Registration"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="im-screenshot-placeholder">
+            <span>Registration Screenshot</span>
+            <small>assets/images/proof/ironman-registration-1.jpg</small>
+          </div>
+          <p class="im-screenshot-label">Athlete confirmation · Name · DOB · Nationality</p>
+        </div>
+        <div class="im-screenshot">
+          <img src="assets/images/proof/ironman-registration-2.jpg" alt="Products Confirmation"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="im-screenshot-placeholder">
+            <span>Products Screenshot</span>
+            <small>assets/images/proof/ironman-registration-2.jpg</small>
+          </div>
+          <p class="im-screenshot-label">Products confirmed · Starting kit · Finisher media</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RACE BIKE ===== -->
+<section class="im-section" id="bike">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">Race Bike</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">Confirmed · IRONMAN Warsaw Expo · Sportmoc</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      Race-ready. <em class="italic-accent">Confirmed.</em>
+    </h2>
+
+    <div class="im-bike-layout reveal">
+
+      <!-- Photo -->
+      <div class="im-bike-photo-wrap">
+        <img src="assets/images/bike/specialized-shiv.jpg" alt="Specialized S-Works Shiv Di2"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="im-bike-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/>
+            <path d="M15 6a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/>
+            <path d="M12 17.5V13l-3.5-3 4.5-4 2.5 3H21"/>
+          </svg>
+          <span>Specialized S-Works Shiv Di2</span>
+          <small>assets/images/bike/specialized-shiv.jpg</small>
+        </div>
+      </div>
+
+      <!-- Details panel -->
+      <div class="im-bike-panel">
+        <div class="im-bike-header">
+          <h3 class="im-bike-name">Specialized S-Works Shiv Di2</h3>
+          <span class="im-bike-type">Triathlon / TT Bike · Size M</span>
+        </div>
+
+        <div class="im-bike-specs">
+          <div class="im-spec-row"><span class="im-spec-key">Bike type</span><span class="im-spec-val">Carbon Triathlon / Time Trial</span></div>
+          <div class="im-spec-row"><span class="im-spec-key">Groupset</span><span class="im-spec-val">Shimano Di2 Electronic</span></div>
+          <div class="im-spec-row"><span class="im-spec-key">Size</span><span class="im-spec-val">M — confirmed for 179–180 cm / 79 cm inseam</span></div>
+          <div class="im-spec-row"><span class="im-spec-key">Wheels</span><span class="im-spec-val">Roval Triathlon Carbon Deep Section</span></div>
+          <div class="im-spec-row"><span class="im-spec-key">Rental from</span><span class="im-spec-val">Sportmoc — IRONMAN Poland official partner</span></div>
+          <div class="im-spec-row"><span class="im-spec-key">Pickup</span><span class="im-spec-val">Friday June 5 · Race Expo · Warsaw</span></div>
+          <div class="im-spec-row"><span class="im-spec-key">Return</span><span class="im-spec-val">Sunday June 7 · After race finish</span></div>
+        </div>
+
+        <div class="im-bike-included">
+          <span class="im-included-label">— Confirmed race setup included</span>
+          <div class="im-included-grid">
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Shimano SPD-SL pedals
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Bottle cages (×2)
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Bike bottles (×2)
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Saddle bag
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Spare tube / repair kit
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              CO₂ cartridge
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Mini pump
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Multitool
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Bike computer mount
+            </div>
+            <div class="im-inc-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="im-inc-check"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Quick bike fit on site
+            </div>
+          </div>
+        </div>
+
+        <div class="im-bike-confirm-bar">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Confirmed by Sportmoc — IRONMAN Warsaw 2026
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY THIS MATTERS ===== -->
+<section class="im-section im-section-dark" id="why">
+  <div class="container-narrow">
+    <div class="section-divider reveal" style="border-color:rgba(255,255,255,0.1);">
+      <span class="section-tag" style="color:var(--red);">Why This Matters</span>
+      <div class="section-divider-line" style="background:rgba(255,255,255,0.1);"></div>
+      <span class="section-tag" style="color:rgba(255,255,255,0.3);">The story behind the race</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 48px; color:var(--white);">
+      More than <em class="italic-accent">a race.</em>
+    </h2>
+
+    <p class="im-why-lead reveal">This is more than a personal endurance challenge. A 19-year-old Lebanese founder, student, and athlete based in France — attempting IRONMAN 70.3 before turning 20 while managing a 25-person company, completing university exams, and training across three disciplines with zero coach and zero sponsor.</p>
+
+    <div class="im-why-cards reveal-stagger">
+      <div class="im-why-card">
+        <div class="im-why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 21h18M3 7l9-4 9 4M4 7v14M20 7v14M8 10v4M12 10v4M16 10v4"/>
+          </svg>
+        </div>
+        <h4>Lebanese Youth</h4>
+        <p>Representing a generation that builds and competes under pressure — wars, financial crisis, personal hardship. Still showing up.</p>
+      </div>
+      <div class="im-why-card">
+        <div class="im-why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </div>
+        <h4>Diaspora Story</h4>
+        <p>Born in Lebanon. Based in France. Racing in Poland. The Lebanese flag carried across borders — origin does not limit ambition.</p>
+      </div>
+      <div class="im-why-card">
+        <div class="im-why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <h4>Historical Note</h4>
+        <p>Potentially one of the youngest Lebanese athletes to complete an IRONMAN 70.3 — pending official verification.</p>
+      </div>
+    </div>
+
+    <div class="im-quote reveal">
+      <p>"People told me to cancel. Money was tight. Business was hard. Exams were close. I didn't cancel."</p>
+      <span>— Toufic Abou Ali · May 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROAD TO WARSAW ===== -->
+<section class="im-section im-section-grey" id="road">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">Road to Warsaw</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">2026 season · 5 events · 13 weeks</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
+      The build-up. <em class="italic-accent">Every race.</em>
+    </h2>
+
+    <div class="im-road-timeline reveal">
+
+      <div class="im-road-item">
+        <div class="im-road-dot"></div>
+        <div class="im-road-content-wrap">
+          <div class="im-road-left">
+            <span class="im-road-date">01 Feb 2026</span>
+            <span class="im-road-badge">Podium</span>
+          </div>
+          <div class="im-road-right">
+            <h4>Envolez Vous 2026 — 10K</h4>
+            <p>39:42 · 10K Personal Best · 3rd ESM · 23rd Overall · France</p>
+            <a href="https://www.strava.com/activities/17249976869" target="_blank" class="im-road-link">Strava ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="im-road-item">
+        <div class="im-road-dot"></div>
+        <div class="im-road-content-wrap">
+          <div class="im-road-left">
+            <span class="im-road-date">21 Feb 2026</span>
+            <span class="im-road-badge">Podium</span>
+          </div>
+          <div class="im-road-right">
+            <h4>Allure Bleue Race — 5K</h4>
+            <p>19:48 · 5K Personal Best · 2nd Overall · France</p>
+            <a href="https://www.strava.com/activities/17472316459" target="_blank" class="im-road-link">Strava ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="im-road-item">
+        <div class="im-road-dot"></div>
+        <div class="im-road-content-wrap">
+          <div class="im-road-left">
+            <span class="im-road-date">19 Apr 2026</span>
+            <span class="im-road-badge">Top 10 U23</span>
+          </div>
+          <div class="im-road-right">
+            <h4>Montpellier Run Festival — Half Marathon</h4>
+            <p>1:29:26 · Half Marathon PB · 9th U23 · 140th of 4,516 · Top 3.1% · France</p>
+            <a href="https://www.strava.com/activities/18175504201" target="_blank" class="im-road-link">Strava ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="im-road-item">
+        <div class="im-road-dot"></div>
+        <div class="im-road-content-wrap">
+          <div class="im-road-left">
+            <span class="im-road-date">03 May 2026</span>
+            <span class="im-road-badge im-road-badge-dark">Marathon PB</span>
+          </div>
+          <div class="im-road-right">
+            <h4>Vodafone Prague Marathon</h4>
+            <p>3:42:37 · Marathon PB · 2,346th overall · Raced with injured left leg · Czech Republic</p>
+            <a href="https://www.strava.com/activities/18717374673" target="_blank" class="im-road-link">Strava ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="im-road-item im-road-item-final">
+        <div class="im-road-dot im-road-dot-red"></div>
+        <div class="im-road-content-wrap">
+          <div class="im-road-left">
+            <span class="im-road-date">07 Jun 2026</span>
+            <span class="im-road-badge im-road-badge-red">IRONMAN</span>
+          </div>
+          <div class="im-road-right">
+            <h4>IRONMAN 70.3 Warsaw</h4>
+            <p>113 km · First triathlon · First Half Ironman · Age 19 · 7 days before turning 20 · Poland</p>
+            <span class="im-road-pending">Result pending — June 7, 2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRAINING PROOF ===== -->
+<section class="im-section" id="training">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">Training Data</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">Strava export · Oct 2022 — Jun 2026</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
+      The work <em class="italic-accent">behind Warsaw.</em>
+    </h2>
+
+    <div class="im-training-grid reveal-stagger">
+      <div class="im-training-card">
+        <div class="im-training-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 4a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/>
+            <path d="M7 20l4-8 3 3 2-4 3 2"/>
+          </svg>
+        </div>
+        <div class="im-training-num"><span data-count="2164">0</span><span class="im-training-unit">km</span></div>
+        <div class="im-training-label">Running</div>
+        <div class="im-training-sub">201 activities · 182h 01min</div>
+      </div>
+      <div class="im-training-card">
+        <div class="im-training-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/>
+            <path d="M15 6a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/>
+            <path d="M12 17.5V13l-3.5-3 4.5-4 2.5 3H21"/>
+          </svg>
+        </div>
+        <div class="im-training-num"><span data-count="436">0</span><span class="im-training-unit">km</span></div>
+        <div class="im-training-label">Cycling</div>
+        <div class="im-training-sub">23 rides · 16h 53min</div>
+      </div>
+      <div class="im-training-card">
+        <div class="im-training-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12z"/>
+            <path d="M7 10c0-1.66 1.34-3 3-3"/>
+            <path d="M17 14c0 1.66-1.34 3-3 3"/>
+          </svg>
+        </div>
+        <div class="im-training-num"><span data-count="28.25">0</span><span class="im-training-unit">km</span></div>
+        <div class="im-training-label">Swimming</div>
+        <div class="im-training-sub">30 sessions · 18h 00min</div>
+      </div>
+      <div class="im-training-card im-training-dark">
+        <div class="im-training-icon" style="background:rgba(255,255,255,0.06);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <div class="im-training-num"><span data-count="256">0</span></div>
+        <div class="im-training-label">Total Activities</div>
+        <div class="im-training-sub">218 hours · Oct 2022 — Jun 2026</div>
+      </div>
+    </div>
+
+    <!-- PBs dark strip -->
+    <div class="im-pbs-strip reveal" style="margin-top: 40px;">
+      <div class="im-pb-cell">
+        <span class="im-pb-time">19:48</span>
+        <span class="im-pb-dist">5K PB</span>
+        <span class="im-pb-note">2nd Overall</span>
+      </div>
+      <div class="im-pb-divider"></div>
+      <div class="im-pb-cell">
+        <span class="im-pb-time">39:42</span>
+        <span class="im-pb-dist">10K PB</span>
+        <span class="im-pb-note">3rd ESM</span>
+      </div>
+      <div class="im-pb-divider"></div>
+      <div class="im-pb-cell">
+        <span class="im-pb-time">1:29:26</span>
+        <span class="im-pb-dist">Half Marathon PB</span>
+        <span class="im-pb-note">9th U23 · 140/4,516</span>
+      </div>
+      <div class="im-pb-divider"></div>
+      <div class="im-pb-cell im-pb-featured">
+        <span class="im-pb-time">3:42:37</span>
+        <span class="im-pb-dist">Marathon PB</span>
+        <span class="im-pb-note">35 days before Warsaw</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEDIA + SPONSORSHIP ===== -->
+<section class="im-section im-section-dark" id="media">
+  <div class="container-narrow">
+    <div class="section-divider reveal" style="border-color:rgba(255,255,255,0.1);">
+      <span class="section-tag" style="color:var(--red);">Media & Sponsorship</span>
+      <div class="section-divider-line" style="background:rgba(255,255,255,0.1);"></div>
+      <span class="section-tag" style="color:rgba(255,255,255,0.3);">Use freely</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 48px; color:var(--white);">
+      Support the <em class="italic-accent">journey.</em>
+    </h2>
+
+    <!-- Caption -->
+    <div class="im-caption-block reveal">
+      <span class="im-caption-tag">— Suggested caption</span>
+      <blockquote class="im-caption">19-year-old Lebanese student-athlete and Co-Founder &amp; Co-CEO of Sira, Toufic Abou Ali, will race IRONMAN 70.3 Warsaw on June 7, 2026 — just before turning 20 — representing Lebanese youth, discipline, ambition, and the diaspora abroad.</blockquote>
+    </div>
+
+    <!-- Sponsor cards -->
+    <div class="im-sponsor-cards reveal-stagger">
+      <div class="im-sponsor-card">
+        <div class="im-sponsor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <h4>Media Visibility</h4>
+        <p>Race photos and content featuring sponsor branding. Instagram presence with engaged athletic audience.</p>
+      </div>
+      <div class="im-sponsor-card">
+        <div class="im-sponsor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <h4>Brand Story</h4>
+        <p>Authentic Lebanese diaspora and youth story. Disciplined, achievement-driven narrative with global reach.</p>
+      </div>
+      <div class="im-sponsor-card">
+        <div class="im-sponsor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h4>Community Reach</h4>
+        <p>Access to Sira's 60,000-member community and Toufic's social presence across Lebanon, France, and the diaspora.</p>
+      </div>
+    </div>
+
+    <!-- Hashtags -->
+    <div class="im-hashtags reveal">
+      <span class="im-hashtag-label">— Hashtags</span>
+      <div class="im-hashtag-row">
+        <span>#IronmanWarsaw</span><span>#IRONMAN703</span><span>#LebaneseSport</span>
+        <span>#TouficAbouAli</span><span>#PressureIntoProof</span><span>#Lebanese</span>
+        <span>#Triathlon</span><span>#Warsaw2026</span>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="im-sponsor-contacts reveal">
+      <a href="https://www.instagram.com/touficaa/" target="_blank" class="im-sponsor-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+          <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+        </svg>
+        <span class="im-sc-label">Instagram</span>
+        <span class="im-sc-val">@touficaa</span>
+      </a>
+      <a href="https://www.linkedin.com/in/touficabouali" target="_blank" class="im-sponsor-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+          <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+          <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+        </svg>
+        <span class="im-sc-label">LinkedIn</span>
+        <span class="im-sc-val">touficabouali</span>
+      </a>
+      <a href="https://siracareers.com" target="_blank" class="im-sponsor-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+        </svg>
+        <span class="im-sc-label">Website</span>
+        <span class="im-sc-val">siracareers.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NAVIGATE ===== -->
+<section class="im-section" style="padding: 80px 0;">
+  <div class="container">
+    <div class="im-nav-cards reveal-stagger">
+      <a href="index.html" class="im-nav-card">
+        <span class="im-nav-tag">Document 01 of 03</span>
+        <h3>Athlete &amp; Founder Profile</h3>
+        <p>Bio · Story · Mission · Sira · Key Numbers · Contact</p>
+        <span class="im-nav-arrow">View profile →</span>
+      </a>
+      <a href="record.html" class="im-nav-card im-nav-dark">
+        <span class="im-nav-tag">Document 02 of 03</span>
+        <h3>Athletic Achievements &amp; Race Highlights</h3>
+        <p>25 races · 6 podiums · Full race register · PBs · Long runs · Strava export</p>
+        <span class="im-nav-arrow">View record →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Toufic Abou Ali</div>
+        <div class="footer-brand-tagline">Lebanese Endurance Athlete · 2026</div>
+        <p style="font-size:13px;line-height:1.6;color:var(--grey-400);max-width:380px;">IRONMAN 70.3 Warsaw · June 7, 2026 · Warsaw, Poland · Age 19</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Documents</div>
+        <ul class="footer-list">
+          <li><a href="index.html">01 — Athlete Profile</a></li>
+          <li><a href="record.html">02 — Athletic Record</a></li>
+          <li><a href="ironman.html">03 — Warsaw Media Pack</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-list">
+          <li><a href="https://siracareers.com" target="_blank">siracareers.com</a></li>
+          <li><a href="https://www.instagram.com/touficaa/" target="_blank">@touficaa</a></li>
+          <li><a href="https://www.strava.com/athletes/109556347" target="_blank">Strava</a></li>
+          <li><a href="https://www.linkedin.com/in/touficabouali" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Toufic Abou Ali</span>
+      <span>Document 03 of 03 · IRONMAN 70.3 Warsaw Media Pack</span>
+    </div>
+  </div>
+</footer>
+
+<button class="print-fab" onclick="window.print()" aria-label="Print">
+  <svg viewBox="0 0 24 24" fill="none">
+    <polyline points="6 9 6 2 18 2 18 9"/>
+    <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
+    <rect x="6" y="14" width="12" height="8"/>
+  </svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

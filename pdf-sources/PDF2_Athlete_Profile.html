@@ -1,0 +1,1408 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PDF 2 - Athlete Profile and Personal Story</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+@page { size: A4 portrait; margin: 0; }
+:root {
+  --black: #0A0A0A;
+  --red: #DC2626;
+  --grey-100: #F5F5F5;
+  --grey-200: #E5E5E5;
+  --grey-500: #737373;
+  --grey-700: #404040;
+}
+html, body {
+  background: #E5E5E5;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  height: 297mm;
+  padding: 20mm 18mm;
+  position: relative;
+  page-break-after: always;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  margin: 8mm 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.page:last-child { page-break-after: auto; }
+
+@media print {
+  html, body { background: #FFFFFF; padding: 0; margin: 0; }
+  body { display: block; }
+  .page { margin: 0; box-shadow: none; }
+}
+
+/* TYPOGRAPHY */
+.h-section { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 32pt; line-height: 1; letter-spacing: -1px; margin-bottom: 4mm; }
+.h-sub { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 9pt; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 8mm; }
+
+/* SECTION HEADER */
+.section-header { display: flex; align-items: flex-end; gap: 6mm; margin-bottom: 8mm; }
+.section-num { font-family: 'Playfair Display', serif; font-size: 14pt; color: var(--red); font-weight: 700; }
+.section-line { flex: 1; height: 1px; background: var(--grey-200); margin-bottom: 4mm; }
+
+/* PAGE FOOTER */
+.page-footer {
+  position: absolute;
+  bottom: 12mm;
+  left: 18mm;
+  right: 18mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  padding-top: 4mm;
+  border-top: 1px solid var(--grey-200);
+}
+
+/* ===== COVER ===== */
+.cover { padding: 0; }
+.cover-top {
+  padding: 20mm 18mm;
+  border-bottom: 1px solid var(--grey-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cover-mark {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  font-size: 9pt;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.cover-mark::before {
+  content: '';
+  width: 3mm;
+  height: 3mm;
+  background: var(--red);
+  border-radius: 50%;
+}
+.cover-doc-num {
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.cover-main {
+  flex: 1;
+  padding: 25mm 18mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cover-eyebrow {
+  font-size: 10pt;
+  letter-spacing: 4px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8mm;
+}
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 72pt;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  margin-bottom: 10mm;
+}
+.cover-title em { color: var(--red); font-style: italic; }
+.cover-subtitle {
+  font-size: 13pt;
+  color: var(--grey-700);
+  line-height: 1.5;
+  max-width: 150mm;
+}
+.cover-bottom {
+  padding: 12mm 18mm;
+  border-top: 1px solid var(--grey-200);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8mm;
+}
+.cover-stat-label {
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2mm;
+}
+.cover-stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ===== WHO I AM ===== */
+.who-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 8mm;
+  margin-top: 2mm;
+}
+.who-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 17pt;
+  line-height: 1.35;
+  font-style: italic;
+  margin-bottom: 6mm;
+  border-left: 3px solid var(--red);
+  padding-left: 5mm;
+}
+.who-quote-attr {
+  font-family: 'Inter', sans-serif;
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 3mm;
+}
+.who-paragraph {
+  font-size: 9.5pt;
+  line-height: 1.65;
+  color: var(--grey-700);
+  margin-bottom: 3.5mm;
+}
+.who-paragraph strong { color: var(--black); font-weight: 600; }
+.identity-block {
+  background: var(--grey-100);
+  padding: 5mm 6mm;
+  border-radius: 1mm;
+}
+.identity-title {
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 4mm;
+}
+.identity-row {
+  display: grid;
+  grid-template-columns: 28mm 1fr;
+  gap: 3mm;
+  padding: 2mm 0;
+  border-bottom: 1px solid var(--grey-200);
+}
+.identity-row:last-child { border-bottom: none; }
+.id-key {
+  font-size: 7.5pt;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.id-val {
+  font-size: 9pt;
+  font-weight: 500;
+  color: var(--black);
+}
+.lebanese-strip {
+  margin-top: 6mm;
+  background: var(--black);
+  color: #FFFFFF;
+  padding: 5mm 6mm;
+  border-radius: 1mm;
+  display: flex;
+  align-items: center;
+  gap: 4mm;
+}
+.lebanese-strip::before {
+  content: '';
+  width: 3mm;
+  height: 3mm;
+  background: var(--red);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.lebanese-strip-text {
+  font-size: 9pt;
+  line-height: 1.5;
+}
+
+/* ===== TRANSFORMATION ===== */
+.transform-hero {
+  display: grid;
+  grid-template-columns: 48mm 1fr;
+  gap: 6mm;
+  align-items: center;
+  margin-bottom: 6mm;
+  padding-bottom: 6mm;
+  border-bottom: 1px solid var(--grey-200);
+}
+.transform-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 54pt;
+  font-weight: 900;
+  line-height: 0.9;
+}
+.transform-age {
+  font-size: 9pt;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 2mm;
+}
+.transform-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 3mm;
+}
+.transform-lead {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: var(--grey-700);
+}
+.transform-body p {
+  font-size: 9.5pt;
+  line-height: 1.65;
+  color: var(--grey-700);
+  margin-bottom: 3.5mm;
+}
+.pull-quote {
+  margin: 5mm 0;
+  padding: 5mm 5mm 5mm 7mm;
+  border-left: 4px solid var(--red);
+  background: var(--grey-100);
+  font-family: 'Playfair Display', serif;
+  font-size: 14pt;
+  font-style: italic;
+  line-height: 1.35;
+}
+.before-after {
+  margin-top: 5mm;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 4mm;
+  align-items: center;
+}
+.ba-card {
+  padding: 4mm 5mm;
+  border: 1px solid var(--grey-200);
+  border-radius: 1mm;
+  text-align: center;
+}
+.ba-card-final {
+  background: var(--black);
+  color: #FFFFFF;
+  border: none;
+}
+.ba-label {
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2mm;
+}
+.ba-card-final .ba-label { color: rgba(255,255,255,0.6); }
+.ba-status {
+  font-family: 'Playfair Display', serif;
+  font-size: 13pt;
+  font-weight: 700;
+}
+.ba-arrow {
+  font-size: 18pt;
+  color: var(--red);
+}
+
+/* ===== ERAS ===== */
+.era-list {
+  display: grid;
+  gap: 3mm;
+}
+.era-card {
+  display: grid;
+  grid-template-columns: 16mm 32mm 1fr;
+  gap: 6mm;
+  padding: 4mm 0;
+  border-bottom: 1px solid var(--grey-200);
+  align-items: start;
+}
+.era-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+}
+.era-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 13pt;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.era-theme {
+  font-size: 8pt;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1mm;
+}
+.era-text {
+  font-size: 9pt;
+  line-height: 1.55;
+  color: var(--grey-700);
+}
+
+/* ===== PRINCIPLES ===== */
+.principles-lead {
+  font-family: 'Playfair Display', serif;
+  font-size: 18pt;
+  line-height: 1.3;
+  margin-bottom: 6mm;
+  font-style: italic;
+}
+.principles-lead em { color: var(--red); }
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+}
+.principle-card {
+  padding: 5mm;
+  border: 1px solid var(--grey-200);
+  border-radius: 1mm;
+}
+.principle-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 3mm;
+}
+.principle-title {
+  font-size: 11pt;
+  font-weight: 700;
+  margin-bottom: 2mm;
+}
+.principle-desc {
+  font-size: 9pt;
+  line-height: 1.5;
+  color: var(--grey-700);
+  font-style: italic;
+}
+
+/* ===== TRAINING ===== */
+.training-lead {
+  font-size: 10pt;
+  line-height: 1.6;
+  color: var(--grey-700);
+  margin-bottom: 5mm;
+}
+.volume-block {
+  background: var(--grey-100);
+  padding: 5mm 6mm;
+  border-radius: 1mm;
+  margin-bottom: 5mm;
+}
+.volume-title {
+  font-size: 9pt;
+  letter-spacing: 1.5px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 4mm;
+}
+.volume-row {
+  display: grid;
+  grid-template-columns: 28mm 1fr 26mm;
+  gap: 4mm;
+  align-items: center;
+  margin-bottom: 2mm;
+}
+.volume-label {
+  font-size: 9pt;
+  font-weight: 600;
+}
+.volume-bar-track {
+  height: 4mm;
+  background: #FFFFFF;
+  border-radius: 0.5mm;
+  overflow: hidden;
+  border: 1px solid var(--grey-200);
+}
+.volume-bar-fill {
+  height: 100%;
+  background: var(--red);
+}
+.volume-value {
+  font-size: 8.5pt;
+  color: var(--grey-700);
+  text-align: right;
+  font-weight: 500;
+}
+.pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+  margin-bottom: 5mm;
+}
+.pillar-card {
+  padding: 4mm 5mm;
+  border-left: 3px solid var(--red);
+  background: var(--grey-100);
+  border-radius: 0.5mm;
+}
+.pillar-title {
+  font-size: 10pt;
+  font-weight: 700;
+  margin-bottom: 1mm;
+}
+.pillar-desc {
+  font-size: 8.5pt;
+  color: var(--grey-700);
+  line-height: 1.5;
+}
+.strength-strip {
+  padding: 5mm 6mm;
+  background: var(--black);
+  color: #FFFFFF;
+  border-radius: 1mm;
+}
+.strength-strip-title {
+  font-size: 9pt;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 3mm;
+}
+.strength-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+}
+.strength-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 22pt;
+  font-weight: 700;
+  line-height: 1;
+}
+.strength-label {
+  font-size: 8pt;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1mm;
+}
+
+/* ===== IRONMAN ===== */
+.ironman-card {
+  background: var(--black);
+  color: #FFFFFF;
+  padding: 7mm 8mm;
+  border-radius: 1mm;
+  margin-bottom: 5mm;
+}
+.ironman-tag {
+  font-size: 8pt;
+  letter-spacing: 3px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 3mm;
+}
+.ironman-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 28pt;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 3mm;
+}
+.ironman-meta {
+  font-size: 10pt;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 5mm;
+}
+.ironman-distances {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4mm;
+  padding-top: 4mm;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.ironman-dist-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 16pt;
+  font-weight: 700;
+  line-height: 1;
+}
+.ironman-dist-label {
+  font-size: 7.5pt;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1mm;
+}
+.future-goals {
+  padding: 5mm 6mm;
+  border: 1px solid var(--grey-200);
+  border-radius: 1mm;
+}
+.future-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 13pt;
+  font-weight: 700;
+  margin-bottom: 3mm;
+}
+.future-list {
+  list-style: none;
+}
+.future-list li {
+  font-size: 9pt;
+  line-height: 1.6;
+  color: var(--grey-700);
+  padding: 1.5mm 0;
+  border-bottom: 1px dashed var(--grey-200);
+  display: flex;
+  gap: 4mm;
+}
+.future-list li::before {
+  content: '>';
+  color: var(--red);
+  font-weight: 700;
+}
+.future-list li:last-child { border-bottom: none; }
+
+/* ===== BEYOND ATHLETICS ===== */
+.beyond-pillars {
+  display: grid;
+  gap: 3.5mm;
+  margin-bottom: 5mm;
+}
+.beyond-card {
+  padding: 4mm 5mm;
+  border: 1px solid var(--grey-200);
+  border-left: 3px solid var(--red);
+  border-radius: 1mm;
+}
+.beyond-tag {
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2mm;
+}
+.beyond-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 13pt;
+  font-weight: 700;
+  margin-bottom: 2mm;
+}
+.beyond-list {
+  list-style: none;
+}
+.beyond-list li {
+  font-size: 8.5pt;
+  line-height: 1.55;
+  color: var(--grey-700);
+  padding: 1mm 0;
+}
+.beyond-list li strong { color: var(--black); font-weight: 600; }
+
+/* ===== RESILIENCE ===== */
+.resilience-list {
+  display: grid;
+  gap: 0;
+}
+.resilience-row {
+  display: grid;
+  grid-template-columns: 32mm 1fr;
+  gap: 6mm;
+  padding: 4mm 0;
+  border-bottom: 1px solid var(--grey-200);
+}
+.resilience-row:last-child { border-bottom: none; }
+.res-num {
+  display: flex;
+  align-items: baseline;
+  gap: 3mm;
+  flex-wrap: wrap;
+}
+.res-num-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 24pt;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+}
+.res-num-year {
+  font-size: 7.5pt;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+}
+.res-title {
+  font-size: 10pt;
+  font-weight: 700;
+  margin-bottom: 1mm;
+}
+.res-text {
+  font-size: 8.5pt;
+  line-height: 1.5;
+  color: var(--grey-700);
+}
+
+/* ===== CLOSING ===== */
+.manifesto {
+  font-family: 'Playfair Display', serif;
+  font-size: 17pt;
+  line-height: 1.4;
+  font-style: italic;
+  padding: 5mm 0 5mm 7mm;
+  border-left: 4px solid var(--red);
+  margin-bottom: 6mm;
+}
+.signature {
+  font-size: 9pt;
+  letter-spacing: 2px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6mm;
+}
+.why-block {
+  background: var(--grey-100);
+  padding: 5mm 6mm;
+  border-radius: 1mm;
+  margin-bottom: 5mm;
+}
+.why-title {
+  font-size: 9pt;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 3mm;
+}
+.why-text {
+  font-size: 9.5pt;
+  line-height: 1.6;
+  color: var(--grey-700);
+}
+.closing-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4mm;
+  padding: 5mm 0;
+  border-top: 1px solid var(--grey-200);
+  border-bottom: 1px solid var(--grey-200);
+  margin-bottom: 5mm;
+}
+.cg-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 18pt;
+  font-weight: 700;
+  color: var(--black);
+}
+.cg-label {
+  font-size: 7.5pt;
+  letter-spacing: 1.5px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1mm;
+}
+.contact-block {
+  display: grid;
+  gap: 2.5mm;
+}
+.contact-line {
+  display: grid;
+  grid-template-columns: 24mm 1fr;
+  gap: 4mm;
+  font-size: 9pt;
+}
+.contact-key {
+  font-size: 8pt;
+  letter-spacing: 1.5px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 1mm;
+}
+.contact-val {
+  color: var(--grey-700);
+}
+
+/* PHOTO PLACEHOLDERS */
+.photo-block {
+  background: repeating-linear-gradient(45deg, var(--grey-100), var(--grey-100) 8px, #FAFAFA 8px, #FAFAFA 16px);
+  border: 1px solid var(--grey-200);
+  border-radius: 1mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.photo-wide {
+  height: 35mm;
+  margin: 3mm 0;
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 - COVER -->
+<div class="page cover">
+  <div class="cover-top">
+    <div class="cover-mark">TOUFIC ABOU ALI</div>
+    <div class="cover-doc-num">Document 02 / 03</div>
+  </div>
+  <div class="cover-main">
+    <div class="cover-eyebrow">- Lebanese Sports Federation Submission</div>
+    <div class="cover-title">
+      Athlete<br>
+      Profile<br>
+      <em>& Personal Story.</em>
+    </div>
+    <div class="cover-subtitle">
+      The story behind the results. The mindset, the identity, and the journey of a Lebanese endurance athlete competing across three countries before age twenty.
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <div>
+      <div class="cover-stat-label">Athlete</div>
+      <div class="cover-stat-value">Toufic Abou Ali</div>
+    </div>
+    <div>
+      <div class="cover-stat-label">Born</div>
+      <div class="cover-stat-value">14 June 2006</div>
+    </div>
+    <div>
+      <div class="cover-stat-label">Base</div>
+      <div class="cover-stat-value">Montpellier, FR</div>
+    </div>
+    <div>
+      <div class="cover-stat-label">Document</div>
+      <div class="cover-stat-value">2026 Portfolio</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 - WHO I AM -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div style="flex:1;">
+      <div class="h-sub">Identity</div>
+      <div class="h-section">Who I am.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="who-grid">
+    <div>
+      <div class="who-quote">
+        I am not a professional athlete. I am a student, an entrepreneur, and a human who refuses to lose to himself.
+        <div class="who-quote-attr">- Toufic Abou Ali</div>
+      </div>
+
+      <p class="who-paragraph">
+        I am a <strong>Lebanese endurance athlete</strong> born on 14 June 2006 in Beirut. I currently live in Montpellier, France, where I balance competitive road racing and triathlon with university studies and building my company.
+      </p>
+
+      <p class="who-paragraph">
+        Endurance sport is not a side activity for me. It is the discipline that holds the rest of my life together. Every long run, every race, every early morning at the pool is a deliberate act of building a version of myself that can carry pressure without breaking.
+      </p>
+
+      <p class="who-paragraph">
+        I train alone, plan my own programs, and race without a sponsor or a coach. My results come from method, not from access.
+      </p>
+
+      <p class="who-paragraph">
+        I read more than <strong>200 books</strong> through my teenage years and routinely work <strong>16 to 18 hour days</strong> across training, business, and study during heavy periods. Volume and consistency are my edge.
+      </p>
+    </div>
+
+    <div>
+      <div class="identity-block">
+        <div class="identity-title">Identity Snapshot</div>
+        <div class="identity-row"><div class="id-key">Full Name</div><div class="id-val">Toufic Abou Ali</div></div>
+        <div class="identity-row"><div class="id-key">Date of Birth</div><div class="id-val">14 June 2006</div></div>
+        <div class="identity-row"><div class="id-key">Nationality</div><div class="id-val">Lebanese</div></div>
+        <div class="identity-row"><div class="id-key">Born In</div><div class="id-val">Beirut, Lebanon</div></div>
+        <div class="identity-row"><div class="id-key">Current Base</div><div class="id-val">Montpellier, FR</div></div>
+        <div class="identity-row"><div class="id-key">Sport</div><div class="id-val">Road Running / Triathlon</div></div>
+        <div class="identity-row"><div class="id-key">Coach</div><div class="id-val">Self-Coached</div></div>
+        <div class="identity-row"><div class="id-key">Years Competing</div><div class="id-val">2022 - Present</div></div>
+        <div class="identity-row"><div class="id-key">Primary Lang.</div><div class="id-val">English (native level)</div></div>
+        <div class="identity-row"><div class="id-key">Also Speaks</div><div class="id-val">Arabic / French / Spanish</div></div>
+        <div class="identity-row"><div class="id-key">Status</div><div class="id-val">Student / Founder / Athlete</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lebanese-strip">
+    <div class="lebanese-strip-text">
+      <strong style="color:#FFFFFF; font-weight:700;">Representing Lebanon.</strong> Every race I run abroad, every podium I stand on, every kilometre logged - I carry the identity of my country with me. Official registration with the Lebanese Sports Federation will allow that identity to be formally recognised on international start lists.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>02</span>
+  </div>
+</div>
+
+<!-- PAGE 3 - TRANSFORMATION -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div style="flex:1;">
+      <div class="h-sub">Origin</div>
+      <div class="h-section">The transformation.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="transform-hero">
+    <div>
+      <div class="transform-year">2019</div>
+      <div class="transform-age">Age 13</div>
+    </div>
+    <div>
+      <div class="transform-title">The night I decided I would not stay the way I was.</div>
+      <div class="transform-lead">Overweight, bullied, insecure - and one decision later, everything started.</div>
+    </div>
+  </div>
+
+  <div class="transform-body">
+    <p>At thirteen years old I was overweight, insecure, angry, and being bullied. I was angry at my body, at my circumstances, and at the version of myself I had become. There was no coach in my life, no team, no athletic environment to push me. I had nothing except a mirror and a decision.</p>
+
+    <p>One night I made the decision that I would not stay the way I was. I started training that same night. I changed how I ate, how I moved, and how I spent my time. For six months I trained in silence and isolation - no posting, no validation, no shortcuts.</p>
+
+    <p>By the end of those six months, I had completed a full physical transformation. More importantly, I had built the discipline that has carried every part of my life since. The body changed. The identity changed. The standard I hold myself to was set that year, and it has never moved.</p>
+  </div>
+
+  <div class="pull-quote">
+    "I started training the same night I decided I would not stay the way I was. The body followed because the decision was final."
+  </div>
+
+  <div class="photo-block photo-wide">Photo - Transformation moment</div>
+
+  <div class="before-after">
+    <div class="ba-card">
+      <div class="ba-label">2019</div>
+      <div class="ba-status">Overweight, age 13</div>
+    </div>
+    <div class="ba-arrow">></div>
+    <div class="ba-card ba-card-final">
+      <div class="ba-label">2026</div>
+      <div class="ba-status">Endurance athlete, age 19</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>03</span>
+  </div>
+</div>
+
+<!-- PAGE 4 - JOURNEY ERAS -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div style="flex:1;">
+      <div class="h-sub">Evolution - The mental journey, not just the races</div>
+      <div class="h-section">Five eras.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="era-list">
+    <div class="era-card">
+      <div class="era-num">01</div>
+      <div>
+        <div class="era-year">2019 - 2020</div>
+        <div class="era-theme">Discipline born from pain</div>
+      </div>
+      <div class="era-text">The transformation year and the year after. No external structure, no validation, no team. Discipline forged in silence. Through COVID lockdown I held the training when no one was watching. The foundation everything else is built on.</div>
+    </div>
+
+    <div class="era-card">
+      <div class="era-num">02</div>
+      <div>
+        <div class="era-year">2021 - 2022</div>
+        <div class="era-theme">Split identity</div>
+      </div>
+      <div class="era-text">Gym and growth coexisted with distractions I could no longer enjoy without guilt. The internal war between who I was becoming and what I was still holding onto. First training sessions logged on Strava in October 2022.</div>
+    </div>
+
+    <div class="era-card">
+      <div class="era-num">03</div>
+      <div>
+        <div class="era-year">2023</div>
+        <div class="era-theme">Chaos and repetition</div>
+      </div>
+      <div class="era-text">The year that trained my tolerance for pressure. Almost every weekend racing in Lebanon. Won my first half marathon at sixteen. Lived through the heaviest period of Lebanese instability while still showing up to start lines.</div>
+    </div>
+
+    <div class="era-card">
+      <div class="era-num">04</div>
+      <div>
+        <div class="era-year">2024</div>
+        <div class="era-theme">Entering the arena</div>
+      </div>
+      <div class="era-text">Ran a 10K with a broken leg and finished. Featured on MTV Lebanon. Hired as lead producer at Media Scaling, a US video production company. Moved alone to France with one day's notice before my flight.</div>
+    </div>
+
+    <div class="era-card">
+      <div class="era-num">05</div>
+      <div>
+        <div class="era-year">2025 - 2026</div>
+        <div class="era-theme">Systems over ego</div>
+      </div>
+      <div class="era-text">Fire year. First marathon - double podium in Beirut. Founded Sira SARL. Heartbreak. Hospital. Financial pressure. Co-founded the RAY association. Through all of it - Prague Marathon PB, three French podiums, four personal bests, and IRONMAN 70.3 Warsaw on the line.</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>04</span>
+  </div>
+</div>
+
+<!-- PAGE 5 - PRINCIPLES -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div style="flex:1;">
+      <div class="h-sub">What I stand for as an athlete</div>
+      <div class="h-section">Principles.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="principles-lead">
+    My athletic identity is built on one principle: <em>turning pressure into proof.</em>
+  </div>
+
+  <div class="principles-grid">
+    <div class="principle-card">
+      <div class="principle-num">01</div>
+      <div class="principle-title">Show up regardless</div>
+      <div class="principle-desc">No conditions, no pressure, no pain stops the start line.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">02</div>
+      <div class="principle-title">Discipline over motivation</div>
+      <div class="principle-desc">Motivation is unreliable. Discipline is repeatable.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">03</div>
+      <div class="principle-title">Pain is information</div>
+      <div class="principle-desc">Suffering during a race tells me what to fix in training.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">04</div>
+      <div class="principle-title">Self-coached by choice</div>
+      <div class="principle-desc">I study, plan, and execute my own programs because I know my body better than anyone.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">05</div>
+      <div class="principle-title">Cross-discipline strength</div>
+      <div class="principle-desc">60 kg pull-ups and 100 kg dips coexist with marathon training.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">06</div>
+      <div class="principle-title">Race my past self</div>
+      <div class="principle-desc">I compete against my past times, not against other runners.</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>05</span>
+  </div>
+</div>
+
+<!-- PAGE 6 - TRAINING -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div style="flex:1;">
+      <div class="h-sub">Methodology</div>
+      <div class="h-section">How I train.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="training-lead">
+    I train without a coach, without a club, and without external pressure. My approach is built on consistency, volume, and the willingness to suffer in training so that races feel manageable.
+  </div>
+
+  <div class="volume-block">
+    <div class="volume-title">Typical Weekly Volume - 2026 Season</div>
+    <div class="volume-row">
+      <div class="volume-label">Running</div>
+      <div class="volume-bar-track"><div class="volume-bar-fill" style="width:80%;"></div></div>
+      <div class="volume-value">50 - 70 km</div>
+    </div>
+    <div class="volume-row">
+      <div class="volume-label">Cycling</div>
+      <div class="volume-bar-track"><div class="volume-bar-fill" style="width:65%;"></div></div>
+      <div class="volume-value">50 - 100 km</div>
+    </div>
+    <div class="volume-row">
+      <div class="volume-label">Swimming</div>
+      <div class="volume-bar-track"><div class="volume-bar-fill" style="width:25%;"></div></div>
+      <div class="volume-value">5 - 8 km</div>
+    </div>
+    <div class="volume-row">
+      <div class="volume-label">Strength</div>
+      <div class="volume-bar-track"><div class="volume-bar-fill" style="width:40%;"></div></div>
+      <div class="volume-value">2 - 3 sessions</div>
+    </div>
+  </div>
+
+  <div class="pillars-grid">
+    <div class="pillar-card">
+      <div class="pillar-title">Endurance base</div>
+      <div class="pillar-desc">Long runs at zone 2, weekly mountain runs, accumulating volume over months.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-title">Speed work</div>
+      <div class="pillar-desc">Intervals, tempo runs, threshold sessions. The work that turned 10K from 46 minutes to 39:42.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-title">Triathlon cross-training</div>
+      <div class="pillar-desc">Bike and swim added in 2026 for IRONMAN 70.3 preparation. Brick workouts. Pool intervals.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-title">Strength and resilience</div>
+      <div class="pillar-desc">Weighted pull-ups, dips, core work. Strength is the protection layer that keeps endurance possible.</div>
+    </div>
+  </div>
+
+  <div class="strength-strip">
+    <div class="strength-strip-title">Cross-discipline strength benchmarks</div>
+    <div class="strength-grid">
+      <div>
+        <div class="strength-num">60 kg</div>
+        <div class="strength-label">Weighted Pull-Up - Age 18</div>
+      </div>
+      <div>
+        <div class="strength-num">100 kg</div>
+        <div class="strength-label">Weighted Dip - Age 18</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>06</span>
+  </div>
+</div>
+
+<!-- PAGE 7 - WHAT I TRAIN FOR -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div style="flex:1;">
+      <div class="h-sub">The next start line</div>
+      <div class="h-section">What I train for.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="ironman-card">
+    <div class="ironman-tag">- Featured event</div>
+    <div class="ironman-name">IRONMAN 70.3<br>Warsaw 2026.</div>
+    <div class="ironman-meta">7 June 2026 - Warsaw, Poland - Seven days before turning 20</div>
+    <div class="ironman-distances">
+      <div>
+        <div class="ironman-dist-val">1.9 km</div>
+        <div class="ironman-dist-label">Swim</div>
+      </div>
+      <div>
+        <div class="ironman-dist-val">90 km</div>
+        <div class="ironman-dist-label">Bike</div>
+      </div>
+      <div>
+        <div class="ironman-dist-val">21.1 km</div>
+        <div class="ironman-dist-label">Run</div>
+      </div>
+      <div>
+        <div class="ironman-dist-val">113 km</div>
+        <div class="ironman-dist-label">Total</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="who-paragraph">
+    <strong>Why this race.</strong> IRONMAN 70.3 Warsaw is the closing chapter of my teenage years as an athlete. Completing it before turning twenty is a personal proof point - that the discipline started at thirteen carried me here without shortcuts and without external structure.
+  </p>
+
+  <p class="who-paragraph">
+    Five weeks before Warsaw I completed the Prague Marathon in 3:42:37 with an injured left leg. That race confirmed I can hold composure under conditions that are not ideal - which is exactly what an IRONMAN race demands across more than five hours of continuous effort.
+  </p>
+
+  <div class="future-goals">
+    <div class="future-title">Beyond 2026</div>
+    <ul class="future-list">
+      <li>Sub-3 hour marathon by 2027</li>
+      <li>First full IRONMAN before 2028</li>
+      <li>Represent Lebanon at international endurance events</li>
+      <li>Mountain ultra-marathons (50K and beyond)</li>
+      <li>Build a long career as a Lebanese endurance athlete competing internationally</li>
+    </ul>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>07</span>
+  </div>
+</div>
+
+<!-- PAGE 8 - BEYOND ATHLETICS -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div style="flex:1;">
+      <div class="h-sub">Life outside the start line</div>
+      <div class="h-section">Beyond athletics.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <p class="training-lead">
+    I do not train as a full-time athlete. I train while building a company, completing my studies, working professionally, and contributing to community projects. Each pillar strengthens the others.
+  </p>
+
+  <div class="beyond-pillars">
+    <div class="beyond-card">
+      <div class="beyond-tag">- Entrepreneurship</div>
+      <div class="beyond-title">Sira - Founder &amp; CEO</div>
+      <ul class="beyond-list">
+        <li><strong>Lebanese career-services company</strong> co-founded with Zayn in late 2023, registered as Sira SARL on 22 April 2025.</li>
+        <li>Scaled to <strong>25 people</strong> across 3 departments before I turned 19.</li>
+        <li>Built a career community of <strong>around 60,000 people</strong> with 15M+ content impressions.</li>
+        <li>Supported <strong>50+ hires</strong> at companies including Amazon, IBM, Toyota, PwC, Deloitte, Emirates, Emaar.</li>
+        <li>Processed ~8,000 CVs, coordinated ~600 interviews, delivered 100+ workshops to ~5,000 attendees.</li>
+        <li>Built ~20,000 lines of automation reducing manual work by ~70 percent.</li>
+      </ul>
+    </div>
+
+    <div class="beyond-card">
+      <div class="beyond-tag">- Professional work</div>
+      <div class="beyond-title">Media Scaling &amp; Heracles Conseil</div>
+      <ul class="beyond-list">
+        <li><strong>Media Scaling (Jan 2024 - Feb 2025):</strong> Hired as lead producer at age 17 at a US video production company. Built AI-assisted editing workflow, contributed to <strong>1,100+ assets reaching 250M+ views</strong>, reduced production time from ~12 hours to ~90 minutes per asset.</li>
+        <li><strong>Heracles Conseil (2026):</strong> Internship at French consulting firm in Montpellier while continuing university, Sira, and triathlon training.</li>
+      </ul>
+    </div>
+
+    <div class="beyond-card">
+      <div class="beyond-tag">- Education &amp; community</div>
+      <div class="beyond-title">University &amp; RAY Association</div>
+      <ul class="beyond-list">
+        <li>Studying in <strong>Montpellier, France</strong>. Moved alone from Lebanon in 2024 - finalised visa one day before flight.</li>
+        <li>Became <strong>class delegate in first year</strong> while still adapting to the language. Top-tier performance among ~600 students.</li>
+        <li>Semester grades: <strong>12.18 / 9.08 / 12.62</strong> while running Sira and training.</li>
+        <li>Co-founded <strong>RAY - Rise Above Yesterday</strong>, a university association around solidarity, sport, and cancer support. Organised "S'unir pour guerir" on 15 March 2026 at In'Sport Montpellier in support of RoseUp.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>08</span>
+  </div>
+</div>
+
+<!-- PAGE 9 - RESILIENCE -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div style="flex:1;">
+      <div class="h-sub">Selected moments of pressure</div>
+      <div class="h-section">Built through pressure.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <p class="training-lead">
+    Every athlete has results. Fewer have a record of how they performed when things broke. These are the moments that shaped my tolerance for pressure.
+  </p>
+
+  <div class="resilience-list">
+    <div class="resilience-row">
+      <div class="res-num">
+        <div class="res-num-big">01</div>
+        <div class="res-num-year">2024 - Age 17</div>
+      </div>
+      <div>
+        <div class="res-title">The broken leg 10K</div>
+        <div class="res-text">Lined up for a 10K race with a broken leg. Finished the race. The story was picked up by MTV Lebanon, one of the country's leading television channels, as a feature on resilience.</div>
+      </div>
+    </div>
+
+    <div class="resilience-row">
+      <div class="res-num">
+        <div class="res-num-big">02</div>
+        <div class="res-num-year">2024 - Age 18</div>
+      </div>
+      <div>
+        <div class="res-title">Migration with one day's notice</div>
+        <div class="res-text">Decided to move from Lebanon to France the night university applications closed. Secured my visa fast and finalised it one day before my flight. Moved alone to a new country and built a life from zero.</div>
+      </div>
+    </div>
+
+    <div class="resilience-row">
+      <div class="res-num">
+        <div class="res-num-big">03</div>
+        <div class="res-num-year">August 2025 - Age 19</div>
+      </div>
+      <div>
+        <div class="res-title">Mother's visit and goodbye</div>
+        <div class="res-text">My mother travelled with me through France, Switzerland, and Italy in 2025. One night in Geneva we slept outside in a park and she covered me when I was cold. I took her to Marseille airport on 22 August and was alone in France again.</div>
+      </div>
+    </div>
+
+    <div class="resilience-row">
+      <div class="res-num">
+        <div class="res-num-big">04</div>
+        <div class="res-num-year">Late 2025 - Age 19</div>
+      </div>
+      <div>
+        <div class="res-title">Two emergency hospital visits</div>
+        <div class="res-text">Went to the emergency hospital twice in late 2025 - once for inflammation, once for a reaction to antibiotics. Kept working, training, and building Sira through the entire period. Did not miss key sessions or deadlines.</div>
+      </div>
+    </div>
+
+    <div class="resilience-row">
+      <div class="res-num">
+        <div class="res-num-big">05</div>
+        <div class="res-num-year">22 Dec 2025 - Age 19</div>
+      </div>
+      <div>
+        <div class="res-title">Heartbreak</div>
+        <div class="res-text">Experienced one of the most painful emotional moments of my life. Two days of crying. Then back to training, gym, studying, and building. Turned the pain into focus and ran the 10K personal best of 39:42 forty days later.</div>
+      </div>
+    </div>
+
+    <div class="resilience-row">
+      <div class="res-num">
+        <div class="res-num-big">06</div>
+        <div class="res-num-year">3 May 2026 - Age 19</div>
+      </div>
+      <div>
+        <div class="res-title">Prague Marathon - racing injured</div>
+        <div class="res-text">Started Prague Marathon with an injured left leg. Held top-600 pace through 5K. Refused to drop out as the injury impacted my second half. Finished in 3:42:37 - a marathon PB. Five weeks before IRONMAN 70.3 Warsaw.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>09</span>
+  </div>
+</div>
+
+<!-- PAGE 10 - CLOSING -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div style="flex:1;">
+      <div class="h-sub">Closing</div>
+      <div class="h-section">The manifesto.</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="manifesto">
+    I do not have shortcuts. I do not have a coach. I do not have sponsors. I have a system, a story, and a commitment to show up - race after race - until the result speaks louder than the doubt.
+  </div>
+
+  <div class="signature">- Toufic Abou Ali, June 2026</div>
+
+  <div class="why-block">
+    <div class="why-title">Why I am submitting to the Lebanese Sports Federation</div>
+    <div class="why-text">
+      I want to be officially registered as a Lebanese athlete so that every result I post abroad - in France, in the Czech Republic, in Poland, and beyond - is counted under the Lebanese flag. I have built every kilometre of this career independently. Federation recognition is the structural step that allows my work to represent something larger than myself.
+    </div>
+  </div>
+
+  <div class="closing-grid">
+    <div>
+      <div class="cg-num">19</div>
+      <div class="cg-label">Age at IRONMAN 70.3</div>
+    </div>
+    <div>
+      <div class="cg-num">7</div>
+      <div class="cg-label">Days before turning 20</div>
+    </div>
+    <div>
+      <div class="cg-num">3+</div>
+      <div class="cg-label">Years competing</div>
+    </div>
+    <div>
+      <div class="cg-num">25+</div>
+      <div class="cg-label">Career races</div>
+    </div>
+    <div>
+      <div class="cg-num">6</div>
+      <div class="cg-label">Confirmed podiums</div>
+    </div>
+  </div>
+
+  <div class="contact-block">
+    <div class="contact-line"><div class="contact-key">Email</div><div class="contact-val">_______________</div></div>
+    <div class="contact-line"><div class="contact-key">Strava</div><div class="contact-val">strava.com/athletes/109556347</div></div>
+    <div class="contact-line"><div class="contact-key">Instagram</div><div class="contact-val">@touficaa</div></div>
+    <div class="contact-line"><div class="contact-key">Portfolio</div><div class="contact-val">touficaa.github.io/toufic-portfolio</div></div>
+    <div class="contact-line"><div class="contact-key">City</div><div class="contact-val">Montpellier, France</div></div>
+  </div>
+
+  <div class="page-footer">
+    <span>Toufic Abou Ali - Athlete Profile</span>
+    <span>10</span>
+  </div>
+</div>
+
+</body>
+</html>

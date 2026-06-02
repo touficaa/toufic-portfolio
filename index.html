@@ -3,47 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Toufic Abou Ali — Lebanese Endurance Athlete. Marathon runner, triathlete, born June 14, 2006.">
-<title>Toufic Abou Ali — Lebanese Endurance Athlete</title>
+<title>Toufic Abou Ali — Athlete & Founder</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
-<!-- LOADER -->
 <div class="loader" id="loader">
   <div class="loader-content">
+    <div class="loader-mark"></div>
     <div class="loader-name">TOUFIC ABOU ALI</div>
-    <div class="loader-line"><div class="loader-progress"></div></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
   </div>
 </div>
 
-<!-- SCROLL PROGRESS -->
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- NAVIGATION -->
 <nav class="nav" id="nav">
   <div class="nav-container">
-    <a href="#hero" class="nav-logo">
-      <span class="logo-mark"></span>
-      <span class="logo-text">TOUFIC ABOU ALI</span>
+    <a href="index.html" class="nav-logo">
+      <span class="dot"></span>
+      <span>TOUFIC ABOU ALI</span>
     </a>
     <ul class="nav-menu" id="navMenu">
-      <li><a href="#hero" class="nav-link">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#stats" class="nav-link">Stats</a></li>
-      <li><a href="#races" class="nav-link">Races</a></li>
-      <li><a href="#timeline" class="nav-link">Timeline</a></li>
-      <li><a href="#gallery" class="nav-link">Gallery</a></li>
-      <li class="nav-dropdown">
-        <a href="#portfolio" class="nav-link nav-link-cta">Portfolio <span class="arrow">▾</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="assets/pdfs/PDF1_Athletic_Achievements.pdf" target="_blank">PDF 1 — Athletic Achievements</a></li>
-          <li><a href="assets/pdfs/PDF2_Athlete_Profile.pdf" target="_blank">PDF 2 — Athlete Profile</a></li>
-          <li><a href="assets/pdfs/PDF3_Race_Results.pdf" target="_blank">PDF 3 — Race Results & Proof</a></li>
-        </ul>
-      </li>
+      <li><a href="index.html" class="nav-link active">Profile</a></li>
+      <li><a href="record.html" class="nav-link">Record</a></li>
+      <li><a href="ironman.html" class="nav-link">Warsaw 70.3</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -51,547 +38,595 @@
   </div>
 </nav>
 
-<!-- SECTION 1 — HERO -->
-<section class="hero" id="hero">
-  <div class="hero-grid">
-    <div class="hero-text">
-      <div class="hero-tag">— Lebanese Endurance Athlete</div>
-      <h1 class="hero-headline">
-        <span class="line">Pressure</span>
-        <span class="line line-accent">into proof.</span>
-      </h1>
-      <p class="hero-sub">
-        Marathon runner. Triathlete. Born June 14, 2006.<br>
-        Six podiums. Twenty-five races. Four countries. One mission.
-      </p>
-      <div class="hero-actions">
-        <a href="#races" class="btn btn-primary">View Races</a>
-        <a href="#portfolio" class="btn btn-secondary">Download Portfolio</a>
-      </div>
-      <div class="hero-meta">
-        <div class="meta-item">
-          <div class="meta-value">19</div>
-          <div class="meta-label">Years Old</div>
-        </div>
-        <div class="meta-item">
-          <div class="meta-value">2,636</div>
-          <div class="meta-label">KM Tracked</div>
-        </div>
-        <div class="meta-item">
-          <div class="meta-value">25</div>
-          <div class="meta-label">Races</div>
-        </div>
-        <div class="meta-item">
-          <div class="meta-value">6</div>
-          <div class="meta-label">Podiums</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <div class="photo-frame">
-        <div class="photo-placeholder">
-          <span class="photo-text">Hero Photo<br><small>assets/images/hero/hero.jpg</small></span>
-        </div>
-      </div>
-      <div class="photo-accent"></div>
-    </div>
-  </div>
-  <div class="scroll-indicator">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-<!-- SECTION 2 — ABOUT -->
-<section class="section about" id="about">
+<!-- ===== HERO ===== -->
+<section class="prof-hero">
   <div class="container">
-    <div class="section-header">
-      <div class="section-num">01</div>
-      <h2 class="section-title">The athlete</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-story">
-        <p class="about-lead">
-          From overweight and bullied at thirteen, to a competitive endurance athlete at nineteen — built one race at a time, without shortcuts.
-        </p>
-        <p>
-          I am Toufic Abou Ali, a Lebanese endurance athlete based in Montpellier, France. I compete in road racing and triathlon while building a career and a company in parallel. My athletic identity is built on one principle: showing up regardless of conditions, pressure, or pain.
-        </p>
-        <p>
-          I started training at thirteen after deciding I would not stay the way I was. I ran my first half marathon at sixteen and won. I ran my first marathon at eighteen and stood on the podium. At nineteen I will line up for my first Half Ironman in Warsaw — seven days before turning twenty.
-        </p>
-      </div>
-      <div class="about-facts">
-        <div class="fact-card">
-          <div class="fact-label">Nationality</div>
-          <div class="fact-value">Lebanese</div>
-        </div>
-        <div class="fact-card">
-          <div class="fact-label">Date of Birth</div>
-          <div class="fact-value">June 14, 2006</div>
-        </div>
-        <div class="fact-card">
-          <div class="fact-label">Base</div>
-          <div class="fact-value">Montpellier, France</div>
-        </div>
-        <div class="fact-card">
-          <div class="fact-label">Disciplines</div>
-          <div class="fact-value">Road Running · Triathlon</div>
-        </div>
-        <div class="fact-card">
-          <div class="fact-label">Coach</div>
-          <div class="fact-value">Self-Coached</div>
-        </div>
-        <div class="fact-card">
-          <div class="fact-label">Languages</div>
-          <div class="fact-value">English · Arabic · French · Spanish</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="prof-hero-inner">
+      <div class="prof-hero-left">
 
-<!-- SECTION 3 — STATS DASHBOARD -->
-<section class="section stats-section" id="stats">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-num">02</div>
-      <h2 class="section-title">By the numbers</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="section-sub">Tracked training data — October 2022 to June 2026</p>
+        <div class="prof-eyebrow">
+          <span class="dot-red"></span>
+          <span>Lebanese Endurance Athlete · Founder · 2026</span>
+        </div>
+        <div class="prof-hero-tagline">Pressure into proof.</div>
+        <h1 class="prof-hero-name">
+          Toufic<br>Abou Ali
+        </h1>
 
-    <div class="stats-counters">
-      <div class="counter-card">
-        <div class="counter-icon">▲</div>
-        <div class="counter-number" data-target="2164">0</div>
-        <div class="counter-unit">km</div>
-        <div class="counter-label">Running Distance</div>
-        <div class="counter-detail">201 activities</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-icon">◆</div>
-        <div class="counter-number" data-target="436">0</div>
-        <div class="counter-unit">km</div>
-        <div class="counter-label">Cycling Distance</div>
-        <div class="counter-detail">23 activities</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-icon">●</div>
-        <div class="counter-number" data-target="28250">0</div>
-        <div class="counter-unit">m</div>
-        <div class="counter-label">Swimming Distance</div>
-        <div class="counter-detail">30 sessions</div>
-      </div>
-      <div class="counter-card counter-card-feature">
-        <div class="counter-icon">★</div>
-        <div class="counter-number" data-target="256">0</div>
-        <div class="counter-label">Total Activities</div>
-        <div class="counter-detail">218 hours of training</div>
-      </div>
-    </div>
+        <div class="prof-hero-tags">
+          <span class="prof-tag">19 years old</span>
+          <span class="prof-tag">Montpellier, France</span>
+          <span class="prof-tag">Lebanese 🇱🇧</span>
+          <span class="prof-tag">Co-Founder & Co-CEO · Sira</span>
+          <span class="prof-tag">IRONMAN 70.3 · June 7, 2026</span>
+        </div>
 
-    <div class="charts-grid">
-      <div class="chart-card">
-        <div class="chart-header">
-          <h3>Yearly Running Progression</h3>
-          <p>Distance covered per year — kilometres</p>
-        </div>
-        <div class="chart-wrap">
-          <canvas id="chartYearly"></canvas>
-        </div>
-      </div>
-      <div class="chart-card">
-        <div class="chart-header">
-          <h3>Discipline Breakdown</h3>
-          <p>Activity split by sport — 2026 season</p>
-        </div>
-        <div class="chart-wrap">
-          <canvas id="chartDiscipline"></canvas>
+        <div class="prof-hero-cta">
+          <a href="record.html" class="btn btn-primary">
+            <span>Athletic Record</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="ironman.html" class="btn btn-secondary">
+            <span>Warsaw Media Pack</span>
+            <span class="btn-arrow">→</span>
+          </a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- SECTION 4 — PERSONAL BESTS -->
-<section class="section pb-section" id="bests">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-num">03</div>
-      <h2 class="section-title">Personal bests</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="section-sub">All current personal records — set before turning 20</p>
-
-    <div class="pb-grid">
-      <div class="pb-card-v2">
-        <div class="pb-distance-label">5K</div>
-        <div class="pb-time-big">19:48</div>
-        <div class="pb-meta">
-          <span>Allure Bleue Race</span>
-          <span>Feb 21, 2026</span>
-        </div>
-        <div class="pb-badge">2nd Overall</div>
-      </div>
-      <div class="pb-card-v2">
-        <div class="pb-distance-label">10K</div>
-        <div class="pb-time-big">39:42</div>
-        <div class="pb-meta">
-          <span>Envolez Vous 2026</span>
-          <span>Feb 1, 2026</span>
-        </div>
-        <div class="pb-badge">3rd ESM · 23rd Overall</div>
-      </div>
-      <div class="pb-card-v2">
-        <div class="pb-distance-label">Half Marathon</div>
-        <div class="pb-time-big">1:29:26</div>
-        <div class="pb-meta">
-          <span>Montpellier Run Festival</span>
-          <span>Apr 19, 2026</span>
-        </div>
-        <div class="pb-badge">9th U23 · 140/4,516</div>
-      </div>
-      <div class="pb-card-v2">
-        <div class="pb-distance-label">Marathon</div>
-        <div class="pb-time-big">3:42:37</div>
-        <div class="pb-meta">
-          <span>Prague Marathon</span>
-          <span>May 3, 2026</span>
-        </div>
-        <div class="pb-badge">Marathon PB</div>
-      </div>
-    </div>
-
-    <div class="progression-block">
-      <h3 class="progression-title">Half Marathon Progression</h3>
-      <div class="progression-visual">
-        <div class="prog-point">
-          <div class="prog-year">2023</div>
-          <div class="prog-time">1:49:34</div>
-          <div class="prog-age">Age 16</div>
-        </div>
-        <div class="prog-arrow">→</div>
-        <div class="prog-point">
-          <div class="prog-year">2025</div>
-          <div class="prog-time">1:39:48</div>
-          <div class="prog-age">Age 18</div>
-        </div>
-        <div class="prog-arrow">→</div>
-        <div class="prog-point prog-point-final">
-          <div class="prog-year">2026</div>
-          <div class="prog-time">1:29:26</div>
-          <div class="prog-age">Age 19</div>
-        </div>
-      </div>
-      <div class="progression-result">— 20 minutes improvement over 3 years</div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 5 — MAJOR RACES -->
-<section class="section races-section" id="races">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-num">04</div>
-      <h2 class="section-title">Major races</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="section-sub">Featured competitive results — 2023 to 2026</p>
-
-    <div class="races-grid">
-
-      <article class="race-card-v2" data-race="beirut">
-        <div class="race-card-image">
-          <div class="img-placeholder">Beirut Marathon Photo</div>
-          <div class="race-card-tag">Marathon</div>
-        </div>
-        <div class="race-card-body">
-          <div class="race-card-date">May 1, 2025 · Beirut, Lebanon</div>
-          <h3 class="race-card-title">Beirut Marathon</h3>
-          <div class="race-card-stats">
-            <div><strong>3:48:22</strong><span>Finish</span></div>
-            <div><strong>51st</strong><span>Overall</span></div>
-            <div><strong>1st</strong><span>542 Program</span></div>
-            <div><strong>2nd</strong><span>U20</span></div>
+      <div class="prof-hero-right">
+        <div class="prof-photo-wrap">
+          <img src="assets/images/hero/hero-main.jpg" alt="Toufic Abou Ali"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="prof-photo-placeholder">
+            <span>Add Portrait Photo</span>
+            <small>assets/images/hero/hero-main.jpg</small>
           </div>
-          <div class="race-card-note">First marathon ever. Double podium on debut.</div>
         </div>
-      </article>
+      </div>
+    </div>
+  </div>
 
-      <article class="race-card-v2" data-race="prague">
-        <div class="race-card-image">
-          <div class="img-placeholder">Prague Marathon Photo</div>
-          <div class="race-card-tag">Marathon</div>
-        </div>
-        <div class="race-card-body">
-          <div class="race-card-date">May 3, 2026 · Prague, Czech Republic</div>
-          <h3 class="race-card-title">Vodafone Prague Marathon</h3>
-          <div class="race-card-stats">
-            <div><strong>3:42:37</strong><span>Finish (PB)</span></div>
-            <div><strong>2,346</strong><span>Overall</span></div>
-            <div><strong>1:40</strong><span>HM Split</span></div>
-            <div><strong>5:16</strong><span>Pace /km</span></div>
-          </div>
-          <div class="race-card-note">Marathon PB. Raced through left leg injury.</div>
-        </div>
-      </article>
-
-      <article class="race-card-v2" data-race="montpellier">
-        <div class="race-card-image">
-          <div class="img-placeholder">Montpellier Run Festival Photo</div>
-          <div class="race-card-tag">Half Marathon</div>
-        </div>
-        <div class="race-card-body">
-          <div class="race-card-date">April 19, 2026 · Montpellier, France</div>
-          <h3 class="race-card-title">Montpellier Run Festival</h3>
-          <div class="race-card-stats">
-            <div><strong>1:29:26</strong><span>Finish (PB)</span></div>
-            <div><strong>140</strong><span>of 4,516</span></div>
-            <div><strong>9th</strong><span>U23</span></div>
-            <div><strong>4:13</strong><span>Pace /km</span></div>
-          </div>
-          <div class="race-card-note">Half marathon PB. Top 3.1 percent of full field.</div>
-        </div>
-      </article>
-
-      <article class="race-card-v2" data-race="envolez">
-        <div class="race-card-image">
-          <div class="img-placeholder">Envolez Vous 2026 Photo</div>
-          <div class="race-card-tag">10K</div>
-        </div>
-        <div class="race-card-body">
-          <div class="race-card-date">February 1, 2026 · France</div>
-          <h3 class="race-card-title">Envolez Vous 2026</h3>
-          <div class="race-card-stats">
-            <div><strong>39:42</strong><span>Finish (PB)</span></div>
-            <div><strong>23rd</strong><span>Overall</span></div>
-            <div><strong>3rd</strong><span>ESM</span></div>
-            <div><strong>3:58</strong><span>Pace /km</span></div>
-          </div>
-          <div class="race-card-note">10K PB. First major podium in France.</div>
-        </div>
-      </article>
-
-      <article class="race-card-v2" data-race="allure">
-        <div class="race-card-image">
-          <div class="img-placeholder">Allure Bleue Race Photo</div>
-          <div class="race-card-tag">5K</div>
-        </div>
-        <div class="race-card-body">
-          <div class="race-card-date">February 21, 2026 · France</div>
-          <h3 class="race-card-title">Allure Bleue Race</h3>
-          <div class="race-card-stats">
-            <div><strong>19:48</strong><span>Finish (PB)</span></div>
-            <div><strong>2nd</strong><span>Overall</span></div>
-            <div><strong>3:56</strong><span>Pace /km</span></div>
-            <div><strong>5</strong><span>km</span></div>
-          </div>
-          <div class="race-card-note">5K PB. Second French podium in three weeks.</div>
-        </div>
-      </article>
-
-      <article class="race-card-v2" data-race="ironman">
-        <div class="race-card-image">
-          <div class="img-placeholder">IRONMAN 70.3 Warsaw</div>
-          <div class="race-card-tag race-card-tag-upcoming">Upcoming</div>
-        </div>
-        <div class="race-card-body">
-          <div class="race-card-date">June 7, 2026 · Warsaw, Poland</div>
-          <h3 class="race-card-title">IRONMAN 70.3 Warsaw</h3>
-          <div class="race-card-stats">
-            <div><strong>1.9 km</strong><span>Swim</span></div>
-            <div><strong>90 km</strong><span>Bike</span></div>
-            <div><strong>21.1 km</strong><span>Run</span></div>
-            <div><strong>113 km</strong><span>Total</span></div>
-          </div>
-          <div class="race-card-note">First Half Ironman. Seven days before turning 20.</div>
-        </div>
-      </article>
-
+  <div class="prof-ticker">
+    <div class="ticker-track">
+      <span>19 YEARS OLD</span><span class="ticker-dot">●</span>
+      <span>2,164 KM TRACKED</span><span class="ticker-dot">●</span>
+      <span>25 RACES</span><span class="ticker-dot">●</span>
+      <span>6 PODIUMS</span><span class="ticker-dot">●</span>
+      <span>IRONMAN 70.3 WARSAW · JUNE 7 2026</span><span class="ticker-dot">●</span>
+      <span>CO-FOUNDER & CO-CEO · SIRA</span><span class="ticker-dot">●</span>
+      <span>LEBANESE 🇱🇧</span><span class="ticker-dot">●</span>
+      <span>19 YEARS OLD</span><span class="ticker-dot">●</span>
+      <span>2,164 KM TRACKED</span><span class="ticker-dot">●</span>
+      <span>25 RACES</span><span class="ticker-dot">●</span>
+      <span>6 PODIUMS</span><span class="ticker-dot">●</span>
+      <span>IRONMAN 70.3 WARSAW · JUNE 7 2026</span><span class="ticker-dot">●</span>
+      <span>CO-FOUNDER & CO-CEO · SIRA</span><span class="ticker-dot">●</span>
+      <span>LEBANESE 🇱🇧</span><span class="ticker-dot">●</span>
     </div>
   </div>
 </section>
 
-<!-- SECTION 6 — TIMELINE -->
-<section class="section timeline-section" id="timeline">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-num">05</div>
-      <h2 class="section-title">Journey</h2>
-      <div class="section-line"></div>
+<!-- ===== BIO ===== -->
+<section class="prof-section" id="bio">
+  <div class="container-narrow">
+    <div class="section-divider reveal">
+      <span class="section-tag">Short Bio</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">60 seconds</span>
     </div>
-    <p class="section-sub">From the first run to the start line of IRONMAN</p>
 
-    <div class="timeline-v2">
-      <div class="timeline-line-bg"></div>
+    <p class="prof-bio-lead reveal">
+      Toufic Abou Ali is a 19-year-old Lebanese student-athlete and entrepreneur based in Montpellier, France. He is the Co-Founder &amp; Co-CEO of Sira, a Lebanese career platform. On June 7, 2026 — one week before turning 20 — he will race IRONMAN 70.3 Warsaw, his first triathlon.
+    </p>
 
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-year-big">2019</div>
-          <div class="timeline-age">Age 13</div>
-          <h3>The decision</h3>
-          <p>Overweight and bullied. Started training the same night. Full transformation in 6 months.</p>
-        </div>
+    <div class="prof-stats-row reveal-stagger">
+      <div class="prof-stat">
+        <div class="prof-stat-disc">Races</div>
+        <div class="prof-stat-num" data-count="25">0</div>
+        <div class="prof-stat-detail">4 countries · 6 podiums</div>
       </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-year-big">2022</div>
-          <div class="timeline-age">Age 16</div>
-          <h3>First tracked runs</h3>
-          <p>Began logging training on Strava. Foundation of competitive years that followed.</p>
-        </div>
+      <div class="prof-stat">
+        <div class="prof-stat-disc">km Tracked</div>
+        <div class="prof-stat-num" data-count="2164">0</div>
+        <div class="prof-stat-detail">Oct 2022 — Jun 2026</div>
       </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot timeline-dot-accent"></div>
-        <div class="timeline-content">
-          <div class="timeline-year-big">2023</div>
-          <div class="timeline-age">Age 16</div>
-          <h3>First half marathon — 1st place</h3>
-          <p>Won the ISF Half Marathon on debut in 1:49:34. Eight races completed. First podium ever.</p>
-        </div>
+      <div class="prof-stat">
+        <div class="prof-stat-disc">Marathons</div>
+        <div class="prof-stat-num" data-count="2">0</div>
+        <div class="prof-stat-detail">Beirut 3:48 · Prague 3:42</div>
       </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-year-big">2024</div>
-          <div class="timeline-age">Age 17 / 18</div>
-          <h3>Broken leg 10K · MTV Lebanon</h3>
-          <p>Ran a 10K with a broken leg and finished. Featured on MTV Lebanon television.</p>
-        </div>
-      </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot timeline-dot-accent"></div>
-        <div class="timeline-content">
-          <div class="timeline-year-big">2025</div>
-          <div class="timeline-age">Age 18 / 19</div>
-          <h3>First marathon — double podium</h3>
-          <p>Beirut Marathon in 3:48:22. 1st 542 Program. 2nd U20. 51st overall. Moved to France.</p>
-        </div>
-      </div>
-
-      <div class="timeline-event timeline-event-feature">
-        <div class="timeline-dot timeline-dot-final"></div>
-        <div class="timeline-content">
-          <div class="timeline-year-big">2026</div>
-          <div class="timeline-age">Age 19</div>
-          <h3>Breakthrough year</h3>
-          <p>Three podiums. Four personal bests. Prague Marathon. IRONMAN 70.3 Warsaw at 19 — seven days before turning 20.</p>
-        </div>
+      <div class="prof-stat prof-stat-dark">
+        <div class="prof-stat-disc">IRONMAN</div>
+        <div class="prof-stat-num">70.3</div>
+        <div class="prof-stat-detail">Warsaw · June 7, 2026</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 7 — GALLERY -->
-<section class="section gallery-section" id="gallery">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-num">06</div>
-      <h2 class="section-title">Gallery</h2>
-      <div class="section-line"></div>
+<!-- ===== STORY ===== -->
+<section class="prof-section prof-section-dark" id="story">
+  <div class="container-narrow">
+    <div class="section-divider reveal" style="border-color:rgba(255,255,255,0.1);">
+      <span class="section-tag" style="color:var(--red);">Story</span>
+      <div class="section-divider-line" style="background:rgba(255,255,255,0.1);"></div>
+      <span class="section-tag" style="color:rgba(255,255,255,0.3);">The journey</span>
     </div>
-    <p class="section-sub">Selected moments from training and competition</p>
 
-    <div class="gallery-grid">
-      <div class="gallery-item gallery-item-large"><div class="img-placeholder">Photo 1 — Race finish</div></div>
-      <div class="gallery-item"><div class="img-placeholder">Photo 2 — Podium</div></div>
-      <div class="gallery-item"><div class="img-placeholder">Photo 3 — Training</div></div>
-      <div class="gallery-item gallery-item-wide"><div class="img-placeholder">Photo 4 — Beirut Marathon</div></div>
-      <div class="gallery-item"><div class="img-placeholder">Photo 5 — Mountain run</div></div>
-      <div class="gallery-item"><div class="img-placeholder">Photo 6 — Prague</div></div>
-      <div class="gallery-item"><div class="img-placeholder">Photo 7 — Action shot</div></div>
-      <div class="gallery-item gallery-item-large"><div class="img-placeholder">Photo 8 — Montpellier</div></div>
+    <p class="prof-story-lead reveal">
+      Toufic started training at 13 after being overweight and bullied. Sport became the first place where he rebuilt discipline, confidence, and identity. Since then, he has raced regularly in Lebanon, completed two marathons, moved alone to France, co-built Sira into a 25-person operation — all at the same time.
+    </p>
+
+    <div class="prof-timeline reveal-stagger">
+
+      <div class="prof-tl-item">
+        <div class="prof-tl-dot"></div>
+        <div class="prof-tl-content">
+          <span class="prof-tl-year">2019</span>
+          <h4>The transformation</h4>
+          <p>Overweight and bullied at 13. One night, one decision. Full body transformation in 6 months — no coach, no team, just discipline.</p>
+        </div>
+      </div>
+
+      <div class="prof-tl-item">
+        <div class="prof-tl-dot"></div>
+        <div class="prof-tl-content">
+          <span class="prof-tl-year">2023</span>
+          <h4>First races, first wins</h4>
+          <p>Won ISF 21KM Half Marathon on debut at 16. Raced almost every weekend in Lebanon. Co-founded Sira.</p>
+        </div>
+      </div>
+
+      <div class="prof-tl-item">
+        <div class="prof-tl-dot"></div>
+        <div class="prof-tl-content">
+          <span class="prof-tl-year">2024</span>
+          <h4>Arena without armor</h4>
+          <p>Ran 10K with broken leg — featured on MTV Lebanon. Moved alone to France with 1 day's notice. First marathon: Beirut, double podium.</p>
+        </div>
+      </div>
+
+      <div class="prof-tl-item">
+        <div class="prof-tl-dot"></div>
+        <div class="prof-tl-content">
+          <span class="prof-tl-year">2025</span>
+          <h4>Fire year</h4>
+          <p>Registered Sira SARL. Sub-1:30 half marathon. Managing 25 people while studying and training. Hospitals, exams, heartbreak — still showing up.</p>
+        </div>
+      </div>
+
+      <div class="prof-tl-item prof-tl-now">
+        <div class="prof-tl-dot prof-tl-dot-red"></div>
+        <div class="prof-tl-content">
+          <span class="prof-tl-year">2026</span>
+          <h4>Warsaw — 7 days before turning 20</h4>
+          <p>Prague Marathon PB 3:42:37 · Montpellier HM PB 1:29:26 · IRONMAN 70.3 Warsaw June 7. 113 km. First triathlon.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- SECTION 8 — PORTFOLIO DOWNLOADS -->
-<section class="section portfolio-section" id="portfolio">
+<!-- ===== MISSION ===== -->
+
+
+<!-- ===== SIRA ===== -->
+
+<!-- ===== RACING MAP ===== -->
+<section class="prof-section" id="mission">
   <div class="container">
-    <div class="section-header">
-      <div class="section-num">07</div>
-      <h2 class="section-title">Full portfolio</h2>
-      <div class="section-line"></div>
+    <div class="section-divider reveal">
+      <span class="section-tag">Race Geography</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">4 countries · 25 races</span>
     </div>
-    <p class="section-sub">Three documents prepared for the Lebanese Sports Federation</p>
 
-    <div class="pdf-grid">
+    <h2 class="headline-l reveal" style="margin-bottom: 12px;">
+      Raced across <em class="italic-accent">borders.</em>
+    </h2>
+    <p class="reveal" style="font-size:12px;color:var(--grey-400);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:48px;font-family:var(--font-sans);">Hover the pins for race details</p>
 
-      <a href="assets/pdfs/PDF1_Athletic_Achievements.pdf" target="_blank" class="pdf-card">
-        <div class="pdf-num">01</div>
-        <div class="pdf-mark"></div>
-        <h3 class="pdf-title">Athletic Achievements<br>& Race Highlights</h3>
-        <p class="pdf-desc">Complete record of all races, personal bests, podiums, training data, and endurance achievements from October 2022 to June 2026.</p>
-        <div class="pdf-meta">
-          <span>8 pages</span>
-          <span>PDF</span>
+    <div class="rmap-outer reveal">
+
+  <!-- Leaflet map container -->
+  <div id="leafletMap" class="leaflet-map-container"></div>
+
+  <!-- Stats strip -->
+  <div class="rmap-stats">
+    <div class="rmst-cell">
+      <span class="rmst-n">4</span>
+      <span class="rmst-l">Countries</span>
+    </div>
+    <div class="rmst-cell">
+      <span class="rmst-n">25</span>
+      <span class="rmst-l">Races</span>
+    </div>
+    <div class="rmst-cell">
+      <span class="rmst-n">6</span>
+      <span class="rmst-l">Podiums</span>
+    </div>
+    <div class="rmst-cell rmst-dark">
+      <span class="rmst-n">113 km</span>
+      <span class="rmst-l">Warsaw · Jun 7</span>
+    </div>
+  </div>
+
+</div><!-- /rmap-outer -->
+  </div>
+</section>
+<section class="prof-section prof-section-grey" id="sira">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">Business</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">Co-Founder & Co-CEO · Sira · May 2023 – Present</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 48px;">
+      Built while <em class="italic-accent">running.</em>
+    </h2>
+
+    <!-- Sira header bar -->
+    <div class="sira-header reveal">
+      <div class="sira-logo-block">
+        <img src="assets/logos/sira.png" alt="Sira"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="sira-logo-fallback" style="display:none;">SIRA</span>
+      </div>
+      <div class="sira-header-text">
+        <div class="sira-role">Co-Founder &amp; Co-CEO</div>
+        <div class="sira-period">May 2023 – Present · Sira, Lebanon (Remote)</div>
+      </div>
+    </div>
+
+    <!-- 6 metric cards -->
+    <div class="sira-metrics-big reveal-stagger" style="margin-bottom: 40px;">
+      <div class="sira-metric-big">
+        <strong data-count="25">0</strong>
+        <span>Person org</span>
+      </div>
+      <div class="sira-metric-big">
+        <strong>60K</strong>
+        <span>Community</span>
+      </div>
+      <div class="sira-metric-big">
+        <strong>15M+</strong>
+        <span>Impressions</span>
+      </div>
+      <div class="sira-metric-big">
+        <strong data-count="8000">0</strong>
+        <span>CVs processed</span>
+      </div>
+      <div class="sira-metric-big">
+        <strong data-count="700">0</strong>
+        <span>Interviews</span>
+      </div>
+      <div class="sira-metric-big sira-metric-dark">
+        <strong>70%</strong>
+        <span>Manual work cut</span>
+      </div>
+    </div>
+
+    <!-- Achievement panels — 3 columns, fast to scan -->
+    <div class="sira-panels reveal">
+      <div class="sira-panel-col">
+        <div class="sira-panel-title">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+          Operations & Systems
         </div>
-        <div class="pdf-download">Download →</div>
+        <div class="sira-panel-items">
+          <div class="sira-panel-item"><span class="spi-num">20,000</span><span class="spi-text">Lines of code — cut manual work by 70%</span></div>
+          <div class="sira-panel-item"><span class="spi-num">98%</span><span class="spi-text">On-time deliverables across departments</span></div>
+          <div class="sira-panel-item"><span class="spi-num">32%</span><span class="spi-text">WhatsApp funnel conversion rate</span></div>
+          <div class="sira-panel-item"><span class="spi-num">34</span><span class="spi-text">Paid campaigns · 280 ad creative videos</span></div>
+          <div class="sira-panel-item"><span class="spi-num">3</span><span class="spi-text">Departments built from scratch</span></div>
+        </div>
+      </div>
+
+      <div class="sira-panel-col">
+        <div class="sira-panel-title">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>
+          Hiring & Delivery
+        </div>
+        <div class="sira-panel-items">
+          <div class="sira-panel-item"><span class="spi-num">8,000</span><span class="spi-text">Resumes reviewed · 600 interviews conducted</span></div>
+          <div class="sira-panel-item"><span class="spi-num">50+</span><span class="spi-text">Hires across 13 roles</span></div>
+          <div class="sira-panel-item"><span class="spi-num">5,000</span><span class="spi-text">Applications managed → 700 interviews → 300 offers</span></div>
+          <div class="sira-panel-item"><span class="spi-num">1,500</span><span class="spi-text">Coaching sessions powered</span></div>
+          <div class="sira-panel-item"><span class="spi-num">43</span><span class="spi-text">Roles filled for international partners</span></div>
+        </div>
+      </div>
+
+      <div class="sira-panel-col">
+        <div class="sira-panel-title">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/></svg>
+          Training & Impact
+        </div>
+        <div class="sira-panel-items">
+          <div class="sira-panel-item"><span class="spi-num">103</span><span class="spi-text">Workshops · 5,000 attendees · 216 majors</span></div>
+          <div class="sira-panel-item"><span class="spi-num">150+</span><span class="spi-text">Professionals achieving 2–4x salary increases</span></div>
+          <div class="sira-panel-item"><span class="spi-num">60K</span><span class="spi-text">Member jobs community moderated</span></div>
+          <div class="sira-panel-item"><span class="spi-num">6M</span><span class="spi-text">Job datapoints in scraping pipeline</span></div>
+          <div class="sira-panel-item"><span class="spi-num">15M</span><span class="spi-text">Impressions through performance marketing</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Companies ticker -->
+    <div class="sira-ticker-section reveal" style="margin-top: 48px;">
+      <span class="sira-clients-label">— Candidates placed at companies including</span>
+      <div class="sira-companies-ticker">
+        <div class="sira-companies-track">
+          <!-- Left to right scroll -->
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/amazon.png" alt="Amazon"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Amazon</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/ibm.png" alt="IBM"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">IBM</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/toyota.png" alt="Toyota"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Toyota</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/pwc.png" alt="PwC"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">PwC</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/deloitte.png" alt="Deloitte"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Deloitte</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/emaar.png" alt="Emaar"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Emaar</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/emirates.png" alt="Emirates"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Emirates</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/aub.png" alt="AUB"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">AUB</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/mubs.png" alt="MUBS"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">MUBS</span>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/amazon.png" alt="Amazon"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Amazon</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/ibm.png" alt="IBM"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">IBM</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/toyota.png" alt="Toyota"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Toyota</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/pwc.png" alt="PwC"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">PwC</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/deloitte.png" alt="Deloitte"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Deloitte</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/emaar.png" alt="Emaar"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Emaar</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/emirates.png" alt="Emirates"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">Emirates</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/aub.png" alt="AUB"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">AUB</span>
+          </div>
+          <div class="sira-company-item">
+            <img src="assets/logos/companies/mubs.png" alt="MUBS"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">MUBS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY NUMBERS ===== -->
+<section class="prof-section" id="numbers">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">By the numbers</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">Sport + Business</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
+      The proof. <em class="italic-accent">In numbers.</em>
+    </h2>
+
+    <div class="prof-numbers-grid reveal-stagger">
+      <div class="prof-num-card">
+        <div class="prof-num-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <span class="prof-num-big">3:42:37</span>
+        <span class="prof-num-label">Marathon PB</span>
+        <span class="prof-num-sub">Prague · May 3, 2026 · Injured leg</span>
+      </div>
+      <div class="prof-num-card">
+        <div class="prof-num-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <span class="prof-num-big">1:29:26</span>
+        <span class="prof-num-label">Half Marathon PB</span>
+        <span class="prof-num-sub">Montpellier · 9th U23 · 140/4,516</span>
+      </div>
+      <div class="prof-num-card">
+        <div class="prof-num-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+          </svg>
+        </div>
+        <span class="prof-num-big">39:42</span>
+        <span class="prof-num-label">10K PB</span>
+        <span class="prof-num-sub">3rd ESM · 23rd Overall</span>
+      </div>
+      <div class="prof-num-card prof-num-dark">
+        <div class="prof-num-icon" style="color:var(--red);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <span class="prof-num-big">60,000</span>
+        <span class="prof-num-label">Sira Community</span>
+        <span class="prof-num-sub">Career platform · Lebanon</span>
+      </div>
+      <div class="prof-num-card prof-num-dark">
+        <div class="prof-num-icon" style="color:var(--red);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+          </svg>
+        </div>
+        <span class="prof-num-big">25</span>
+        <span class="prof-num-label">Team at Sira</span>
+        <span class="prof-num-sub">3 departments · Before age 18</span>
+      </div>
+      <div class="prof-num-card prof-num-red">
+        <div class="prof-num-icon" style="color:rgba(255,255,255,0.7);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945"/>
+            <path d="M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064"/>
+            <circle cx="12" cy="12" r="9"/>
+          </svg>
+        </div>
+        <span class="prof-num-big">113 km</span>
+        <span class="prof-num-label">IRONMAN 70.3</span>
+        <span class="prof-num-sub">Warsaw · June 7, 2026 · Age 19</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="prof-section prof-section-grey" id="contact">
+  <div class="container-narrow">
+    <div class="section-divider reveal">
+      <span class="section-tag">Contact</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">Sponsorship · Media · Federation</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      Let's <em class="italic-accent">connect.</em>
+    </h2>
+
+    <div class="prof-contact-grid reveal-stagger">
+      <a href="https://siracareers.com" target="_blank" class="prof-contact-card">
+        <div class="prof-cc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </div>
+        <span class="prof-contact-label">Website</span>
+        <span class="prof-contact-val">siracareers.com</span>
       </a>
-
-      <a href="assets/pdfs/PDF2_Athlete_Profile.pdf" target="_blank" class="pdf-card">
-        <div class="pdf-num">02</div>
-        <div class="pdf-mark"></div>
-        <h3 class="pdf-title">Athlete Profile<br>& Personal Story</h3>
-        <p class="pdf-desc">Personal narrative, identity, athletic philosophy, and the journey from overweight at 13 to endurance athlete at 19.</p>
-        <div class="pdf-meta">
-          <span>To be built</span>
-          <span>PDF</span>
+      <a href="https://www.linkedin.com/in/touficabouali" target="_blank" class="prof-contact-card">
+        <div class="prof-cc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+            <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
         </div>
-        <div class="pdf-download">Download →</div>
+        <span class="prof-contact-label">LinkedIn</span>
+        <span class="prof-contact-val">touficabouali</span>
       </a>
-
-      <a href="assets/pdfs/PDF3_Race_Results.pdf" target="_blank" class="pdf-card">
-        <div class="pdf-num">03</div>
-        <div class="pdf-mark"></div>
-        <h3 class="pdf-title">Race Results<br>& Official Proof</h3>
-        <p class="pdf-desc">Official race result screenshots, Strava activity links, race certificates, photos, and verification documents for federation review.</p>
-        <div class="pdf-meta">
-          <span>To be built</span>
-          <span>PDF</span>
+      <a href="https://www.instagram.com/touficaa/" target="_blank" class="prof-contact-card">
+        <div class="prof-cc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
         </div>
-        <div class="pdf-download">Download →</div>
+        <span class="prof-contact-label">Instagram</span>
+        <span class="prof-contact-val">@touficaa</span>
       </a>
-
+      <a href="https://www.strava.com/athletes/109556347" target="_blank" class="prof-contact-card">
+        <div class="prof-cc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <span class="prof-contact-label">Strava</span>
+        <span class="prof-contact-val">athletes/109556347</span>
+      </a>
+      <div class="prof-contact-card">
+        <div class="prof-cc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <span class="prof-contact-label">Location</span>
+        <span class="prof-contact-val">Montpellier, France 🇫🇷</span>
+      </div>
+      <div class="prof-contact-card">
+        <div class="prof-cc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 21h18M3 7l9-4 9 4M4 7v14M20 7v14M8 10v4M12 10v4M16 10v4"/>
+          </svg>
+        </div>
+        <span class="prof-contact-label">Nationality</span>
+        <span class="prof-contact-val">Lebanese 🇱🇧</span>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- SECTION 9 — CONTACT / FOOTER -->
-<section class="section contact-section" id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-left">
-        <div class="section-num">08</div>
-        <h2 class="contact-title">Let's connect.</h2>
-        <p class="contact-sub">For federation registration, partnership opportunities, or any inquiry — reach out directly.</p>
-      </div>
-      <div class="contact-right">
-        <div class="contact-row">
-          <div class="contact-label">Email</div>
-          <a href="mailto:" class="contact-value">_______________</a>
-        </div>
-        <div class="contact-row">
-          <div class="contact-label">Strava</div>
-          <a href="https://www.strava.com/athletes/109556347" target="_blank" class="contact-value">strava.com/athletes/109556347</a>
-        </div>
-        <div class="contact-row">
-          <div class="contact-label">Instagram</div>
-          <a href="https://www.instagram.com/touficaa/" target="_blank" class="contact-value">@touficaa</a>
-        </div>
-        <div class="contact-row">
-          <div class="contact-label">Based in</div>
-          <div class="contact-value">Montpellier, France</div>
-        </div>
-      </div>
+    <!-- Navigate to docs -->
+    <div class="prof-nav-cards reveal-stagger">
+      <a href="record.html" class="prof-nav-card">
+        <span class="prof-nav-tag">Document 02 of 03</span>
+        <h3>Athletic Achievements &amp; Race Highlights</h3>
+        <p>25 races · 6 podiums · Full Strava export · Personal bests · Long runs · Race deep-dives · All verified</p>
+        <span class="prof-nav-arrow">View record →</span>
+      </a>
+      <a href="ironman.html" class="prof-nav-card prof-nav-dark">
+        <span class="prof-nav-tag">Document 03 of 03</span>
+        <h3>IRONMAN 70.3 Warsaw Media Pack</h3>
+        <p>Race overview · Registration proof · Race bike · Road to Warsaw · Why it matters · Sponsorship · Media use</p>
+        <span class="prof-nav-arrow">View media pack →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -599,19 +634,300 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">TOUFIC ABOU ALI</div>
-        <div class="footer-tagline">Lebanese Endurance Athlete · 2026</div>
+      <div>
+        <div class="footer-brand-name">Toufic Abou Ali</div>
+        <div class="footer-brand-tagline">Lebanese Endurance Athlete · Founder · 2026</div>
+        <p style="font-size:13px;line-height:1.6;color:var(--grey-400);max-width:380px;">
+          19-year-old Lebanese student-athlete and entrepreneur. Co-Founder &amp; Co-CEO of Sira. Racing IRONMAN 70.3 Warsaw on June 7, 2026.
+        </p>
       </div>
-      <div class="footer-meta">
-        <span>Prepared for the Lebanese Sports Federation</span>
-        <span>·</span>
-        <span>All data verified from Strava activity export</span>
+      <div>
+        <div class="footer-col-title">Documents</div>
+        <ul class="footer-list">
+          <li><a href="index.html">01 — Athlete Profile</a></li>
+          <li><a href="record.html">02 — Athletic Record</a></li>
+          <li><a href="ironman.html">03 — Warsaw Media Pack</a></li>
+        </ul>
       </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-list">
+          <li><a href="https://siracareers.com" target="_blank">siracareers.com</a></li>
+          <li><a href="https://www.instagram.com/touficaa/" target="_blank">@touficaa</a></li>
+          <li><a href="https://www.strava.com/athletes/109556347" target="_blank">Strava</a></li>
+          <li><a href="https://www.linkedin.com/in/touficabouali" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Toufic Abou Ali</span>
+      <span>Document 01 of 03 · Athlete &amp; Founder Profile</span>
     </div>
   </div>
 </footer>
 
+<button class="print-fab" onclick="window.print()" aria-label="Print">
+  <svg viewBox="0 0 24 24" fill="none">
+    <polyline points="6 9 6 2 18 2 18 9"/>
+    <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
+    <rect x="6" y="14" width="12" height="8"/>
+  </svg>
+</button>
+
 <script src="script.js"></script>
+
+<script>
+// ============================================================
+// LEAFLET INTERACTIVE MAP — Race Locations
+// ============================================================
+(function() {
+
+  function initMap() {
+    var el = document.getElementById('leafletMap');
+    if (!el || el._leaflet_id) return;
+
+    // Init map centered on Europe/Middle East
+    var map = L.map('leafletMap', {
+      center: [35, 25],
+      zoom: 4,
+      zoomControl: true,
+      scrollWheelZoom: false,
+      attributionControl: false
+    });
+
+    // Tile layer — CartoDB light (clean, minimal, no labels cluttering)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    // Custom pin icon factory
+    function makeIcon(color, size, pulse) {
+      var s = size || 14;
+      var html = pulse
+        ? '<div style="width:' + s + 'px;height:' + s + 'px;background:' + color + ';border-radius:50%;border:2.5px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.25);position:relative;">' +
+          '<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:' + (s+16) + 'px;height:' + (s+16) + 'px;background:' + color + ';opacity:0.2;border-radius:50%;animation:leafPulse 2s ease-out infinite;"></div>' +
+          '</div>'
+        : '<div style="width:' + s + 'px;height:' + s + 'px;background:' + color + ';border-radius:50%;border:2.5px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.25);"></div>';
+
+      return L.divIcon({
+        html: html,
+        className: '',
+        iconSize: [s, s],
+        iconAnchor: [s/2, s/2],
+        popupAnchor: [0, -s]
+      });
+    }
+
+    // Race data
+    var races = [
+      {
+        lat: 33.888,
+        lng: 35.495,
+        name: 'Lebanon 🇱🇧',
+        city: 'Beirut · Tripoli · Barja · Rashaya',
+        color: '#DC2626',
+        size: 18,
+        pulse: true,
+        home: true,
+        rows: [
+          ['Races', '21 races · 2022–2025'],
+          ['Marathon', 'Beirut 3:48:22 · 1st 542 Program'],
+          ['Half', 'ISF 21KM · 1st Place on debut · Age 16'],
+          ['Feature', 'MTV Lebanon · 10K with broken leg']
+        ]
+      },
+      {
+        lat: 43.61,
+        lng: 3.88,
+        name: 'France 🇫🇷',
+        city: 'Montpellier · 2025–2026',
+        color: '#525252',
+        size: 14,
+        pulse: true,
+        rows: [
+          ['Races', '3 races · Current training base'],
+          ['HM PB', '1:29:26 · 9th U23 · 140 / 4,516'],
+          ['10K PB', '39:42 · 3rd ESM · 23rd Overall'],
+          ['5K', '19:48 · 2nd Overall']
+        ]
+      },
+      {
+        lat: 50.073,
+        lng: 14.437,
+        name: 'Czech Republic 🇨🇿',
+        city: 'Prague · May 3, 2026',
+        color: '#525252',
+        size: 14,
+        pulse: true,
+        rows: [
+          ['Result', 'Marathon PB · 3:42:37'],
+          ['Context', 'Raced with injured left leg'],
+          ['Next', '35 days before Warsaw IRONMAN']
+        ]
+      },
+      {
+        lat: 52.229,
+        lng: 21.012,
+        name: 'Poland 🇵🇱 — IRONMAN',
+        city: 'Warsaw · June 7, 2026',
+        color: '#DC2626',
+        size: 20,
+        pulse: true,
+        iron: true,
+        rows: [
+          ['Race', 'IRONMAN 70.3 · 113 km total'],
+          ['Age', '19 · 7 days before turning 20'],
+          ['Type', 'First triathlon · First Half Ironman']
+        ]
+      }
+    ];
+
+    // Draw connection lines
+    var lineCoords = [
+      [33.888, 35.495],
+      [43.61,  3.88],
+      [50.073, 14.437],
+      [52.229, 21.012]
+    ];
+
+    L.polyline(lineCoords, {
+      color: '#DC2626',
+      weight: 1.5,
+      opacity: 0.35,
+      dashArray: '5, 7'
+    }).addTo(map);
+
+    // Add markers
+    races.forEach(function(r) {
+      var marker = L.marker([r.lat, r.lng], { icon: makeIcon(r.color, r.size, r.pulse) }).addTo(map);
+
+      // Build popup content
+      var rows = r.rows.map(function(row) {
+        return '<div class="lmap-row"><span class="lmap-key">' + row[0] + '</span><span class="lmap-val">' + row[1] + '</span></div>';
+      }).join('');
+
+      var badge = r.iron
+        ? '<span style="background:#DC2626;color:white;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:2px;font-family:Inter,sans-serif;">IRONMAN 70.3</span>'
+        : (r.home ? '<span style="background:#DC2626;color:white;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:2px;font-family:Inter,sans-serif;">HOME COUNTRY</span>' : '');
+
+      var popup = L.popup({
+        closeButton: false,
+        className: 'lmap-popup',
+        maxWidth: 280,
+        offset: [0, -10]
+      }).setContent(
+        '<div class="lmap-tip">' +
+          '<div class="lmap-tip-name">' + r.name + '</div>' +
+          '<div class="lmap-tip-city">' + r.city + '</div>' +
+          (badge ? '<div style="margin-bottom:10px;">' + badge + '</div>' : '') +
+          '<div class="lmap-tip-rows">' + rows + '</div>' +
+        '</div>'
+      );
+
+      marker.on('click', function() { marker.bindPopup(popup).openPopup(); });
+      marker.on('mouseover', function() { marker.bindPopup(popup).openPopup(); });
+    });
+
+    // Disable scroll zoom on mobile
+    map.on('focus', function() { map.scrollWheelZoom.enable(); });
+    map.on('blur', function() { map.scrollWheelZoom.disable(); });
+  }
+
+  // Init when DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMap);
+  } else {
+    initMap();
+  }
+
+})();
+</script>
+
+<style>
+/* Pulse animation for custom markers */
+@keyframes leafPulse {
+  0%   { transform: translate(-50%,-50%) scale(0.5); opacity: 0.6; }
+  100% { transform: translate(-50%,-50%) scale(3); opacity: 0; }
+}
+
+/* Leaflet popup — custom dark style */
+.lmap-popup .leaflet-popup-content-wrapper {
+  background: #0a0a0a;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  padding: 0;
+  border: none;
+}
+
+.lmap-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+.lmap-popup .leaflet-popup-tip {
+  background: #0a0a0a;
+}
+
+.lmap-tip {
+  padding: 16px 18px;
+  min-width: 220px;
+}
+
+.lmap-tip-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.lmap-tip-city {
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #DC2626;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.lmap-tip-rows { display: flex; flex-direction: column; gap: 4px; }
+
+.lmap-row {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 8px;
+  font-family: Inter, sans-serif;
+}
+
+.lmap-key {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #555;
+  padding-top: 2px;
+}
+
+.lmap-val {
+  font-size: 11px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Leaflet attribution */
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  opacity: 0.4;
+}
+</style>
 </body>
 </html>
+
+
+
+
+

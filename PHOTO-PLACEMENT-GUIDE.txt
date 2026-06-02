@@ -1,0 +1,66 @@
+﻿====================================================
+TOUFIC PORTFOLIO — PHOTO PLACEMENT GUIDE
+====================================================
+Add your photos to these exact paths.
+The site will show them automatically.
+If a photo is missing, an elegant placeholder shows instead.
+
+----------------------------------------------------
+PAGE 1 — ATHLETE PROFILE (index.html)
+----------------------------------------------------
+
+HERO PORTRAIT:
+  assets/images/hero/hero-main.jpg
+  → Your best vertical portrait photo
+  → Aspect ratio: 3:4 (portrait)
+  → Minimum: 800px wide
+
+----------------------------------------------------
+PAGE 3 — IRONMAN MEDIA PACK (ironman.html)
+----------------------------------------------------
+
+REGISTRATION PROOF — Screenshot 1:
+  assets/images/proof/ironman-registration-1.jpg
+  → The screenshot showing:
+     "Enea IRONMAN 70.3 Warsaw — Status: Registered"
+     Toufic Abou Ali · DOB: 14-06-2006 · Nationality: Lebanon
+
+REGISTRATION PROOF — Screenshot 2:
+  assets/images/proof/ironman-registration-2.jpg
+  → The screenshot showing:
+     Products: Starting kit 400 EUR · Daily license · Medal engraving · Finisher photo
+
+RACE BIKE:
+  assets/images/bike/specialized-shiv.jpg
+  → The Specialized S-Works Shiv Di2 red/black photo you have
+  → Aspect ratio: 4:3 (landscape)
+
+----------------------------------------------------
+OPTIONAL — RACE PHOTOS (record.html)
+----------------------------------------------------
+
+RACE PHOTOS (shown on record page race cards):
+  assets/images/races/beirut-marathon.jpg
+  assets/images/races/prague-marathon.jpg
+  assets/images/races/montpellier.jpg
+  assets/images/races/envolez-vous.jpg
+  assets/images/races/allure-bleue.jpg
+  assets/images/races/ironman-warsaw.jpg  (add after June 7)
+
+LOGOS:
+  assets/logos/sira.png
+  assets/logos/ray.png
+  assets/logos/mediascaling.png
+  assets/logos/heracles.png
+  assets/logos/roseup.png
+  assets/logos/leklub.png
+  → PNG format with transparent background
+  → Grayscale on load, color on hover
+
+====================================================
+PRIORITY ORDER — Add these first:
+1. ironman-registration-1.jpg  (proof screenshot)
+2. ironman-registration-2.jpg  (proof screenshot)
+3. specialized-shiv.jpg        (bike photo)
+4. hero-main.jpg               (your portrait)
+====================================================
