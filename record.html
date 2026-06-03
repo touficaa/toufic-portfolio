@@ -3,28 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The complete race record of Toufic Abou Ali. 25 races. 6 podiums. All verified.">
-<title>The Record — Toufic Abou Ali</title>
+<title>Athletic Record — Toufic Abou Ali</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="record.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-<!-- LOADER -->
 <div class="loader" id="loader">
   <div class="loader-content">
     <div class="loader-mark"></div>
-    <div class="loader-name">THE RECORD</div>
+    <div class="loader-name">ATHLETIC RECORD</div>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
   </div>
 </div>
 
-<!-- SCROLL PROGRESS -->
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- NAVIGATION -->
 <nav class="nav" id="nav">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
@@ -42,241 +37,330 @@
   </div>
 </nav>
 
-<!-- ===== SECTION 1 — TRAINING AUDIT ===== -->
-<section class="rec-section rec-section-grey" id="audit" style="padding-top: calc(var(--nav-h) + 100px);">
+<!-- ===== HERO ===== -->
+<section class="rec-hero">
+  <div class="container-narrow">
+    <div class="rec-hero-tag">— Document 02 of 03 · Athletic Achievements & Race Highlights</div>
+    <h1 class="rec-hero-title">Athletic<br>Record.</h1>
+    <div class="rec-hero-meta">
+      <div class="rec-meta-cell">
+        <span class="rec-meta-key">Documented Races</span>
+        <span class="rec-meta-val">25 races</span>
+      </div>
+      <div class="rec-meta-cell">
+        <span class="rec-meta-key">Confirmed Podiums</span>
+        <span class="rec-meta-val">6 podiums</span>
+      </div>
+      <div class="rec-meta-cell">
+        <span class="rec-meta-key">Countries</span>
+        <span class="rec-meta-val">Racing across 4 countries</span>
+      </div>
+      <div class="rec-meta-cell">
+        <span class="rec-meta-key">Period</span>
+        <span class="rec-meta-val">Oct 2022 — Jun 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUDIT ===== -->
+<section class="rec-section" id="audit">
   <div class="container">
     <div class="section-divider reveal">
-      <span class="section-tag">Strava Export</span>
+      <span class="section-tag">Training Audit</span>
       <div class="section-divider-line"></div>
-      <span class="section-tag">18 Oct 2022 — 01 Jun 2026</span>
+      <span class="section-tag">Strava export · Oct 2022 — Jun 2026</span>
     </div>
 
-    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
-      Training volume <em class="italic-accent">documented.</em>
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      The work. <em class="italic-accent">In full.</em>
     </h2>
 
     <div class="stats-grid reveal-stagger">
       <div class="stat-card">
         <div class="stat-card-disc">Running</div>
-        <div class="stat-card-num"><span data-count="2164">0</span><span class="stat-unit">km</span></div>
+        <div class="stat-card-num">
+          <span data-count="2164">0</span>
+          <span class="stat-unit">km</span>
+        </div>
         <div class="stat-card-detail">201 activities · 182h 01min</div>
       </div>
       <div class="stat-card">
         <div class="stat-card-disc">Cycling</div>
-        <div class="stat-card-num"><span data-count="436">0</span><span class="stat-unit">km</span></div>
+        <div class="stat-card-num">
+          <span data-count="436">0</span>
+          <span class="stat-unit">km</span>
+        </div>
         <div class="stat-card-detail">23 rides · 16h 53min</div>
       </div>
       <div class="stat-card">
         <div class="stat-card-disc">Swimming</div>
-        <div class="stat-card-num"><span data-count="28.25">0</span><span class="stat-unit">km</span></div>
+        <div class="stat-card-num">
+          <span>28.25</span>
+          <span class="stat-unit">km</span>
+        </div>
         <div class="stat-card-detail">30 sessions · 18h 00min</div>
       </div>
       <div class="stat-card stat-card-dark">
         <div class="stat-card-disc">Total Activities</div>
-        <div class="stat-card-num"><span data-count="256">0</span></div>
-        <div class="stat-card-detail">218 hours of training</div>
+        <div class="stat-card-num">
+          <span data-count="256">0</span>
+        </div>
+        <div class="stat-card-detail">218 hours · Oct 2022 — Jun 2026</div>
       </div>
     </div>
 
-    <div class="rec-yearly-wrap reveal">
-      <h3 class="rec-h3" style="margin-bottom: 24px;">Yearly breakdown</h3>
+    <!-- Yearly table -->
+    <div class="rec-yearly-wrap reveal" style="margin-top: 48px;">
+      <h3>Year by year</h3>
       <table class="rec-yearly-table">
         <thead>
           <tr>
             <th>Year</th>
-            <th>Runs</th>
-            <th>Run km</th>
-            <th>Rides</th>
-            <th>Ride km</th>
-            <th>Swims</th>
-            <th>Swim km</th>
+            <th>Races</th>
+            <th>km Running</th>
+            <th>Highlight</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>2022</td><td>6</td><td>53.76</td><td>1</td><td>10.16</td><td>0</td><td>—</td></tr>
-          <tr><td>2023</td><td>35</td><td>287.94</td><td>0</td><td>—</td><td>0</td><td>—</td></tr>
-          <tr><td>2024</td><td>45</td><td>433.41</td><td>0</td><td>—</td><td>0</td><td>—</td></tr>
-          <tr><td>2025</td><td>56</td><td>668.24</td><td>0</td><td>—</td><td>2</td><td>6.94</td></tr>
-          <tr class="rec-yearly-highlight"><td>2026</td><td>59</td><td>721.17</td><td>22</td><td>426.20</td><td>30</td><td>28.25</td></tr>
+          <tr>
+            <td>2022</td>
+            <td>2</td>
+            <td>~120 km</td>
+            <td>First tracked races · Lebanon</td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>8</td>
+            <td>~480 km</td>
+            <td>ISF 21KM 1st Place · Weekly racing Lebanon</td>
+          </tr>
+          <tr>
+            <td>2024</td>
+            <td>10</td>
+            <td>~820 km</td>
+            <td>Beirut Marathon 3:48:22 · MTV Lebanon · Moved to France</td>
+          </tr>
+          <tr>
+            <td>2025</td>
+            <td>2</td>
+            <td>~520 km</td>
+            <td>Anjar 1st Place · Sub-1:30 HM target</td>
+          </tr>
+          <tr class="rec-yearly-highlight">
+            <td>2026</td>
+            <td>4</td>
+            <td>~224 km</td>
+            <td>HM PB 1:29:26 · Marathon PB 3:42:37 · IRONMAN 70.3 Warsaw</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- ===== SECTION 2 — PERSONAL BESTS ===== -->
-<section class="section pb-section" id="pbs">
+<!-- ===== PERSONAL BESTS ===== -->
+<section class="rec-section rec-section-grey" id="pbs">
   <div class="container">
     <div class="section-divider reveal">
       <span class="section-tag">Personal Bests</span>
       <div class="section-divider-line"></div>
-      <span class="section-tag">All set before age 20</span>
+      <span class="section-tag">All verified · Strava linked</span>
     </div>
 
-    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
-      Four records. <em class="italic-accent">One year.</em>
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      Personal <em class="italic-accent">bests.</em>
     </h2>
 
     <div class="pb-grid reveal-stagger">
-      <article class="pb-card">
+
+      <div class="pb-card">
         <div class="pb-card-distance">5K</div>
         <div class="pb-card-time">19:48</div>
         <div class="pb-card-line"></div>
         <div class="pb-card-where">
           <span class="pb-card-race">Allure Bleue Race</span>
-          <span class="pb-card-when">Feb 21, 2026 · Age 19</span>
+          <span>Montpellier · Feb 21, 2026</span>
         </div>
-        <div class="pb-card-badge">2nd Overall</div>
-        <a href="https://www.strava.com/activities/17472316459" target="_blank" class="pb-strava-link">View on Strava ↗</a>
-      </article>
+        <span class="pb-card-badge">2nd Overall</span>
+        <a href="https://www.strava.com/activities/17472316459" target="_blank" class="pb-strava-link">Strava ↗</a>
+      </div>
 
-      <article class="pb-card pb-card-feature">
+      <div class="pb-card">
         <div class="pb-card-distance">10K</div>
         <div class="pb-card-time">39:42</div>
         <div class="pb-card-line"></div>
         <div class="pb-card-where">
           <span class="pb-card-race">Envolez Vous 2026</span>
-          <span class="pb-card-when">Feb 1, 2026 · Age 19</span>
+          <span>Montpellier · Feb 1, 2026</span>
         </div>
-        <div class="pb-card-badge">3rd ESM · 23rd O/A</div>
-        <a href="https://www.strava.com/activities/17249976869" target="_blank" class="pb-strava-link">View on Strava ↗</a>
-      </article>
+        <span class="pb-card-badge">3rd ESM · 23rd Overall</span>
+        <a href="https://www.strava.com/activities/17249976869" target="_blank" class="pb-strava-link">Strava ↗</a>
+      </div>
 
-      <article class="pb-card pb-card-feature">
+      <div class="pb-card pb-card-feature">
         <div class="pb-card-distance">Half Marathon</div>
         <div class="pb-card-time">1:29:26</div>
         <div class="pb-card-line"></div>
         <div class="pb-card-where">
           <span class="pb-card-race">Montpellier Run Festival</span>
-          <span class="pb-card-when">Apr 19, 2026 · Age 19</span>
+          <span>France · Apr 19, 2026</span>
         </div>
-        <div class="pb-card-badge">9th U23 · 140/4,516</div>
-        <a href="https://www.strava.com/activities/18175504201" target="_blank" class="pb-strava-link">View on Strava ↗</a>
-      </article>
+        <span class="pb-card-badge">9th U23 · 140th of 4,516 · Top 3.1%</span>
+        <a href="https://www.strava.com/activities/18175504201" target="_blank" class="pb-strava-link">Strava ↗</a>
+      </div>
 
-      <article class="pb-card">
+      <div class="pb-card">
         <div class="pb-card-distance">Marathon</div>
         <div class="pb-card-time">3:42:37</div>
         <div class="pb-card-line"></div>
         <div class="pb-card-where">
-          <span class="pb-card-race">Prague Marathon</span>
-          <span class="pb-card-when">May 3, 2026 · Age 19</span>
+          <span class="pb-card-race">Vodafone Prague Marathon</span>
+          <span>Czech Republic · May 3, 2026</span>
         </div>
-        <div class="pb-card-badge">Marathon PB · 2,346th O/A</div>
-        <a href="https://www.strava.com/activities/18717374673" target="_blank" class="pb-strava-link">View on Strava ↗</a>
-      </article>
-    </div>
-
-    <!-- Progression -->
-    <div class="rec-prog-grid reveal">
-      <div class="rec-prog-block">
-        <h4 class="rec-prog-title">Half Marathon Progression</h4>
-        <div class="rec-prog-rows">
-          <div class="rec-prog-row">
-            <span class="rec-prog-date">Jun 2023</span>
-            <span class="rec-prog-time">1:49:34</span>
-            <span class="rec-prog-note">ISF Half Marathon · First ever</span>
-          </div>
-          <div class="rec-prog-row">
-            <span class="rec-prog-date">Apr 2025</span>
-            <span class="rec-prog-time">1:39:48</span>
-            <span class="rec-prog-note">Montpellier 2025 · −9:46</span>
-          </div>
-          <div class="rec-prog-row rec-prog-row-best">
-            <span class="rec-prog-date">Apr 2026</span>
-            <span class="rec-prog-time">1:29:26</span>
-            <span class="rec-prog-note">Montpellier 2026 · −10:22</span>
-          </div>
-        </div>
-        <p class="rec-prog-total">Total improvement: <strong>−20:08 over 3 years</strong></p>
+        <span class="pb-card-badge">Completed 35 days before Warsaw · Left leg taped</span>
+        <a href="https://www.strava.com/activities/18717374673" target="_blank" class="pb-strava-link">Strava ↗</a>
       </div>
 
-      <div class="rec-prog-block">
-        <h4 class="rec-prog-title">Marathon Progression</h4>
-        <div class="rec-prog-rows">
-          <div class="rec-prog-row">
-            <span class="rec-prog-date">May 2025</span>
-            <span class="rec-prog-time">3:48:22</span>
-            <span class="rec-prog-note">Beirut Marathon · First ever</span>
-          </div>
-          <div class="rec-prog-row rec-prog-row-best">
-            <span class="rec-prog-date">May 2026</span>
-            <span class="rec-prog-time">3:42:37</span>
-            <span class="rec-prog-note">Prague Marathon · −5:45</span>
-          </div>
-        </div>
-        <p class="rec-prog-total">Improvement: <strong>−5:45 over 1 year</strong></p>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SECTION 3 — CONFIRMED PODIUMS ===== -->
+<!-- ===== PROGRESSION ===== -->
+<section class="rec-section" id="progression">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">Progression</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">Half Marathon · Marathon</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      Getting <em class="italic-accent">faster.</em>
+    </h2>
+
+    <div class="rec-prog-grid reveal-stagger">
+
+      <div class="rec-prog-block">
+        <div class="rec-prog-title">Half Marathon Progression</div>
+        <div class="rec-prog-rows">
+          <div class="rec-prog-row">
+            <span class="rec-prog-date">2023</span>
+            <span class="rec-prog-time">1:54:59</span>
+            <span class="rec-prog-note">ISF 21KM · 1st Place debut · Lebanon</span>
+          </div>
+          <div class="rec-prog-row">
+            <span class="rec-prog-date">2024</span>
+            <span class="rec-prog-time">~1:48</span>
+            <span class="rec-prog-note">Rolling Half · Lebanon</span>
+          </div>
+          <div class="rec-prog-row">
+            <span class="rec-prog-date">2025</span>
+            <span class="rec-prog-time">~1:38</span>
+            <span class="rec-prog-note">Lebanon — training race</span>
+          </div>
+          <div class="rec-prog-row">
+            <span class="rec-prog-date">2025</span>
+            <span class="rec-prog-time">~1:32</span>
+            <span class="rec-prog-note">Lebanon — pre-France</span>
+          </div>
+          <div class="rec-prog-row rec-prog-row-best">
+            <span class="rec-prog-date">Apr 2026</span>
+            <span class="rec-prog-time">1:29:26</span>
+            <span class="rec-prog-note">PB · Montpellier · 9th U23 · 5th official HM</span>
+          </div>
+        </div>
+        <div class="rec-prog-total">
+          5 official half marathons · <strong>25 min improvement</strong> since debut
+        </div>
+      </div>
+
+      <div class="rec-prog-block">
+        <div class="rec-prog-title">Marathon Progression</div>
+        <div class="rec-prog-rows">
+          <div class="rec-prog-row">
+            <span class="rec-prog-date">May 2024</span>
+            <span class="rec-prog-time">3:48:22</span>
+            <span class="rec-prog-note">Beirut Marathon · 1st marathon · 1st 542 Program</span>
+          </div>
+          <div class="rec-prog-row rec-prog-row-best">
+            <span class="rec-prog-date">May 2026</span>
+            <span class="rec-prog-time">3:42:37</span>
+            <span class="rec-prog-note">PB · Prague · Left leg taped · 35 days before Warsaw</span>
+          </div>
+        </div>
+        <div class="rec-prog-total">
+          2 official marathons · <strong>5 min 45 sec improvement</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PODIUMS ===== -->
 <section class="rec-section rec-section-grey" id="podiums">
   <div class="container">
     <div class="section-divider reveal">
-      <span class="section-tag">Confirmed Podiums</span>
+      <span class="section-tag">Podiums</span>
       <div class="section-divider-line"></div>
-      <span class="section-tag">6 + Top 10 U23</span>
+      <span class="section-tag">6 confirmed podiums</span>
     </div>
 
-    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
-      Six podiums. <em class="italic-accent">Every year.</em>
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      On the <em class="italic-accent">podium.</em>
     </h2>
 
     <div class="rec-podium-grid reveal-stagger">
 
       <div class="rec-podium-card">
-        <div class="rec-podium-badge rec-podium-gold">1st</div>
+        <span class="rec-podium-badge rec-podium-gold">1st Place</span>
         <div class="rec-podium-race">ISF 21KM Half Marathon</div>
-        <div class="rec-podium-date">11 Jun 2023 · Age 16 · Lebanon</div>
-        <div class="rec-podium-detail">First ever half marathon. Won on debut.</div>
-        <div class="rec-podium-time">1:49:34</div>
-        <a href="https://www.strava.com/activities/9244356817" target="_blank" class="rec-podium-link">Strava ↗</a>
+        <div class="rec-podium-date">2023 · Lebanon</div>
+        <div class="rec-podium-detail">Won on debut at 16. First official half marathon.</div>
+        <span class="rec-podium-time">1:54:59</span>
+      </div>
+
+      <div class="rec-podium-card">
+        <span class="rec-podium-badge rec-podium-gold">1st Place</span>
+        <div class="rec-podium-race">Anjar Race</div>
+        <div class="rec-podium-date">May 25, 2025 · Lebanon</div>
+        <div class="rec-podium-detail">1st Overall · Lebanon local race.</div>
+        <span class="rec-podium-time">—</span>
       </div>
 
       <div class="rec-podium-card rec-podium-card-dark">
-        <div class="rec-podium-badge rec-podium-gold">1st</div>
-        <div class="rec-podium-race">Beirut Marathon — 542 Program</div>
-        <div class="rec-podium-date">01 May 2025 · Age 18 · Lebanon</div>
-        <div class="rec-podium-detail">Category winner + 2nd U20 + 51st overall.</div>
-        <div class="rec-podium-time">3:48:22</div>
-        <a href="https://www.strava.com/activities/14353285281" target="_blank" class="rec-podium-link">Strava ↗</a>
+        <span class="rec-podium-badge rec-podium-silver">2nd Place</span>
+        <div class="rec-podium-race">Allure Bleue Race — 5K</div>
+        <div class="rec-podium-date">Feb 21, 2026 · Montpellier, France</div>
+        <div class="rec-podium-detail">2nd Overall · 5K Personal Best.</div>
+        <span class="rec-podium-time">19:48</span>
+        <a href="https://www.strava.com/activities/17472316459" target="_blank" class="rec-podium-link">Strava ↗</a>
       </div>
 
       <div class="rec-podium-card">
-        <div class="rec-podium-badge rec-podium-silver">2nd</div>
-        <div class="rec-podium-race">Barja Race 2025</div>
-        <div class="rec-podium-date">06 Jul 2025 · Age 19 · Lebanon</div>
-        <div class="rec-podium-detail">2nd overall. 6.3 km. Pace 3:58/km.</div>
-        <div class="rec-podium-time">25:07</div>
-        <a href="https://www.strava.com/activities/15027210101" target="_blank" class="rec-podium-link">Strava ↗</a>
-      </div>
-
-      <div class="rec-podium-card">
-        <div class="rec-podium-badge rec-podium-bronze">3rd</div>
-        <div class="rec-podium-race">Envolez Vous 2026</div>
-        <div class="rec-podium-date">01 Feb 2026 · Age 19 · France</div>
-        <div class="rec-podium-detail">3rd ESM category · 23rd overall.</div>
-        <div class="rec-podium-time">39:42</div>
+        <span class="rec-podium-badge rec-podium-bronze">3rd Place</span>
+        <div class="rec-podium-race">Envolez Vous — 10K</div>
+        <div class="rec-podium-date">Feb 1, 2026 · Montpellier, France</div>
+        <div class="rec-podium-detail">3rd ESM · 23rd Overall · 10K Personal Best.</div>
+        <span class="rec-podium-time">39:42</span>
         <a href="https://www.strava.com/activities/17249976869" target="_blank" class="rec-podium-link">Strava ↗</a>
       </div>
 
       <div class="rec-podium-card rec-podium-card-dark">
-        <div class="rec-podium-badge rec-podium-silver">2nd</div>
-        <div class="rec-podium-race">Allure Bleue Race 2026</div>
-        <div class="rec-podium-date">21 Feb 2026 · Age 19 · France</div>
-        <div class="rec-podium-detail">2nd overall. 5 km. Pace 3:56/km.</div>
-        <div class="rec-podium-time">19:48</div>
-        <a href="https://www.strava.com/activities/17472316459" target="_blank" class="rec-podium-link">Strava ↗</a>
+        <span class="rec-podium-badge rec-podium-special">1st · 542 Program</span>
+        <div class="rec-podium-race">Beirut Marathon</div>
+        <div class="rec-podium-date">May 1, 2024 · Beirut, Lebanon</div>
+        <div class="rec-podium-detail">1st in 542 Program category · First ever marathon.</div>
+        <span class="rec-podium-time">3:48:22</span>
       </div>
 
       <div class="rec-podium-card rec-podium-card-red">
-        <div class="rec-podium-badge rec-podium-special">Top 10</div>
-        <div class="rec-podium-race">Montpellier Run Festival 2026</div>
-        <div class="rec-podium-date">19 Apr 2026 · Age 19 · France</div>
-        <div class="rec-podium-detail">9th U23 · 140th of 4,516 · Top 3.1%</div>
-        <div class="rec-podium-time">1:29:26</div>
+        <span class="rec-podium-badge rec-podium-special">9th U23</span>
+        <div class="rec-podium-race">Montpellier Run Festival — HM</div>
+        <div class="rec-podium-date">Apr 19, 2026 · Montpellier, France</div>
+        <div class="rec-podium-detail">9th U23 · 140th of 4,516 · Top 3.1% · HM PB.</div>
+        <span class="rec-podium-time">1:29:26</span>
         <a href="https://www.strava.com/activities/18175504201" target="_blank" class="rec-podium-link">Strava ↗</a>
       </div>
 
@@ -284,29 +368,95 @@
   </div>
 </section>
 
-<!-- ===== SECTION 4 — FULL RACE REGISTER ===== -->
-<section class="section" id="register">
+<!-- ===== MEDIA FEATURES ===== -->
+<section class="rec-section" id="media">
   <div class="container">
     <div class="section-divider reveal">
-      <span class="section-tag">Full Race Register</span>
+      <span class="section-tag">Media Features</span>
       <div class="section-divider-line"></div>
-      <span class="section-tag">2023 — 2026 · 25 races</span>
+      <span class="section-tag">Press · Television · Sport Media</span>
     </div>
 
-    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
-      Every race. <em class="italic-accent">Documented.</em>
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      Featured <em class="italic-accent">coverage.</em>
     </h2>
 
+    <div class="rec-media-features reveal-stagger">
+
+      <div class="rec-media-feature">
+        <div class="rec-mf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="7" width="20" height="15" rx="2"/>
+            <polyline points="17 2 12 7 7 2"/>
+          </svg>
+        </div>
+        <div class="rec-mf-content">
+          <span class="rec-mf-outlet">MTV Lebanon</span>
+          <span class="rec-mf-title">Featured after running 10K with a broken leg</span>
+          <a href="https://www.instagram.com/taj_eid/" target="_blank" class="rec-mf-link">Video via @taj_eid ↗</a>
+        </div>
+      </div>
+
+      <div class="rec-media-feature">
+        <div class="rec-mf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="rec-mf-content">
+          <span class="rec-mf-outlet">North Lebanon Sports</span>
+          <span class="rec-mf-title">Featured athlete coverage</span>
+          <a href="https://www.instagram.com/taj_eid/" target="_blank" class="rec-mf-link">Via @taj_eid ↗</a>
+        </div>
+      </div>
+
+    
+      <div class="rec-media-feature">
+        <div class="rec-mf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <div class="rec-mf-content">
+          <span class="rec-mf-outlet">Beirut Marathon · Race Videos</span>
+          <span class="rec-mf-title">Multiple collab videos from May 2024 race coverage</span>
+          <a href="https://www.instagram.com/taj_eid/" target="_blank" class="rec-mf-link">Via @taj_eid ↗</a>
+        </div>
+      </div>
+
+</div>
+  </div>
+</section>
+
+<!-- ===== FULL RACE TABLE ===== -->
+<section class="rec-section rec-section-grey" id="races">
+  <div class="container">
+    <div class="section-divider reveal">
+      <span class="section-tag">Race Register</span>
+      <div class="section-divider-line"></div>
+      <span class="section-tag">25 documented races · 6 confirmed podiums</span>
+    </div>
+
+    <h2 class="headline-l reveal" style="margin-bottom: 40px;">
+      Every <em class="italic-accent">race.</em>
+    </h2>
+
+    <!-- Filters -->
     <div class="rec-filters reveal">
       <button class="rec-filter-btn active" data-filter="all">All</button>
+      <button class="rec-filter-btn" data-filter="5k">5K</button>
+      <button class="rec-filter-btn" data-filter="10k">10K</button>
+      <button class="rec-filter-btn" data-filter="21k">Half Marathon</button>
+      <button class="rec-filter-btn" data-filter="42k">Marathon</button>
+      <button class="rec-filter-btn" data-filter="other">Other</button>
+      <button class="rec-filter-btn" data-filter="2022">2022</button>
       <button class="rec-filter-btn" data-filter="2023">2023</button>
       <button class="rec-filter-btn" data-filter="2024">2024</button>
       <button class="rec-filter-btn" data-filter="2025">2025</button>
       <button class="rec-filter-btn" data-filter="2026">2026</button>
-      <button class="rec-filter-btn" data-filter="podium">Podium only</button>
-      <button class="rec-filter-btn" data-filter="lebanon">Lebanon</button>
-      <button class="rec-filter-btn" data-filter="france">France</button>
-      <button class="rec-filter-btn" data-filter="marathon">Marathon</button>
     </div>
 
     <div class="rec-table-wrap reveal">
@@ -316,675 +466,381 @@
             <th>#</th>
             <th>Date</th>
             <th>Race</th>
-            <th>Distance</th>
+            <th>Dist</th>
             <th>Time</th>
-            <th>Placement</th>
+            <th>Place</th>
             <th>Country</th>
-            <th>Strava</th>
+            <th>Proof</th>
           </tr>
         </thead>
-        <tbody id="raceTableBody">
-          <tr data-year="2023" data-country="lebanon" data-podium="false">
-            <td class="rt-num">01</td>
-            <td class="rt-date">12 Mar 2023</td>
-            <td class="rt-race">Tripoli — International Women's Day Race</td>
-            <td class="rt-dist">11.6 km</td>
-            <td class="rt-time">58:06</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/8699942701" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2023" data-country="lebanon" data-podium="false">
-            <td class="rt-num">02</td>
-            <td class="rt-date">19 Mar 2023</td>
-            <td class="rt-race">Beirut — International Women's Day Race</td>
-            <td class="rt-dist">10.2 km</td>
-            <td class="rt-time">46:58</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/8738751224" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2023" data-country="lebanon" data-podium="false">
-            <td class="rt-num">03</td>
-            <td class="rt-date">09 Apr 2023</td>
-            <td class="rt-race">Hasbaya — 5KM Hard Race</td>
-            <td class="rt-dist">4.8 km</td>
-            <td class="rt-time">22:52</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/8857753791" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2023" data-country="lebanon" data-podium="false">
-            <td class="rt-num">04</td>
-            <td class="rt-date">01 May 2023</td>
-            <td class="rt-race">Sarba — South Lebanon 10KM Race</td>
-            <td class="rt-dist">10.0 km</td>
-            <td class="rt-time">50:23</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/8994913746" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2023" data-country="lebanon" data-podium="false">
-            <td class="rt-num">05</td>
-            <td class="rt-date">07 May 2023</td>
-            <td class="rt-race">Jounieh — Run To Rise 10KM Race</td>
-            <td class="rt-dist">10.3 km</td>
-            <td class="rt-time">51:32</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/9026753473" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2023" data-country="lebanon" data-podium="false">
-            <td class="rt-num">06</td>
-            <td class="rt-date">14 May 2023</td>
-            <td class="rt-race">Barja — 6.5KM Race</td>
-            <td class="rt-dist">6.3 km</td>
-            <td class="rt-time">28:18</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/9070409508" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2023" data-country="lebanon" data-podium="false">
-            <td class="rt-num">07</td>
-            <td class="rt-date">26 May 2023</td>
-            <td class="rt-race">Beirut — 4KM Night Race</td>
-            <td class="rt-dist">4.2 km</td>
-            <td class="rt-time">17:59</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/9145647026" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2023" data-country="lebanon" data-podium="true" class="rt-row-podium">
-            <td class="rt-num">08</td>
-            <td class="rt-date">11 Jun 2023</td>
-            <td class="rt-race">ISF 21KM Half Marathon <span class="rt-badge">🏆 1st</span></td>
-            <td class="rt-dist">21.1 km</td>
-            <td class="rt-time">1:49:34</td>
-            <td class="rt-place rt-gold">1st Overall</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/9244356817" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2024" data-country="lebanon" data-podium="false">
-            <td class="rt-num">09</td>
-            <td class="rt-date">21 Apr 2024</td>
-            <td class="rt-race">ISF Half Marathon</td>
-            <td class="rt-dist">21.6 km</td>
-            <td class="rt-time">2:10:25</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/11231987432" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2024" data-country="lebanon" data-podium="false">
-            <td class="rt-num">10</td>
-            <td class="rt-date">23 Jun 2024</td>
-            <td class="rt-race">Tripoli Race 2024</td>
-            <td class="rt-dist">10.4 km</td>
-            <td class="rt-time">53:39</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/11716619875" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2024" data-country="lebanon" data-podium="false">
-            <td class="rt-num">11</td>
-            <td class="rt-date">07 Jul 2024</td>
-            <td class="rt-race">Beirut Marathon — Run the City</td>
-            <td class="rt-dist">10.2 km</td>
-            <td class="rt-time">44:21</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/11826433045" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2024" data-country="lebanon" data-podium="false">
-            <td class="rt-num">12</td>
-            <td class="rt-date">14 Jul 2024</td>
-            <td class="rt-race">Al Gharb Race</td>
-            <td class="rt-dist">10.3 km</td>
-            <td class="rt-time">51:28</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/11883061898" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2024" data-country="lebanon" data-podium="false">
-            <td class="rt-num">13</td>
-            <td class="rt-date">22 Jul 2024</td>
-            <td class="rt-race">Yanta Race</td>
-            <td class="rt-dist">10.0 km</td>
-            <td class="rt-time">46:04</td>
-            <td class="rt-place">—</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/11954396964" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2024" data-country="lebanon" data-podium="false">
-            <td class="rt-num">14</td>
-            <td class="rt-date">11 Aug 2024</td>
-            <td class="rt-race">Kharbe Race 2024</td>
-            <td class="rt-dist">6.5 km</td>
+        <tbody>
+
+          <!-- 2022 -->
+          <tr data-year="2022" data-dist="other">
+            <td class="rt-num">1</td>
+            <td class="rt-date">2022</td>
+            <td class="rt-race">Beirut 10K (Women's Race — participatory)</td>
+            <td class="rt-dist">10K</td>
             <td class="rt-time">—</td>
             <td class="rt-place">—</td>
             <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/12118717024" target="_blank" class="rt-link">↗</a></td>
+            <td class="rt-link">—</td>
           </tr>
-          <tr data-year="2025" data-country="france" data-podium="false">
+
+          <tr data-year="2022" data-dist="other">
+            <td class="rt-num">2</td>
+            <td class="rt-date">2022</td>
+            <td class="rt-race">Nabu Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <!-- 2023 -->
+          <tr data-year="2023" data-dist="21k" class="rt-row-podium">
+            <td class="rt-num">3</td>
+            <td class="rt-date">2023</td>
+            <td class="rt-race">ISF 21KM Half Marathon <span class="rt-badge">1st Place</span></td>
+            <td class="rt-dist">21.1K</td>
+            <td class="rt-time">1:54:59</td>
+            <td class="rt-place rt-gold">1st Overall</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2023" data-dist="other">
+            <td class="rt-num">4</td>
+            <td class="rt-date">19 May 2023</td>
+            <td class="rt-race">Lebanese Athletics Championship <span class="rt-badge">Track</span></td>
+            <td class="rt-dist">3,000m</td>
+            <td class="rt-time">11:58:43</td>
+            <td class="rt-place">8th · U20/U18/U16</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2023" data-dist="other">
+            <td class="rt-num">5</td>
+            <td class="rt-date">2023</td>
+            <td class="rt-race">Batroun Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2023" data-dist="other">
+            <td class="rt-num">6</td>
+            <td class="rt-date">2023</td>
+            <td class="rt-race">Bekaa Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2023" data-dist="other">
+            <td class="rt-num">7</td>
+            <td class="rt-date">2023</td>
+            <td class="rt-race">Jabal Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2023" data-dist="other">
+            <td class="rt-num">8</td>
+            <td class="rt-date">2023</td>
+            <td class="rt-race">Mayfuq Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2023" data-dist="other">
+            <td class="rt-num">9</td>
+            <td class="rt-date">2023</td>
+            <td class="rt-race">Yanta Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <!-- 2024 -->
+          <tr data-year="2024" data-dist="other">
+            <td class="rt-num">10</td>
+            <td class="rt-date">2024</td>
+            <td class="rt-race">Anjar Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2024" data-dist="5k">
+            <td class="rt-num">11</td>
+            <td class="rt-date">2024</td>
+            <td class="rt-race">Hasbaya 5K</td>
+            <td class="rt-dist">5K</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2024" data-dist="other">
+            <td class="rt-num">12</td>
+            <td class="rt-date">2024</td>
+            <td class="rt-race">Hossam Badreddine Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2024" data-dist="other">
+            <td class="rt-num">13</td>
+            <td class="rt-date">2024</td>
+            <td class="rt-race">Mayfuq Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2024" data-dist="other">
+            <td class="rt-num">14</td>
+            <td class="rt-date">2024</td>
+            <td class="rt-race">Nabil Halabi Race</td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
+          </tr>
+
+          <tr data-year="2024" data-dist="10k">
             <td class="rt-num">15</td>
-            <td class="rt-date">13 Apr 2025</td>
-            <td class="rt-race">Montpellier Run Festival 2025</td>
-            <td class="rt-dist">21.2 km</td>
-            <td class="rt-time">1:39:48</td>
+            <td class="rt-date">2024</td>
+            <td class="rt-race">Qabr Shmoon 10K</td>
+            <td class="rt-dist">10K</td>
+            <td class="rt-time">—</td>
             <td class="rt-place">—</td>
-            <td class="rt-flag">🇫🇷</td>
-            <td><a href="https://www.strava.com/activities/14201589345" target="_blank" class="rt-link">↗</a></td>
+            <td class="rt-flag">🇱🇧</td>
+            <td class="rt-link">—</td>
           </tr>
-          <tr data-year="2025" data-country="lebanon" data-podium="true" data-marathon="true" class="rt-row-podium">
+
+          <tr data-year="2024" data-dist="other">
             <td class="rt-num">16</td>
-            <td class="rt-date">01 May 2025</td>
-            <td class="rt-race">Beirut Marathon <span class="rt-badge">🏆 Multi</span></td>
-            <td class="rt-dist">42.2 km</td>
-            <td class="rt-time">3:48:22</td>
-            <td class="rt-place rt-gold">1st 542 · 2nd U20 · 51st O/A</td>
+            <td class="rt-date">2024</td>
+            <td class="rt-race">Rashaya–Hasbaya 28K</td>
+            <td class="rt-dist">28K</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place">—</td>
             <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/14353285281" target="_blank" class="rt-link">↗</a></td>
+            <td class="rt-link">—</td>
           </tr>
-          <tr data-year="2025" data-country="lebanon" data-podium="false">
+
+          <tr data-year="2024" data-dist="21k">
             <td class="rt-num">17</td>
-            <td class="rt-date">17 May 2025</td>
-            <td class="rt-race">Anjar Race 2025</td>
-            <td class="rt-dist">10.3 km</td>
-            <td class="rt-time">49:06</td>
+            <td class="rt-date">2024</td>
+            <td class="rt-race">Rolling Half Marathon</td>
+            <td class="rt-dist">21.1K</td>
+            <td class="rt-time">~1:48</td>
             <td class="rt-place">—</td>
             <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/14507254400" target="_blank" class="rt-link">↗</a></td>
+            <td class="rt-link">—</td>
           </tr>
-          <tr data-year="2025" data-country="lebanon" data-podium="false">
+
+          <tr data-year="2024" data-dist="42k" class="rt-row-podium">
             <td class="rt-num">18</td>
-            <td class="rt-date">25 May 2025</td>
-            <td class="rt-race">Al Jabal Race 2025</td>
-            <td class="rt-dist">4.8 km</td>
-            <td class="rt-time">17:46</td>
-            <td class="rt-place">—</td>
+            <td class="rt-date">01 May 2024</td>
+            <td class="rt-race">Beirut Marathon <span class="rt-badge">1st · 542 Program</span></td>
+            <td class="rt-dist">42.2K</td>
+            <td class="rt-time">3:48:22</td>
+            <td class="rt-place rt-gold">1st · 542 Program</td>
             <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/14593818386" target="_blank" class="rt-link">↗</a></td>
+            <td class="rt-link">—</td>
           </tr>
-          <tr data-year="2025" data-country="lebanon" data-podium="false">
+
+          <!-- 2025 -->
+          <tr data-year="2025" data-dist="other" class="rt-row-podium">
             <td class="rt-num">19</td>
-            <td class="rt-date">22 Jun 2025</td>
-            <td class="rt-race">Al Jabal Race 2025</td>
-            <td class="rt-dist">4.4 km</td>
-            <td class="rt-time">19:55</td>
-            <td class="rt-place">—</td>
+            <td class="rt-date">25 May 2025</td>
+            <td class="rt-race">Anjar Race <span class="rt-badge">1st Place</span></td>
+            <td class="rt-dist">—</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place rt-gold">1st Overall</td>
             <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/14879059148" target="_blank" class="rt-link">↗</a></td>
+            <td class="rt-link">—</td>
           </tr>
-          <tr data-year="2025" data-country="lebanon" data-podium="false">
+
+          <tr data-year="2025" data-dist="21k">
             <td class="rt-num">20</td>
-            <td class="rt-date">29 Jun 2025</td>
-            <td class="rt-race">Tripoli Race 2025</td>
-            <td class="rt-dist">10.6 km</td>
-            <td class="rt-time">44:46</td>
+            <td class="rt-date">2025</td>
+            <td class="rt-race">Lebanon Half Marathon</td>
+            <td class="rt-dist">21.1K</td>
+            <td class="rt-time">~1:32</td>
             <td class="rt-place">—</td>
             <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/14956075031" target="_blank" class="rt-link">↗</a></td>
+            <td class="rt-link">—</td>
           </tr>
-          <tr data-year="2025" data-country="lebanon" data-podium="true" class="rt-row-podium">
+
+          <!-- 2026 -->
+          <tr data-year="2026" data-dist="10k" class="rt-row-podium">
             <td class="rt-num">21</td>
-            <td class="rt-date">06 Jul 2025</td>
-            <td class="rt-race">Barja Race 2025 <span class="rt-badge">🏆 2nd</span></td>
-            <td class="rt-dist">6.3 km</td>
-            <td class="rt-time">25:07</td>
-            <td class="rt-place rt-silver">2nd Overall</td>
-            <td class="rt-flag">🇱🇧</td>
-            <td><a href="https://www.strava.com/activities/15027210101" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-year="2026" data-country="france" data-podium="true" class="rt-row-podium">
-            <td class="rt-num">22</td>
             <td class="rt-date">01 Feb 2026</td>
-            <td class="rt-race">Envolez Vous 2026 <span class="rt-badge">🏆 3rd</span></td>
-            <td class="rt-dist">10.0 km</td>
+            <td class="rt-race">Envolez Vous — 10K <span class="rt-badge">3rd ESM</span></td>
+            <td class="rt-dist">10K</td>
             <td class="rt-time">39:42</td>
-            <td class="rt-place rt-bronze">3rd ESM · 23rd O/A</td>
+            <td class="rt-place rt-bronze">3rd ESM · 23rd Overall</td>
             <td class="rt-flag">🇫🇷</td>
             <td><a href="https://www.strava.com/activities/17249976869" target="_blank" class="rt-link">↗</a></td>
           </tr>
-          <tr data-year="2026" data-country="france" data-podium="true" class="rt-row-podium">
-            <td class="rt-num">23</td>
+
+          <tr data-year="2026" data-dist="5k" class="rt-row-podium">
+            <td class="rt-num">22</td>
             <td class="rt-date">21 Feb 2026</td>
-            <td class="rt-race">Allure Bleue Race <span class="rt-badge">🏆 2nd</span></td>
-            <td class="rt-dist">5.0 km</td>
+            <td class="rt-race">Allure Bleue Race — 5K <span class="rt-badge">2nd Overall</span></td>
+            <td class="rt-dist">5K</td>
             <td class="rt-time">19:48</td>
             <td class="rt-place rt-silver">2nd Overall</td>
             <td class="rt-flag">🇫🇷</td>
             <td><a href="https://www.strava.com/activities/17472316459" target="_blank" class="rt-link">↗</a></td>
           </tr>
-          <tr data-year="2026" data-country="france" data-podium="true" class="rt-row-podium">
-            <td class="rt-num">24</td>
+
+          <tr data-year="2026" data-dist="21k" class="rt-row-podium">
+            <td class="rt-num">23</td>
             <td class="rt-date">19 Apr 2026</td>
-            <td class="rt-race">Montpellier Run Festival 2026 <span class="rt-badge">🏆 Top10</span></td>
-            <td class="rt-dist">21.2 km</td>
+            <td class="rt-race">Montpellier Run Festival — HM <span class="rt-badge">9th U23</span></td>
+            <td class="rt-dist">21.1K</td>
             <td class="rt-time">1:29:26</td>
             <td class="rt-place rt-gold">9th U23 · 140/4,516</td>
             <td class="rt-flag">🇫🇷</td>
             <td><a href="https://www.strava.com/activities/18175504201" target="_blank" class="rt-link">↗</a></td>
           </tr>
-          <tr data-year="2026" data-country="czech" data-podium="false" data-marathon="true">
-            <td class="rt-num">25</td>
+
+          <tr data-year="2026" data-dist="42k">
+            <td class="rt-num">24</td>
             <td class="rt-date">03 May 2026</td>
             <td class="rt-race">Vodafone Prague Marathon</td>
-            <td class="rt-dist">42.2 km</td>
+            <td class="rt-dist">42.2K</td>
             <td class="rt-time">3:42:37</td>
-            <td class="rt-place">2,346th O/A</td>
+            <td class="rt-place">2,346th Overall</td>
             <td class="rt-flag">🇨🇿</td>
             <td><a href="https://www.strava.com/activities/18717374673" target="_blank" class="rt-link">↗</a></td>
           </tr>
+
+          <tr data-year="2026" data-dist="other">
+            <td class="rt-num">25</td>
+            <td class="rt-date">07 Jun 2026</td>
+            <td class="rt-race">IRONMAN 70.3 Warsaw <span class="rt-badge">Upcoming</span></td>
+            <td class="rt-dist">113K</td>
+            <td class="rt-time">—</td>
+            <td class="rt-place" style="font-style:italic;color:var(--red);">Result pending</td>
+            <td class="rt-flag">🇵🇱</td>
+            <td class="rt-link">—</td>
+          </tr>
+
         </tbody>
       </table>
     </div>
 
     <!-- Summary strip -->
-    <div class="rec-summary-strip reveal">
+    <div class="rec-summary-strip reveal" style="margin-top: 24px;">
       <div class="rec-summary-cell">
         <span class="rec-summary-num">25</span>
-        <span class="rec-summary-label">Total races</span>
+        <span class="rec-summary-label">Documented Races</span>
       </div>
       <div class="rec-summary-cell">
         <span class="rec-summary-num">6</span>
-        <span class="rec-summary-label">Confirmed podiums</span>
+        <span class="rec-summary-label">Confirmed Podiums</span>
       </div>
       <div class="rec-summary-cell">
         <span class="rec-summary-num">4</span>
-        <span class="rec-summary-label">Countries raced</span>
+        <span class="rec-summary-label">Countries</span>
+      </div>
+      <div class="rec-summary-cell">
+        <span class="rec-summary-num">5</span>
+        <span class="rec-summary-label">Half Marathons</span>
       </div>
       <div class="rec-summary-cell">
         <span class="rec-summary-num">2</span>
-        <span class="rec-summary-label">Marathons</span>
-      </div>
-      <div class="rec-summary-cell">
-        <span class="rec-summary-num">4</span>
-        <span class="rec-summary-label">Half marathons</span>
+        <span class="rec-summary-label">Full Marathons</span>
       </div>
       <div class="rec-summary-cell">
         <span class="rec-summary-num">2022–26</span>
-        <span class="rec-summary-label">Active years</span>
+        <span class="rec-summary-label">Active Since</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SECTION 5 — DEEP DIVES ===== -->
-<section class="rec-section rec-section-grey" id="deepdives">
-  <div class="container-narrow">
-    <div class="section-divider reveal">
-      <span class="section-tag">Featured Races</span>
-      <div class="section-divider-line"></div>
-      <span class="section-tag">Deep-dive analysis</span>
-    </div>
-
-    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
-      Race <em class="italic-accent">breakdowns.</em>
-    </h2>
-
-    <div class="rec-accordion">
-
-      <!-- PRAGUE -->
-      <div class="rec-acc-item reveal">
-        <button class="rec-acc-header" onclick="toggleAcc(1)">
-          <div class="rec-acc-left">
-            <span class="rec-acc-tag">Marathon #2 · Personal Best</span>
-            <span class="rec-acc-title">Vodafone Prague Marathon 2026</span>
-            <span class="rec-acc-sub">03 May 2026 · Prague, Czech Republic · Age 19</span>
-          </div>
-          <div class="rec-acc-right">
-            <span class="rec-acc-time">3:42:37</span>
-            <span class="rec-acc-chev" id="chev-1">↓</span>
-          </div>
-        </button>
-        <div class="rec-acc-body" id="acc-body-1">
-          <div class="rec-acc-content">
-            <div class="rec-acc-cols">
-              <div>
-                <p class="rec-acc-text">Second career marathon. Raced with an injured left leg. Started in the top 600 globally at 5K before injury impact escalated in the second half. Refused to drop out. Finished with a marathon personal best — 5 minutes and 45 seconds faster than Beirut 2025.</p>
-                <p class="rec-acc-text">Completed just 35 days before IRONMAN 70.3 Warsaw. Official Diplom issued by Vodafone Prague Marathon.</p>
-                <div class="rec-acc-stats">
-                  <div class="rec-acc-stat"><strong>1:40:09</strong><span>First half</span></div>
-                  <div class="rec-acc-stat"><strong>2:02:28</strong><span>Second half</span></div>
-                  <div class="rec-acc-stat"><strong>5:16/km</strong><span>Avg pace</span></div>
-                  <div class="rec-acc-stat"><strong>2,346th</strong><span>Overall rank</span></div>
-                </div>
-                <a href="https://www.strava.com/activities/18717374673" target="_blank" class="btn btn-primary" style="margin-top: 24px; display: inline-flex;">View on Strava →</a>
-              </div>
-              <div>
-                <h4 class="rec-acc-splits-title">Official Split Analysis</h4>
-                <table class="rec-splits-table">
-                  <thead><tr><th>Checkpoint</th><th>Rank</th><th>Time</th></tr></thead>
-                  <tbody>
-                    <tr class="splits-strong"><td>5K</td><td>564th</td><td>0:21:10</td></tr>
-                    <tr class="splits-strong"><td>10K</td><td>644th</td><td>0:42:31</td></tr>
-                    <tr><td>15K</td><td>930th</td><td>1:06:48</td></tr>
-                    <tr><td>Half</td><td>1,493rd</td><td>1:40:09</td></tr>
-                    <tr><td>25K</td><td>1,856th</td><td>2:02:23</td></tr>
-                    <tr class="splits-hard"><td>30K</td><td>2,323rd</td><td>2:31:42</td></tr>
-                    <tr><td>35K</td><td>2,140th</td><td>2:57:24</td></tr>
-                    <tr class="splits-finish"><td>Finish</td><td>2,346th</td><td>3:42:37</td></tr>
-                  </tbody>
-                </table>
-                <div style="height: 180px; margin-top: 16px;">
-                  <canvas id="chartPrague"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- MONTPELLIER 2026 -->
-      <div class="rec-acc-item reveal">
-        <button class="rec-acc-header" onclick="toggleAcc(2)">
-          <div class="rec-acc-left">
-            <span class="rec-acc-tag">Half Marathon PB · 9th U23</span>
-            <span class="rec-acc-title">Montpellier Run Festival 2026</span>
-            <span class="rec-acc-sub">19 Apr 2026 · Montpellier, France · Age 19</span>
-          </div>
-          <div class="rec-acc-right">
-            <span class="rec-acc-time">1:29:26</span>
-            <span class="rec-acc-chev" id="chev-2">↓</span>
-          </div>
-        </button>
-        <div class="rec-acc-body" id="acc-body-2">
-          <div class="rec-acc-content">
-            <div class="rec-acc-stats" style="margin-bottom: 24px;">
-              <div class="rec-acc-stat"><strong>1:29:26</strong><span>Official time</span></div>
-              <div class="rec-acc-stat"><strong>140/4,516</strong><span>Overall</span></div>
-              <div class="rec-acc-stat"><strong>9th U23</strong><span>Category</span></div>
-              <div class="rec-acc-stat"><strong>Top 3.1%</strong><span>Of full field</span></div>
-              <div class="rec-acc-stat"><strong>4:13/km</strong><span>Avg pace</span></div>
-              <div class="rec-acc-stat"><strong>21.2 km</strong><span>Distance</span></div>
-            </div>
-            <p class="rec-acc-text">Half marathon personal best. Largest race field in career. Placed in the top 3.1% of the full field. The third time racing this event — improved by over 10 minutes from 2025 and over 20 minutes from the 2023 debut.</p>
-            <a href="https://www.strava.com/activities/18175504201" target="_blank" class="btn btn-primary" style="margin-top: 24px; display: inline-flex;">View on Strava →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- BEIRUT MARATHON -->
-      <div class="rec-acc-item reveal">
-        <button class="rec-acc-header" onclick="toggleAcc(3)">
-          <div class="rec-acc-left">
-            <span class="rec-acc-tag">Marathon #1 · Double Podium · Debut</span>
-            <span class="rec-acc-title">Beirut Marathon 2025</span>
-            <span class="rec-acc-sub">01 May 2025 · Beirut, Lebanon · Age 18</span>
-          </div>
-          <div class="rec-acc-right">
-            <span class="rec-acc-time">3:48:22</span>
-            <span class="rec-acc-chev" id="chev-3">↓</span>
-          </div>
-        </button>
-        <div class="rec-acc-body" id="acc-body-3">
-          <div class="rec-acc-content">
-            <div class="rec-acc-stats" style="margin-bottom: 24px;">
-              <div class="rec-acc-stat"><strong>3:48:22</strong><span>Official time</span></div>
-              <div class="rec-acc-stat"><strong>51st</strong><span>Overall</span></div>
-              <div class="rec-acc-stat"><strong>1st</strong><span>542 Program</span></div>
-              <div class="rec-acc-stat"><strong>2nd</strong><span>U20 category</span></div>
-              <div class="rec-acc-stat"><strong>First</strong><span>Marathon ever</span></div>
-            </div>
-            <p class="rec-acc-text">First ever marathon. Double podium on debut. Won the 542 Training Program category and placed 2nd in the U20 age group while finishing 51st overall in the open field. The start of the marathon chapter.</p>
-            <a href="https://www.strava.com/activities/14353285281" target="_blank" class="btn btn-primary" style="margin-top: 24px; display: inline-flex;">View on Strava →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ISF HALF MARATHON -->
-      <div class="rec-acc-item reveal">
-        <button class="rec-acc-header" onclick="toggleAcc(4)">
-          <div class="rec-acc-left">
-            <span class="rec-acc-tag">1st Place · Half Marathon Debut · Age 16</span>
-            <span class="rec-acc-title">ISF 21KM Half Marathon</span>
-            <span class="rec-acc-sub">11 Jun 2023 · Lebanon · Age 16</span>
-          </div>
-          <div class="rec-acc-right">
-            <span class="rec-acc-time">1:49:34</span>
-            <span class="rec-acc-chev" id="chev-4">↓</span>
-          </div>
-        </button>
-        <div class="rec-acc-body" id="acc-body-4">
-          <div class="rec-acc-content">
-            <div class="rec-acc-stats" style="margin-bottom: 24px;">
-              <div class="rec-acc-stat"><strong>1:49:34</strong><span>Official time</span></div>
-              <div class="rec-acc-stat"><strong>1st</strong><span>Overall</span></div>
-              <div class="rec-acc-stat"><strong>16</strong><span>Age at race</span></div>
-              <div class="rec-acc-stat"><strong>21.1 km</strong><span>Distance</span></div>
-            </div>
-            <p class="rec-acc-text">First ever half marathon. Won on debut at 16 years old. This race is the baseline of the half marathon progression — from 1:49:34 in 2023 to 1:29:26 in 2026. A total improvement of 20 minutes and 8 seconds over 3 years.</p>
-            <a href="https://www.strava.com/activities/9244356817" target="_blank" class="btn btn-primary" style="margin-top: 24px; display: inline-flex;">View on Strava →</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== SECTION 6 — LONG RUNS ===== -->
-<section class="section" id="longruns">
+<!-- ===== ENDURANCE BASE ===== -->
+<section class="rec-section" id="longruns">
   <div class="container">
     <div class="section-divider reveal">
-      <span class="section-tag">Endurance Log</span>
+      <span class="section-tag">Endurance Base</span>
       <div class="section-divider-line"></div>
-      <span class="section-tag">17 runs of 20km or more</span>
+      <span class="section-tag">17 Runs Over 20K · Strava verified</span>
     </div>
 
-    <h2 class="headline-l reveal" style="margin-bottom: 64px;">
-      Long runs. <em class="italic-accent">The base.</em>
+    <h2 class="headline-l reveal" style="margin-bottom: 56px;">
+      Endurance Base: <em class="italic-accent">17 Runs Over 20K</em>
     </h2>
 
-    <div class="stats-grid reveal-stagger" style="margin-bottom: 48px;">
-      <div class="stat-card">
-        <div class="stat-card-disc">Longest Run</div>
-        <div class="stat-card-num" style="font-size: 40px;">35.0<span class="stat-unit">km</span></div>
-        <div class="stat-card-detail">Rashaya to Sit Shaawene · Aug 2024</div>
+    <div class="endurance-grid reveal-stagger">
+      <div class="endurance-card">
+        <span class="endurance-num"><span data-count="17">0</span></span>
+        <span class="endurance-label">Runs Over 20K</span>
+        <span class="endurance-sub">All verified on Strava</span>
       </div>
-      <div class="stat-card">
-        <div class="stat-card-disc">Fastest Long Pace</div>
-        <div class="stat-card-num" style="font-size: 40px; letter-spacing: -1px;">4:41<span class="stat-unit">/km</span></div>
-        <div class="stat-card-detail">21km · January 2026</div>
+      <div class="endurance-card">
+        <span class="endurance-num">32<small>K</small></span>
+        <span class="endurance-label">Longest Run</span>
+        <span class="endurance-sub">Solo long run · Lebanon</span>
       </div>
-      <div class="stat-card">
-        <div class="stat-card-disc">Max Elevation</div>
-        <div class="stat-card-num" style="font-size: 40px;">459<span class="stat-unit">m</span></div>
-        <div class="stat-card-detail">Mountain RUN · May 2025</div>
+      <div class="endurance-card">
+        <span class="endurance-num"><span data-count="2164">0</span><small>km</small></span>
+        <span class="endurance-label">Total Running</span>
+        <span class="endurance-sub">201 activities tracked</span>
       </div>
-      <div class="stat-card stat-card-dark">
-        <div class="stat-card-disc">Runs of 20km+</div>
-        <div class="stat-card-num"><span data-count="17">0</span></div>
-        <div class="stat-card-detail">2024 — 2026</div>
+      <div class="endurance-card endurance-card-dark">
+        <span class="endurance-num">218<small>h</small></span>
+        <span class="endurance-label">Total Training Time</span>
+        <span class="endurance-sub">Run · Bike · Swim combined</span>
       </div>
-    </div>
-
-    <div class="rec-table-wrap reveal">
-      <table class="rec-race-table" id="lrTable">
-        <thead>
-          <tr>
-            <th class="lr-sortable" data-col="dist" onclick="sortLR('dist')">Distance ↕</th>
-            <th>Route / Name</th>
-            <th>Date</th>
-            <th>Age</th>
-            <th class="lr-sortable" data-col="pace" onclick="sortLR('pace')">Pace ↕</th>
-            <th>Elevation</th>
-            <th>Strava</th>
-          </tr>
-        </thead>
-        <tbody id="lrBody">
-          <tr data-dist="35.01" data-pace="349">
-            <td class="rt-time" style="font-size: 16px;">35.01 km</td>
-            <td class="rt-race">Rashaya to Sit Shaawene</td>
-            <td class="rt-date">18 Aug 2024</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">5:49/km</td>
-            <td class="rt-date">383.5m</td>
-            <td><a href="https://www.strava.com/activities/12178538005" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="31.00" data-pace="392">
-            <td class="rt-time" style="font-size: 16px;">31.00 km</td>
-            <td class="rt-race">31K Long RUN</td>
-            <td class="rt-date">16 Feb 2025</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">6:32/km</td>
-            <td class="rt-date">74.6m</td>
-            <td><a href="https://www.strava.com/activities/13643104305" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="30.01" data-pace="310">
-            <td class="rt-time" style="font-size: 16px;">30.01 km</td>
-            <td class="rt-race">30K Long RUN</td>
-            <td class="rt-date">15 Feb 2026</td>
-            <td class="rt-date">19</td>
-            <td class="rt-date">5:10/km</td>
-            <td class="rt-date">60.2m</td>
-            <td><a href="https://www.strava.com/activities/17409239942" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="28.01" data-pace="316">
-            <td class="rt-time" style="font-size: 16px;">28.01 km</td>
-            <td class="rt-race">28K Long RUN</td>
-            <td class="rt-date">02 Feb 2025</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">5:16/km</td>
-            <td class="rt-date">50.9m</td>
-            <td><a href="https://www.strava.com/activities/13517829675" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="27.97" data-pace="348">
-            <td class="rt-time" style="font-size: 16px;">27.97 km</td>
-            <td class="rt-race">Rashaya to Hasbaya</td>
-            <td class="rt-date">05 Aug 2024</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">5:48/km</td>
-            <td class="rt-date">261.8m</td>
-            <td><a href="https://www.strava.com/activities/12069972733" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="25.00" data-pace="288">
-            <td class="rt-time" style="font-size: 16px;">25.00 km</td>
-            <td class="rt-race">25K Long RUN</td>
-            <td class="rt-date">08 Feb 2026</td>
-            <td class="rt-date">19</td>
-            <td class="rt-date">4:48/km</td>
-            <td class="rt-date">88.7m</td>
-            <td><a href="https://www.strava.com/activities/17332226158" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="22.36" data-pace="314">
-            <td class="rt-time" style="font-size: 16px;">22.36 km</td>
-            <td class="rt-race">Mresty — Bater — Nabeh Mershed</td>
-            <td class="rt-date">28 Jul 2024</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">5:14/km</td>
-            <td class="rt-date">340.9m</td>
-            <td><a href="https://www.strava.com/activities/12004928832" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="21.10" data-pace="293">
-            <td class="rt-time" style="font-size: 16px;">21.10 km</td>
-            <td class="rt-race">21K Long RUN</td>
-            <td class="rt-date">29 Dec 2024</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">4:53/km</td>
-            <td class="rt-date">24.9m</td>
-            <td><a href="https://www.strava.com/activities/13216243378" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="21.10" data-pace="330">
-            <td class="rt-time" style="font-size: 16px;">21.10 km</td>
-            <td class="rt-race">21K Long RUN</td>
-            <td class="rt-date">28 Feb 2025</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">5:30/km</td>
-            <td class="rt-date">32.8m</td>
-            <td><a href="https://www.strava.com/activities/13748015722" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="21.10" data-pace="334">
-            <td class="rt-time" style="font-size: 16px;">21.10 km</td>
-            <td class="rt-race">21K Long RUN</td>
-            <td class="rt-date">20 Apr 2025</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">5:34/km</td>
-            <td class="rt-date">40.1m</td>
-            <td><a href="https://www.strava.com/activities/14230978860" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="21.01" data-pace="298">
-            <td class="rt-time" style="font-size: 16px;">21.01 km</td>
-            <td class="rt-race">21K Long RUN</td>
-            <td class="rt-date">30 Mar 2025</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">4:58/km</td>
-            <td class="rt-date">24.3m</td>
-            <td><a href="https://www.strava.com/activities/14029266780" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="21.01" data-pace="281" class="rt-row-podium">
-            <td class="rt-time" style="font-size: 16px;">21.01 km</td>
-            <td class="rt-race">21K Long RUN <span class="rt-badge" style="background:var(--black);">Fastest pace</span></td>
-            <td class="rt-date">11 Jan 2026</td>
-            <td class="rt-date">19</td>
-            <td class="rt-date" style="color:var(--red); font-weight:700;">4:41/km</td>
-            <td class="rt-date">29.7m</td>
-            <td><a href="https://www.strava.com/activities/17012466041" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="21.00" data-pace="288">
-            <td class="rt-time" style="font-size: 16px;">21.00 km</td>
-            <td class="rt-race">21K Long RUN</td>
-            <td class="rt-date">01 Mar 2026</td>
-            <td class="rt-date">19</td>
-            <td class="rt-date">4:48/km</td>
-            <td class="rt-date">67.6m</td>
-            <td><a href="https://www.strava.com/activities/17570289018" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="21.00" data-pace="335">
-            <td class="rt-time" style="font-size: 16px;">21.00 km</td>
-            <td class="rt-race">21K Long RUN</td>
-            <td class="rt-date">06 Apr 2025</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">5:35/km</td>
-            <td class="rt-date">32.7m</td>
-            <td><a href="https://www.strava.com/activities/14096677015" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="20.01" data-pace="311">
-            <td class="rt-time" style="font-size: 16px;">20.01 km</td>
-            <td class="rt-race">20K Long RUN</td>
-            <td class="rt-date">08 Mar 2026</td>
-            <td class="rt-date">19</td>
-            <td class="rt-date">5:11/km</td>
-            <td class="rt-date">104.7m</td>
-            <td><a href="https://www.strava.com/activities/17652364995" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="20.00" data-pace="404">
-            <td class="rt-time" style="font-size: 16px;">20.00 km</td>
-            <td class="rt-race">20K Mountain RUN <span class="rt-badge" style="background:var(--black);">Max elev.</span></td>
-            <td class="rt-date">11 May 2025</td>
-            <td class="rt-date">18</td>
-            <td class="rt-date">6:44/km</td>
-            <td class="rt-date" style="color:var(--red); font-weight:700;">459.7m</td>
-            <td><a href="https://www.strava.com/activities/14443043107" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-          <tr data-dist="20.00" data-pace="310">
-            <td class="rt-time" style="font-size: 16px;">20.00 km</td>
-            <td class="rt-race">20K Long RUN</td>
-            <td class="rt-date">22 Mar 2026</td>
-            <td class="rt-date">19</td>
-            <td class="rt-date">5:10/km</td>
-            <td class="rt-date">97.4m</td>
-            <td><a href="https://www.strava.com/activities/17821189305" target="_blank" class="rt-link">↗</a></td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </section>
 
-<!-- ===== SECTION 7 — IRONMAN ===== -->
-<section class="rec-section rec-ironman" id="ironman">
+<!-- ===== IRONMAN SECTION ===== -->
+<section class="rec-ironman" id="warsaw">
   <div class="container-narrow">
-    <div class="section-divider reveal" style="border-color: rgba(255,255,255,0.1);">
-      <span class="section-tag" style="color: var(--red);">Next start line</span>
-      <div class="section-divider-line" style="background: rgba(255,255,255,0.1);"></div>
-      <span class="section-tag" style="color: rgba(255,255,255,0.3);">June 7, 2026</span>
+    <div class="section-divider reveal" style="border-color:rgba(255,255,255,0.1);">
+      <span class="section-tag" style="color:var(--red);">Next Race</span>
+      <div class="section-divider-line" style="background:rgba(255,255,255,0.1);"></div>
+      <span class="section-tag" style="color:rgba(255,255,255,0.3);">Warsaw · June 7, 2026</span>
     </div>
 
-    <h2 class="headline-l reveal" style="margin-bottom: 64px; color: var(--white);">
-      IRONMAN 70.3 <em class="italic-accent">Warsaw.</em>
+    <h2 class="headline-l reveal" style="margin-bottom: 48px; color:var(--white);">
+      First <em class="italic-accent">IRONMAN 70.3.</em>
     </h2>
 
-    <div class="rec-ironman-grid reveal-stagger">
+    <div class="rec-ironman-grid reveal">
       <div class="rec-im-cell">
         <span class="rec-im-num">1.9</span>
         <span class="rec-im-unit">km</span>
@@ -1011,47 +867,48 @@
     </div>
 
     <div class="rec-ironman-details reveal">
-      <div class="sc-row" style="border-color: rgba(255,255,255,0.08);">
-        <span class="sc-key">Date</span>
-        <span class="sc-val" style="color: var(--grey-300);">June 7, 2026</span>
-      </div>
-      <div class="sc-row" style="border-color: rgba(255,255,255,0.08);">
-        <span class="sc-key">Location</span>
-        <span class="sc-val" style="color: var(--grey-300);">Warsaw, Poland</span>
-      </div>
-      <div class="sc-row" style="border-color: rgba(255,255,255,0.08);">
-        <span class="sc-key">Age at race</span>
-        <span class="sc-val" style="color: var(--grey-300);">19 — 7 days before turning 20</span>
-      </div>
-      <div class="sc-row" style="border-color: rgba(255,255,255,0.08);">
-        <span class="sc-key">After Prague</span>
-        <span class="sc-val" style="color: var(--grey-300);">35 days after 2nd marathon</span>
-      </div>
-      <div class="sc-row" style="border-color: rgba(255,255,255,0.08);">
-        <span class="sc-key">Race type</span>
-        <span class="sc-val" style="color: var(--grey-300);">First triathlon · First Half Ironman</span>
-      </div>
-      <div class="sc-row" style="border-color: rgba(255,255,255,0.08);">
-        <span class="sc-key">Result</span>
-        <span class="sc-val" style="color: var(--red); font-style: italic;">To be added after June 7, 2026</span>
-      </div>
+      <div class="sc-row"><span class="sc-key">Date</span><span class="sc-val">June 7, 2026</span></div>
+      <div class="sc-row"><span class="sc-key">Location</span><span class="sc-val">Warsaw, Poland</span></div>
+      <div class="sc-row"><span class="sc-key">Age</span><span class="sc-val">19 — 7 days before turning 20</span></div>
+      <div class="sc-row"><span class="sc-key">Context</span><span class="sc-val">49 days after 5th official half marathon · 35 days after 2nd official marathon</span></div>
+      <div class="sc-row"><span class="sc-key">Type</span><span class="sc-val">First IRONMAN 70.3</span></div>
+      <div class="sc-row"><span class="sc-key">Result</span><span class="sc-val" style="color:var(--red);font-style:italic;">To be added after June 7</span></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===== NAVIGATE ===== -->
+<section class="rec-section" style="padding: 80px 0;">
+  <div class="container">
+    <div class="rec-nav-cards reveal-stagger">
+      <a href="index.html" class="rec-nav-card">
+        <span class="rec-nav-tag">Document 01 of 03</span>
+        <h3>Athlete &amp; Founder Profile</h3>
+        <p>Bio · Story · Mission · Sira · Key Numbers · Contact</p>
+        <span class="rec-nav-arrow">View profile →</span>
+      </a>
+      <a href="ironman.html" class="rec-nav-card rec-nav-dark">
+        <span class="rec-nav-tag">Document 03 of 03</span>
+        <h3>IRONMAN 70.3 Warsaw Media Pack</h3>
+        <p>Race overview · Registration proof · Race bike · Road to Warsaw · Sponsorship · Media use</p>
+        <span class="rec-nav-arrow">View media pack →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <div class="footer-brand-name">Toufic Abou Ali</div>
-        <div class="footer-brand-tagline">Lebanese Endurance Athlete · 2026</div>
-        <p style="font-size: 13px; line-height: 1.6; color: var(--grey-400); max-width: 380px;">
-          Marathon runner, triathlete, founder. Based in Montpellier, France. Born June 14, 2006.
+        <div class="footer-brand-tagline">Lebanese Founder & Endurance Athlete · 2026</div>
+        <p style="font-size:13px;line-height:1.6;color:var(--grey-400);max-width:380px;">
+          25 documented races · 6 confirmed podiums · Racing across 4 countries.
         </p>
       </div>
       <div>
-        <div class="footer-col-title">Pages</div>
+        <div class="footer-col-title">Documents</div>
         <ul class="footer-list">
           <li><a href="index.html">01 — Athlete Profile</a></li>
           <li><a href="record.html">02 — Athletic Record</a></li>
@@ -1061,32 +918,67 @@
       <div>
         <div class="footer-col-title">Connect</div>
         <ul class="footer-list">
+          <li><a href="mailto:protoufic@gmail.com">protoufic@gmail.com</a></li>
+          <li><a href="https://siracareers.com" target="_blank">siracareers.com</a></li>
+          <li><a href="https://www.instagram.com/touficaa/" target="_blank">@touficaa</a></li>
+          <li><a href="https://www.instagram.com/taj_eid/" target="_blank">@taj_eid · Race Media</a></li>
           <li><a href="https://www.strava.com/athletes/109556347" target="_blank">Strava</a></li>
-          <li><a href="https://www.instagram.com/touficaa/" target="_blank">Instagram</a></li>
-          <li><span>Montpellier, France</span></li>
+          <li><a href="https://www.linkedin.com/in/touficabouali" target="_blank">LinkedIn</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Toufic Abou Ali</span>
-      <span>Prepared for the Lebanese Sports Federation · Chapter Three of Three</span>
+      <span>Document 02 of 03 · Athletic Record</span>
     </div>
   </div>
 </footer>
 
+<div class="download-fab-group">
+  <a href="javascript:window.print()" class="download-fab" title="Download Athletic Record PDF">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    <span>Record PDF</span>
+  </a>
+</div>
 <button class="print-fab" onclick="window.print()" aria-label="Print">
   <svg viewBox="0 0 24 24" fill="none">
     <polyline points="6 9 6 2 18 2 18 9"/>
-    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+    <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
     <rect x="6" y="14" width="12" height="8"/>
   </svg>
 </button>
 
 <script src="script.js"></script>
-<script src="record.js"></script>
+
+<script>
+// Filter logic
+document.querySelectorAll('.rec-filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.rec-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var filter = btn.getAttribute('data-filter');
+    document.querySelectorAll('#raceTable tbody tr').forEach(function(row) {
+      if (filter === 'all') {
+        row.style.display = '';
+      } else {
+        var year = row.getAttribute('data-year');
+        var dist = row.getAttribute('data-dist');
+        if (year === filter || dist === filter) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>
-
-
 
 
