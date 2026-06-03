@@ -1,0 +1,1152 @@
+﻿/* ================================================================
+   MOBILE-ONLY STYLESHEET
+   Applies only to phones/tablets (max-width: 900px)
+   Does NOT affect desktop layout
+   ================================================================ */
+
+@media (max-width: 900px) {
+
+  /* ===== GLOBAL TYPOGRAPHY RESCALING ===== */
+  html { font-size: 15px; }
+  body { font-size: 15px; line-height: 1.55; -webkit-text-size-adjust: 100%; }
+
+  .container,
+  .container-narrow {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+  }
+
+  /* ===== NAVIGATION ===== */
+  .nav {
+    padding: 12px 0;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .nav-logo {
+    font-size: 11px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .nav-logo .dot {
+    width: 7px !important;
+    height: 7px !important;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: #0a0a0a;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    padding: 40px 24px;
+    transition: right 0.4s cubic-bezier(0.65,0,0.35,1);
+    z-index: 999;
+    box-shadow: -20px 0 60px rgba(0,0,0,0.4);
+  }
+
+  .nav-menu.open { right: 0; }
+
+  .nav-menu li { list-style: none; }
+
+  .nav-menu a,
+  .nav-link {
+    color: #fff !important;
+    font-size: 16px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu a.active,
+  .nav-link.active {
+    color: #DC2626 !important;
+    border-bottom-color: #DC2626;
+  }
+
+  .nav-toggle {
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1000;
+    position: relative;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #0a0a0a;
+    transition: all 0.3s ease;
+  }
+
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background: #fff;
+  }
+
+  .nav-toggle.active span:nth-child(2) { opacity: 0; }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background: #fff;
+  }
+
+  /* ===== HEROES — Profile / Record / Ironman ===== */
+  .prof-hero,
+  .rec-hero,
+  .im-hero {
+    min-height: auto !important;
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .prof-hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 20px 0 40px !important;
+  }
+
+  .prof-hero-left { order: 2; }
+  .prof-hero-right { order: 1; max-width: 280px; margin: 0 auto; }
+
+  .prof-hero-tagline {
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .prof-hero-tagline::before { width: 18px !important; }
+
+  .prof-eyebrow {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .prof-hero-name {
+    font-size: 52px !important;
+    letter-spacing: -2px !important;
+    margin-bottom: 22px !important;
+    line-height: 0.92 !important;
+  }
+
+  .rec-hero-title,
+  .im-hero-title {
+    font-size: 56px !important;
+    letter-spacing: -2px !important;
+    margin-bottom: 32px !important;
+    line-height: 0.9 !important;
+  }
+
+  .rec-hero-tag,
+  .im-hero-tag {
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .prof-hero-tags {
+    gap: 6px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .prof-tag {
+    font-size: 9px !important;
+    letter-spacing: 0.8px !important;
+    padding: 6px 11px !important;
+  }
+
+  .prof-hero-intro {
+    font-size: 13.5px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 26px !important;
+  }
+
+  .prof-hero-cta {
+    flex-direction: column;
+    gap: 10px !important;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 12px !important;
+    padding: 14px 20px !important;
+  }
+
+  /* Hero meta grids */
+  .rec-hero-meta,
+  .im-hero-meta {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+  }
+
+  .rec-meta-cell,
+  .im-meta-cell {
+    padding: 14px 12px !important;
+    border-right: 1px solid rgba(255,255,255,0.07) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  }
+
+  .rec-meta-cell:nth-child(2n),
+  .im-meta-cell:nth-child(2n) {
+    border-right: none !important;
+  }
+
+  .rec-meta-cell:nth-last-child(-n+2),
+  .im-meta-cell:nth-last-child(-n+2) {
+    border-bottom: none !important;
+  }
+
+  .rec-meta-key,
+  .im-meta-key {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .rec-meta-val,
+  .im-meta-val {
+    font-size: 12px !important;
+  }
+
+  /* Positioning strip on Ironman hero */
+  .im-positioning-strip {
+    flex-direction: column !important;
+    gap: 6px !important;
+    font-size: 12px !important;
+    padding: 14px 0 !important;
+  }
+
+  .im-pos-dot { display: none; }
+
+  /* ===== TICKER ===== */
+  .prof-ticker { padding: 12px 0 !important; }
+
+  .ticker-track span {
+    font-size: 9px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .ticker-track { gap: 22px !important; }
+
+  /* ===== SECTIONS ===== */
+  .prof-section,
+  .rec-section,
+  .im-section {
+    padding: 60px 0 !important;
+  }
+
+  .section-divider {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 8px;
+    margin-bottom: 24px !important;
+  }
+
+  .section-divider-line { display: none !important; }
+
+  .section-tag {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  /* Big headlines (Built while running, etc.) */
+  .headline-l {
+    font-size: 36px !important;
+    letter-spacing: -1px !important;
+    line-height: 1.05 !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* ===== BIO ===== */
+  .prof-bio-lead {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 36px !important;
+  }
+
+  .prof-stats-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .prof-stat {
+    padding: 22px 18px !important;
+  }
+
+  .prof-stat-disc {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .prof-stat-num {
+    font-size: 32px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .prof-stat-detail { font-size: 11px !important; }
+
+  /* ===== STORY / TIMELINE ===== */
+  .prof-story-lead {
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 32px !important;
+  }
+
+  .prof-timeline {
+    padding-left: 28px !important;
+    max-width: 100%;
+  }
+
+  .prof-timeline::before { left: 8px !important; }
+
+  .prof-tl-item {
+    padding: 16px 16px !important;
+    margin-bottom: 8px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .prof-tl-dot {
+    left: -26px !important;
+    width: 10px !important;
+    height: 10px !important;
+    top: 22px !important;
+  }
+
+  .prof-tl-year {
+    font-size: 13px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .prof-tl-content h4 {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .prof-tl-content p {
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* ===== MISSION + QUOTE ===== */
+  .prof-quote {
+    font-size: 19px !important;
+    line-height: 1.4 !important;
+    padding-left: 18px !important;
+    margin-bottom: 36px !important;
+  }
+
+  /* ===== MAP ===== */
+  .leaflet-map-container {
+    height: 320px !important;
+  }
+
+  .rmap-stats { grid-template-columns: 1fr 1fr !important; }
+
+  .rmst-cell {
+    padding: 18px 14px !important;
+  }
+
+  .rmst-n {
+    font-size: 26px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .rmst-l {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  /* ===== SIRA ===== */
+  .sira-header {
+    grid-template-columns: 56px 1fr !important;
+    padding: 20px 18px !important;
+    gap: 16px !important;
+  }
+
+  .sira-logo-block {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .sira-role { font-size: 17px !important; }
+
+  .sira-period {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .sira-intro-line {
+    font-size: 14px !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .sira-metrics-big {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .sira-metric-big {
+    padding: 18px 12px !important;
+  }
+
+  .sira-metric-big strong {
+    font-size: 22px !important;
+  }
+
+  .sira-metric-big span {
+    font-size: 9px !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* Companies ticker mobile */
+  .sira-companies-ticker {
+    padding: 24px 0 !important;
+  }
+
+  .sira-company-item {
+    height: 42px !important;
+  }
+
+  .sira-company-item img {
+    height: 36px !important;
+    max-width: 100px !important;
+  }
+
+  .sira-company-item span {
+    font-size: 18px !important;
+  }
+
+  .sira-companies-track {
+    gap: 40px !important;
+  }
+
+  /* ===== NUMBERS GRID ===== */
+  .prof-numbers-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .prof-num-card {
+    padding: 28px 22px !important;
+  }
+
+  .prof-num-big {
+    font-size: 34px !important;
+    letter-spacing: -1px !important;
+  }
+
+  /* ===== CONTACT ===== */
+  .prof-contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .prof-contact-card {
+    padding: 18px 20px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 14px !important;
+  }
+
+  .prof-cc-icon {
+    margin-bottom: 0 !important;
+  }
+
+  .prof-contact-label {
+    font-size: 9px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .prof-contact-val { font-size: 13px !important; }
+
+  /* Nav cards (bottom) */
+  .prof-nav-cards,
+  .rec-nav-cards,
+  .im-nav-cards {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-top: 48px !important;
+  }
+
+  .prof-nav-card,
+  .rec-nav-card,
+  .im-nav-card {
+    padding: 26px 22px !important;
+  }
+
+  .prof-nav-card h3,
+  .rec-nav-card h3,
+  .im-nav-card h3 {
+    font-size: 20px !important;
+  }
+
+  .prof-nav-card p,
+  .rec-nav-card p,
+  .im-nav-card p {
+    font-size: 12.5px !important;
+    margin-bottom: 18px !important;
+  }
+
+  /* ===== RECORD PAGE — STAT CARDS ===== */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .stat-card {
+    padding: 22px 16px !important;
+  }
+
+  .stat-card-disc {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .stat-card-num {
+    font-size: 32px !important;
+    letter-spacing: -1px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .stat-unit { font-size: 13px !important; }
+  .stat-card-detail { font-size: 11px !important; }
+
+  /* Yearly table */
+  .rec-yearly-wrap { overflow-x: auto; }
+
+  .rec-yearly-table {
+    font-size: 12px !important;
+    min-width: 480px;
+  }
+
+  .rec-yearly-table th,
+  .rec-yearly-table td {
+    padding: 10px 14px !important;
+  }
+
+  /* ===== PB CARDS ===== */
+  .pb-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .pb-card { padding: 28px 22px !important; }
+
+  .pb-card-distance {
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .pb-card-time {
+    font-size: 40px !important;
+    letter-spacing: -1.5px !important;
+    margin-bottom: 18px !important;
+  }
+
+  /* Progression */
+  .rec-prog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .rec-prog-row {
+    grid-template-columns: 60px 80px 1fr !important;
+    gap: 10px !important;
+    padding: 12px 18px !important;
+  }
+
+  .rec-prog-time { font-size: 18px !important; }
+  .rec-prog-note { font-size: 11px !important; }
+
+  /* ===== PODIUM CARDS ===== */
+  .rec-podium-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .rec-podium-card { padding: 22px 20px !important; }
+
+  .rec-podium-race { font-size: 16px !important; }
+  .rec-podium-time { font-size: 28px !important; }
+
+  /* ===== MEDIA FEATURES ===== */
+  .rec-media-feature {
+    grid-template-columns: 44px 1fr !important;
+    gap: 14px !important;
+    padding: 18px 18px !important;
+  }
+
+  .rec-mf-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .rec-mf-outlet { font-size: 10px !important; }
+  .rec-mf-title { font-size: 13px !important; }
+
+  /* ===== FILTER BUTTONS ===== */
+  .rec-filters {
+    gap: 6px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .rec-filter-btn {
+    padding: 7px 12px !important;
+    font-size: 10px !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* ===== RACE TABLE — horizontal scroll ===== */
+  .rec-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -20px;
+    padding: 0 20px 12px;
+    position: relative;
+  }
+
+  .rec-table-wrap::after {
+    content: '← swipe →';
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .rec-race-table {
+    font-size: 11.5px !important;
+    min-width: 620px;
+  }
+
+  .rec-race-table th {
+    padding: 10px 12px !important;
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .rt-num,
+  .rt-date,
+  .rt-race,
+  .rt-dist,
+  .rt-time,
+  .rt-place,
+  .rt-flag {
+    padding: 10px 12px !important;
+  }
+
+  .rt-time { font-size: 14px !important; }
+  .rt-race { font-size: 12px !important; }
+
+  /* Summary strip */
+  .rec-summary-strip {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .rec-summary-cell {
+    padding: 18px 12px !important;
+    border-right: 1px solid rgba(255,255,255,0.06) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  }
+
+  .rec-summary-cell:nth-child(2n) { border-right: none !important; }
+  .rec-summary-cell:nth-last-child(-n+2) { border-bottom: none !important; }
+
+  .rec-summary-num { font-size: 22px !important; }
+  .rec-summary-label { font-size: 9px !important; letter-spacing: 1.5px !important; }
+
+  /* ===== ENDURANCE BASE ===== */
+  .endurance-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .endurance-card { padding: 22px 14px !important; }
+
+  .endurance-num {
+    font-size: 32px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .endurance-num small { font-size: 12px !important; }
+
+  .endurance-label {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  /* ===== IRONMAN SECTION (Record page) ===== */
+  .rec-ironman { padding: 60px 0 !important; }
+
+  .rec-ironman-grid {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .rec-im-cell {
+    flex: 1 1 calc(50% - 8px) !important;
+    max-width: none !important;
+    padding: 18px 14px !important;
+  }
+
+  .rec-im-plus,
+  .rec-im-equals {
+    flex: 0 0 100% !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    transform: rotate(90deg);
+    padding: 4px 0 !important;
+  }
+
+  .rec-im-num { font-size: 32px !important; }
+  .rec-im-unit { font-size: 11px !important; }
+  .rec-im-label { font-size: 9px !important; letter-spacing: 1.5px !important; }
+
+  .sc-row {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+    padding: 10px 0 !important;
+  }
+
+  .sc-key { font-size: 9px !important; letter-spacing: 1.5px !important; }
+  .sc-val { font-size: 12.5px !important; }
+
+  /* ===== IRONMAN PAGE — RACE FORMAT ===== */
+  .im-format-grid {
+    flex-direction: column !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+
+  .im-format-card {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 22px 20px !important;
+  }
+
+  .im-format-plus,
+  .im-format-equals {
+    transform: rotate(90deg);
+    font-size: 22px !important;
+    padding: 2px 0 !important;
+  }
+
+  .im-format-num { font-size: 38px !important; }
+  .im-format-unit { font-size: 12px !important; }
+  .im-format-label { font-size: 9px !important; letter-spacing: 1.5px !important; }
+  .im-format-note { font-size: 11px !important; }
+
+  /* Context panels */
+  .im-context-panels {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .im-ctx-panel { padding: 18px 18px !important; }
+  .im-ctx-label { font-size: 9px !important; letter-spacing: 1.5px !important; }
+  .im-ctx-value { font-size: 12px !important; }
+
+  /* Registration strip */
+  .im-reg-strip {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .im-reg-cell {
+    padding: 14px 14px !important;
+    border-right: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .im-reg-cell:nth-child(2n) { border-right: none !important; }
+  .im-reg-cell:nth-last-child(-n+2) { border-bottom: none !important; }
+
+  .im-reg-key { font-size: 9px !important; letter-spacing: 1.5px !important; }
+  .im-reg-val { font-size: 12px !important; }
+  .im-reg-status { font-size: 12px !important; }
+
+  .im-reg-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .im-product-row {
+    padding: 12px 16px !important;
+    gap: 12px !important;
+  }
+
+  .im-product-name { font-size: 12px !important; }
+  .im-product-price { font-size: 15px !important; }
+
+  /* Bike layout */
+  .im-bike-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .im-bike-photo-wrap {
+    aspect-ratio: 4/3 !important;
+  }
+
+  .im-bike-name { font-size: 22px !important; }
+
+  .im-spec-row {
+    grid-template-columns: 90px 1fr !important;
+    padding: 10px 18px !important;
+    gap: 12px !important;
+  }
+
+  .im-spec-key { font-size: 9px !important; letter-spacing: 1px !important; }
+  .im-spec-val { font-size: 12px !important; }
+
+  .im-included-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .im-inc-item { font-size: 12px !important; }
+
+  .im-bike-confirm-bar {
+    padding: 14px 18px !important;
+    font-size: 11px !important;
+  }
+
+  /* Race setup */
+  .im-setup-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .im-setup-item { padding: 18px 16px !important; }
+  .im-setup-cat { font-size: 9px !important; letter-spacing: 1.5px !important; }
+  .im-setup-val { font-size: 14px !important; }
+  .im-setup-note { font-size: 10px !important; }
+
+  /* Why section */
+  .im-why-lead {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 32px !important;
+  }
+
+  .im-why-cards {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-bottom: 36px !important;
+  }
+
+  .im-why-card { padding: 22px 20px !important; }
+  .im-why-card h4 { font-size: 17px !important; }
+  .im-why-card p { font-size: 12.5px !important; }
+
+  .im-quote {
+    padding: 28px 24px !important;
+  }
+
+  .im-quote p { font-size: 18px !important; line-height: 1.4 !important; }
+  .im-quote span { font-size: 10px !important; letter-spacing: 1.5px !important; }
+
+  /* Road timeline */
+  .im-road-timeline {
+    padding-left: 28px !important;
+  }
+
+  .im-road-timeline::before { left: 8px !important; }
+
+  .im-road-dot {
+    left: -26px !important;
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .im-road-content-wrap {
+    grid-template-columns: 1fr !important;
+    padding: 16px 18px !important;
+    gap: 0 !important;
+  }
+
+  .im-road-left {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    border-right: none !important;
+    border-bottom: 1px solid #eee !important;
+    padding: 0 0 8px 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .im-road-item-final .im-road-left {
+    border-bottom-color: rgba(255,255,255,0.1) !important;
+  }
+
+  .im-road-right { padding-left: 0 !important; }
+
+  .im-road-date { font-size: 13px !important; }
+  .im-road-badge { font-size: 8px !important; padding: 2px 8px !important; }
+  .im-road-right h4 { font-size: 16px !important; }
+  .im-road-right p { font-size: 12px !important; }
+
+  /* Training grid */
+  .im-training-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .im-training-card { padding: 22px 14px !important; }
+  .im-training-num { font-size: 32px !important; }
+  .im-training-unit { font-size: 12px !important; }
+  .im-training-label { font-size: 9px !important; letter-spacing: 1.5px !important; }
+  .im-training-sub { font-size: 10px !important; }
+
+  /* PBs strip */
+  .im-pbs-strip {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+  }
+
+  .im-pb-cell { padding: 18px 14px !important; }
+  .im-pb-divider { display: none !important; }
+  .im-pb-time { font-size: 20px !important; }
+  .im-pb-dist { font-size: 9px !important; letter-spacing: 1.5px !important; }
+  .im-pb-note { font-size: 10px !important; }
+
+  /* Media + sponsorship */
+  .im-caption-block { padding: 24px 22px !important; margin-bottom: 28px !important; }
+  .im-caption { font-size: 15px !important; line-height: 1.5 !important; }
+
+  .im-sponsor-cards {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .im-sponsor-card { padding: 22px 20px !important; }
+  .im-sponsor-card h4 { font-size: 16px !important; }
+  .im-sponsor-card p { font-size: 12px !important; }
+
+  .im-cta-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 11.5px !important;
+    padding: 16px 20px !important;
+  }
+
+  .im-cta-note { font-size: 11px !important; }
+
+  .im-hashtag-row { gap: 6px !important; }
+
+  .im-hashtag-row span {
+    font-size: 11px !important;
+    padding: 5px 11px !important;
+  }
+
+  .im-sponsor-contacts {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .im-sponsor-contact {
+    padding: 12px 14px !important;
+  }
+
+  .im-sc-val { font-size: 12px !important; }
+
+  .im-media-use-note {
+    font-size: 10.5px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 60px 0 30px !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .footer-brand-name { font-size: 22px !important; }
+  .footer-brand-tagline { font-size: 11px !important; letter-spacing: 1.5px !important; }
+
+  .footer-col-title { font-size: 10px !important; letter-spacing: 2px !important; margin-bottom: 14px !important; }
+
+  .footer-list a { font-size: 13px !important; }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 8px !important;
+    text-align: center !important;
+    font-size: 11px !important;
+    padding-top: 24px !important;
+  }
+
+  /* ===== FAB BUTTONS — Print + Download ===== */
+  .print-fab {
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .print-fab svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .download-fab-group {
+    bottom: 70px !important;
+    right: 16px !important;
+  }
+
+  .download-fab {
+    padding: 10px 14px !important;
+    font-size: 10px !important;
+    letter-spacing: 1.2px !important;
+  }
+
+  .download-fab span { display: none; }
+
+  .download-fab svg { width: 14px !important; height: 14px !important; }
+
+  /* ===== LEAFLET POPUP ===== */
+  .lmap-popup .leaflet-popup-content-wrapper {
+    max-width: 240px;
+  }
+
+  /* ===== TAP TARGETS ===== */
+  a, button, .btn, .nav-link {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Remove hover transforms on touch devices (prevents stuck hover states) */
+  .prof-stat:hover,
+  .stat-card:hover,
+  .pb-card:hover,
+  .rec-podium-card:hover,
+  .prof-num-card:hover,
+  .prof-contact-card:hover,
+  .prof-nav-card:hover,
+  .rec-nav-card:hover,
+  .im-nav-card:hover,
+  .im-format-card:hover,
+  .im-ctx-panel:hover,
+  .im-why-card:hover,
+  .im-sponsor-card:hover,
+  .im-setup-item:hover,
+  .im-training-card:hover,
+  .endurance-card:hover,
+  .im-road-item:hover .im-road-content-wrap,
+  .prof-tl-item:hover {
+    transform: none !important;
+  }
+
+  /* ===== LOADER ===== */
+  .loader-name {
+    font-size: 12px !important;
+    letter-spacing: 3px !important;
+  }
+
+  .loader-bar { width: 200px !important; }
+}
+
+/* ================================================================
+   SMALL PHONES (max-width: 480px) — Extra tightening
+   ================================================================ */
+
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+
+  .container,
+  .container-narrow {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .prof-hero-name { font-size: 44px !important; }
+  .rec-hero-title,
+  .im-hero-title { font-size: 46px !important; }
+  .headline-l { font-size: 30px !important; }
+
+  .prof-bio-lead,
+  .prof-story-lead,
+  .im-why-lead { font-size: 14px !important; }
+
+  .prof-stats-row,
+  .stats-grid,
+  .sira-metrics-big,
+  .endurance-grid,
+  .im-training-grid,
+  .im-setup-grid,
+  .rec-summary-strip,
+  .im-pbs-strip,
+  .im-reg-strip,
+  .rec-hero-meta,
+  .im-hero-meta,
+  .rmap-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  .rec-summary-cell,
+  .im-reg-cell {
+    border-right: none !important;
+  }
+
+  .im-format-num,
+  .stat-card-num,
+  .prof-stat-num,
+  .endurance-num,
+  .im-training-num,
+  .rec-im-num { font-size: 30px !important; }
+
+  .pb-card-time { font-size: 36px !important; }
+
+  .prof-tag {
+    font-size: 8.5px !important;
+    padding: 5px 9px !important;
+  }
+}
+
+/* ================================================================
+   LANDSCAPE PHONE — Prevent hero squishing
+   ================================================================ */
+
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+  .prof-hero,
+  .rec-hero,
+  .im-hero {
+    min-height: auto !important;
+    padding-top: 80px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .prof-hero-name { font-size: 42px !important; }
+  .rec-hero-title,
+  .im-hero-title { font-size: 44px !important; }
+}

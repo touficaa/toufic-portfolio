@@ -170,3 +170,45 @@
   });
 
 })();
+
+/* ================================================================
+   MOBILE NAV TOGGLE
+   ================================================================ */
+(function() {
+  function initNavToggle() {
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', function() {
+      menu.classList.toggle('open');
+      toggle.classList.toggle('active');
+      document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking a link
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.remove('open');
+        toggle.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close menu when resizing back to desktop
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 900 && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        toggle.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavToggle);
+  } else {
+    initNavToggle();
+  }
+})();
