@@ -1,6 +1,6 @@
 ﻿/* ================================================================
    RECORD PAGE — COMPLETE FIXED REWRITE
-   All layout issues resolved
+   All layout issues resolved + Elegant race table
    ================================================================ */
 
 /* ===== CURSOR FIX ===== */
@@ -658,108 +658,8 @@ input, textarea { cursor: text; }
   border-color: var(--black);
 }
 
-/* ===== RACE TABLE ===== */
-.rec-table-wrap { overflow-x: auto; }
-
-.rec-race-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  min-width: 700px;
-  font-family: var(--font-sans);
-}
-
-.rec-race-table th {
-  padding: 12px 16px;
-  text-align: left;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--grey-500);
-  border-bottom: 2px solid var(--grey-200);
-  white-space: nowrap;
-}
-
-.rec-race-table tbody tr {
-  border-bottom: 1px solid var(--grey-100);
-  transition: all 0.25s var(--ease);
-}
-
-.rec-race-table tbody tr:hover {
-  background: var(--off-white);
-  box-shadow: inset 3px 0 0 var(--red);
-}
-
-.rt-row-podium { background: rgba(220,38,38,0.025); }
-
-.rt-num {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--grey-300);
-  padding: 14px 16px;
-  width: 48px;
-}
-
-.rt-date {
-  color: var(--grey-500);
-  white-space: nowrap;
-  padding: 14px 16px;
-  font-size: 12px;
-}
-
-.rt-race { font-weight: 600; padding: 14px 16px; font-size: 13px; }
-.rt-dist { padding: 14px 16px; color: var(--grey-600); white-space: nowrap; font-size: 13px; }
-
-.rt-time {
-  font-family: var(--font-serif);
-  font-size: 17px;
-  font-weight: 700;
-  padding: 14px 16px;
-  white-space: nowrap;
-  letter-spacing: -0.5px;
-}
-
-.rt-place { padding: 14px 16px; font-size: 12px; white-space: nowrap; }
-.rt-gold   { color: #B8860B; font-weight: 700; }
-.rt-silver { color: var(--grey-600); font-weight: 700; }
-.rt-bronze { color: #CD7F32; font-weight: 700; }
-.rt-flag   { padding: 14px 16px; font-size: 16px; }
-
-.rt-badge {
-  display: inline-block;
-  background: var(--red);
-  color: var(--white);
-  font-size: 9px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 2px;
-  margin-left: 8px;
-  vertical-align: middle;
-  font-family: var(--font-sans);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.rt-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px; height: 28px;
-  background: var(--grey-100);
-  border-radius: 2px;
-  font-size: 12px;
-  color: var(--grey-600);
-  transition: all 0.3s ease;
-  margin: 8px 16px;
-  cursor: pointer;
-}
-
-.rt-link:hover { background: var(--red); color: var(--white); }
-
 /* ================================================================
-   FIX 1: SUMMARY STRIP — was showing as plain text list
+   SUMMARY STRIP
    ================================================================ */
 .rec-summary-strip {
   display: grid !important;
@@ -806,8 +706,7 @@ input, textarea { cursor: text; }
 }
 
 /* ================================================================
-   FIX 2: ENDURANCE BASE — was showing as plain text list
-   Rebuilt with dedicated classes (no more im-training conflicts)
+   ENDURANCE BASE
    ================================================================ */
 .endurance-grid {
   display: grid !important;
@@ -895,7 +794,7 @@ input, textarea { cursor: text; }
 .endurance-card-dark .endurance-sub { color: var(--grey-400); }
 
 /* ================================================================
-   FIX 3: IRONMAN GRID — was showing as plain stacked text
+   IRONMAN SECTION
    ================================================================ */
 .rec-ironman {
   background: var(--black);
@@ -1011,7 +910,7 @@ input, textarea { cursor: text; }
 }
 
 /* ================================================================
-   FIX 4: NAV CARDS — were stacking as plain text
+   NAV CARDS
    ================================================================ */
 .rec-nav-cards {
   display: grid !important;
@@ -1117,4 +1016,351 @@ input, textarea { cursor: text; }
   .endurance-grid { grid-template-columns: 1fr; }
   .rec-media-feature { grid-template-columns: 1fr; }
   .sc-row { grid-template-columns: 1fr; gap: 4px; }
+}
+
+
+
+
+/* ================================================================
+   RACE TABLE — MATCHES SCREENSHOT EXACTLY
+   Horizontal pill filters · Italic serif numbers · Bold race names
+   ================================================================ */
+
+/* ===== FILTER PILLS ===== */
+.rec-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.rec-filter-btn {
+  padding: 12px 22px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey-700);
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  font-family: var(--font-sans);
+  white-space: nowrap;
+}
+
+.rec-filter-btn:hover {
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.rec-filter-btn.active {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+/* ===== TABLE WRAPPER ===== */
+.rec-table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 4px;
+}
+
+.rec-race-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 1100px;
+  font-family: var(--font-sans);
+}
+
+/* ===== HEADER ROW ===== */
+.rec-race-table thead tr {
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.rec-race-table th {
+  padding: 18px 20px;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--grey-500);
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  background: var(--white);
+}
+
+.rec-race-table th:first-child {
+  width: 60px;
+  padding-left: 32px;
+}
+
+/* ===== BODY ROWS ===== */
+.rec-race-table tbody tr {
+  border-bottom: 1px solid var(--grey-100);
+  transition: all 0.2s ease;
+  background: var(--white);
+}
+
+.rec-race-table tbody tr:nth-child(even) {
+  background: rgba(0,0,0,0.012);
+}
+
+.rec-race-table tbody tr:hover {
+  background: var(--off-white);
+  box-shadow: inset 3px 0 0 var(--red);
+}
+
+.rec-race-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Podium row tint */
+.rt-row-podium {
+  background: rgba(220,38,38,0.018) !important;
+}
+
+.rt-row-podium:hover {
+  background: rgba(220,38,38,0.04) !important;
+}
+
+/* Upcoming row */
+.rt-row-upcoming {
+  background: rgba(220,38,38,0.05) !important;
+}
+
+.rt-row-upcoming:hover {
+  background: rgba(220,38,38,0.08) !important;
+}
+
+/* ===== CELLS ===== */
+
+/* Row number — italic serif gray (low opacity) */
+.rt-num {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--grey-300);
+  padding: 20px 20px;
+  padding-left: 32px;
+  width: 60px;
+  letter-spacing: -0.3px;
+}
+
+/* Date — sans-serif gray, regular weight */
+.rt-date {
+  color: var(--grey-600);
+  white-space: nowrap;
+  padding: 20px 20px;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  width: 140px;
+}
+
+/* Race name — bold black, moderate size */
+.rt-race {
+  font-weight: 600;
+  padding: 20px 20px;
+  font-size: 15px;
+  color: var(--black);
+  font-family: var(--font-sans);
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+}
+
+/* Distance */
+.rt-dist {
+  padding: 20px 20px;
+  color: var(--grey-700);
+  white-space: nowrap;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  width: 100px;
+}
+
+/* Time — serif bold */
+.rt-time {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 700;
+  padding: 20px 20px;
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+  width: 110px;
+  color: var(--black);
+  font-style: italic;
+}
+
+/* Place */
+.rt-place {
+  padding: 20px 20px;
+  font-size: 13px;
+  white-space: nowrap;
+  color: var(--grey-700);
+  font-weight: 500;
+  font-family: var(--font-sans);
+}
+
+/* Podium gold colors */
+.rt-gold,
+.rt-silver,
+.rt-bronze {
+  color: #B8860B;
+  font-weight: 700;
+}
+
+/* Upcoming italic red */
+.rt-upcoming {
+  color: var(--red);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Country code */
+.rt-flag {
+  padding: 20px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--grey-700);
+  font-family: var(--font-sans);
+  letter-spacing: 0.5px;
+  width: 70px;
+}
+
+/* Badge pill — red, uppercase */
+.rt-badge {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-family: var(--font-sans);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.rt-badge-red {
+  background: var(--red);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1280px) {
+  .rec-race-table { min-width: 980px; }
+  .rt-num { padding: 16px 16px; padding-left: 24px; font-size: 16px; }
+  .rt-date, .rt-dist, .rt-place, .rt-flag, .rt-race, .rt-time { padding: 16px 14px; }
+  
+  .rec-race-table th { padding: 16px 14px; }
+  .rec-race-table th:first-child { padding-left: 24px; }
+}
+
+@media (max-width: 768px) {
+  .rec-filter-btn { padding: 10px 16px; font-size: 10px; letter-spacing: 1.2px; }
+  .rec-race-table { min-width: 880px; }
+  .rt-race { font-size: 13px; }
+  .rt-num { font-size: 14px; }
+  .rt-badge { font-size: 8px; padding: 3px 7px; }
+}
+
+
+/* ================================================================
+   PROOF CELL — FIXED FOR MULTI-LINK SUPPORT
+   ================================================================ */
+
+td.rt-proof {
+  padding: 14px 16px;
+  padding-right: 24px;
+  white-space: nowrap;
+  text-align: right;
+  vertical-align: middle;
+  width: auto;
+  min-width: 100px;
+}
+
+/* Container for multiple proof buttons */
+td.rt-proof a.rt-proof-btn + a.rt-proof-btn {
+  margin-left: 4px;
+}
+
+/* Single dash for no-proof rows */
+.rt-no-proof {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  background: var(--grey-100);
+  border: 1px solid var(--grey-200);
+  border-radius: 3px;
+  color: var(--grey-400);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Proof button — square pill */
+a.rt-proof-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 28px;
+  padding: 0 9px;
+  background: var(--grey-100);
+  border: 1px solid var(--grey-200);
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--grey-700);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+a.rt-proof-btn:hover {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+  transform: translateY(-1px);
+}
+
+/* Strava — orange */
+a.rt-proof-btn.rt-proof-strava {
+  background: rgba(252,82,0,0.08);
+  border-color: rgba(252,82,0,0.25);
+  color: #FC5200;
+}
+
+a.rt-proof-btn.rt-proof-strava:hover {
+  background: #FC5200;
+  border-color: #FC5200;
+  color: var(--white);
+}
+
+/* MTV / Press — red */
+a.rt-proof-btn.rt-proof-mtv {
+  background: rgba(220,38,38,0.08);
+  border-color: rgba(220,38,38,0.25);
+  color: var(--red);
+}
+
+a.rt-proof-btn.rt-proof-mtv:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
 }

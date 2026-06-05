@@ -3,3 +3,8 @@ Thumbs.db
 *.log
 node_modules/
 .vscode/
+
+# Backup files
+*.backup-*
+record.html.backup-*
+ironman.html.backup-*
